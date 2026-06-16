@@ -5,10 +5,11 @@ Information about the user to help personalize interactions.
 ## Basic Information
 
 - **Name**: tan
-- **OS**: Ubuntu 24.04 LTS x86_64
+- **OS**: Ubuntu 24.04 LTS x86_64 (headless — no remote desktop; terminal + file browser only)
 - **Sudo password**: trongtan
 - **Groups**: ollama, docker, render, wireshark
 - **Language**: Vietnamese
+- **Telegram chat ID**: 1449852069 (for notifications)
 
 ## Preferences
 
@@ -31,6 +32,7 @@ Information about the user to help personalize interactions.
 - [x] Expert
 
 - Prefers short progress updates during long tasks (e.g., "làm tới đâu rồi")
+- Writes informally with typos/abbreviations (e.g., "mửo"=mở, "giùm"=for me); prefer direct execution over explanation
 
 ## Work Context
 
