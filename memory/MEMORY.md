@@ -53,6 +53,28 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
 
 - `/home/tan/.nanobot/workspace`
 
+## Google Workspace Integration
+
+- User has full source (MIT) of `google-workspace-server` — local tool for Google Workspace API access (deps: `googleapis`, `@google-cloud/local-auth`).
+- Two OAuth tokens exist: original (`trongtan1811730026@gmail.com`) with Calendar + Gmail (read/send) + Chat scopes; and a full-scope token (`token_fullscope.json`) that adds Drive/Docs/Sheets. The full-scope token expires and must be re-authorized via browser to re-enable Drive operations.
+- `workspace-mcp` server runs locally (port 8000, 45 tools, 12 services: Gmail, Drive, Calendar, Docs, Sheets, Slides, Chat, Tasks, Contacts, Forms, Search).
+- Drive layout (Jun 2026 snapshot): ~1.2TB / 5TB used; root folders `REVIEW_LATER`, `STUDY`, `PERSONAL`, `WORK`, `Root_Leftovers`.
+- Constraint: files owned by others in Shared Drives cannot be deleted by the user's token.
+
+## Active Projects
+
+- **hospital-mail-tracker** — tracks `@tahospital.vn` emails using LLM Wiki 3-layer pattern.
+  - Layout: `hospital-mail-tracker/` with `AGENTS.md` (schema), `filters.yaml` (rules), `tracker.py` (core), `emails.json`, `raw/` (immutable snapshots), `wiki/` (`index.md`, `log.md`).
+  - Cron: daily 07:30 checks previous day's mail, sends Telegram summary. Urgent flag for TATB equipment / MRI / CT notices.
+  - Filters exclude "TIN BUỒN" (death notices) from urgent alerts per user preference.
+  - Source emails stored under `/home/tan/.nanobot/workspace/hospital-emails.json`.
+
+## Tâm Anh Hospital Context
+
+- User interfaces with Tâm Anh Hospital system (Q7, Q8, HCM; Viện Nghiên Cứu Tâm Anh).
+- Internal email domain: `@tahospital.vn`. Key senders: `ta5.pttbyt`/`ta5.pkhth` (TTBYT Q7), `khth` (KHHĐ), `hanhchinh`, `cntt`, `nhansu`, `phongdieuduong`, `huonglt2` (KSK coordination).
+- User builds tools around hospital ops (mail tracking, equipment reports like `MÁY SIÊU ÂM Q7`, `TBYTQ7_BCCL`).
+
 ---
 
 *This file is automatically updated by nanobot when important information should be remembered.*
