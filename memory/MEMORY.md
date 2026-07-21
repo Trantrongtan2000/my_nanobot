@@ -40,9 +40,9 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
 
 ## Google Workspace Integration
 
-- User has full source (MIT) of `google-workspace-server` — local tool for Google Workspace API access (deps: `googleapis`, `@google-cloud/local-auth`).
-- Two OAuth tokens exist: original (`trongtan1811730026@gmail.com`) with Calendar + Gmail (read/send) + Chat scopes; and a full-scope token (`token_fullscope.json`) that adds Drive/Docs/Sheets. The full-scope token expires and must be re-authorized via browser to re-enable Drive operations.
-- `workspace-mcp` server runs locally (port 8000, 45 tools, 12 services: Gmail, Drive, Calendar, Docs, Sheets, Slides, Chat, Tasks, Contacts, Forms, Search).
+- `workspace-mcp` v1.21.1 server runs locally (port 8000, 45 tools, 12 services: Gmail, Drive, Calendar, Docs, Sheets, Slides, Chat, Tasks, Contacts, Forms, Search).
+- Auth: `--single-user` mode with pre-created OAuth token. Credentials dir: `~/.google_workspace_mcp/credentials/`. Requires `WORKSPACE_MCP_HOST=0.0.0.0` for LAN access.
+- Gmail + Calendar + Chat scopes active; Drive/Docs/Sheets require re-auth with broader scopes (browser needed).
 - Drive layout (Jun 2026 snapshot): ~1.2TB / 5TB used; root folders `REVIEW_LATER`, `STUDY`, `PERSONAL`, `WORK`, `Root_Leftovers`.
 - Constraint: files owned by others in Shared Drives cannot be deleted by the user's token.
 
@@ -55,11 +55,22 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
   - By default fetches only email metadata (snippet); full body fetched on demand via `read <id>` or `readall`.
   - Source emails stored under `/home/tan/.nanobot/workspace/hospital-emails.json`.
 
+- **Device Wiki** (`kb/wiki/devices/`) — 38 ultrasound device pages for Tâm Anh Q7 from Excel, with AETitle registry (51 devices). Uses LLM Wiki 3-layer pattern (`raw/`, `wiki/`, `AGENTS.md`).
+
+- **Central Orchestrator** (`/home/tan/central-orchestrator/`) — CrewAI multi-agent system connecting nanobot + Hermes on two nodes (192.168.2.22 and 192.168.2.237), both running Hermes + nanobot.
+
 ## Tâm Anh Hospital Context
 
 - User interfaces with Tâm Anh Hospital system (Q7, Q8, HCM; Viện Nghiên Cứu Tâm Anh).
 - Internal email domain: `@tahospital.vn`. Key senders: `ta5.pttbyt`/`ta5.pkhth` (TTBYT Q7), `khth` (KHHĐ), `hanhchinh`, `cntt`, `nhansu`, `phongdieuduong`, `huonglt2` (KSK coordination).
 - User builds tools around hospital ops (mail tracking, equipment reports like `MÁY SIÊU ÂM Q7`, `TBYTQ7_BCCL`).
+
+## Agent Ecosystem
+
+- **AgentMemory MCP** installed (port 3111, viewer 3114). `bm25-only` mode (no embeddings API key).
+- **Pi Agent** (Qwen local via Ollama): web search fixed by replacing `@ollama/pi-web-search` with `pi-web-access` (Exa MCP).
+- Skills installed from ClawHub: self-improving-agent, skill-vetter, vibesec, markitdown.
+- **Mistral OCR workflow** (on Hermes): PDF → images → Mistral OCR → markdown. Used for biomedical document processing.
 
 ---
 
