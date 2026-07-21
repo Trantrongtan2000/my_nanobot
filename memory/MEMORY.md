@@ -13,25 +13,10 @@ This file stores important information that should persist across sessions.
 
 - **cli-anything-hub v0.3.0** + 69 `cli-anything-*` skills installed to `~/.agents/skills/`
 
-## Active Projects
-
-- **browser-use-desktop harness** at `/home/tan/projects/browser-use-desktop-harness/agent-harness/`
-  - Installed as `cli-anything-browserusedesktop` to `~/.local/bin/`
-  - CDP wrapper only (navigate/eval/screenshot) — cannot login, fill forms, or handle 2FA; full AI agent (browser-use-desktop + Claude Code engine) needed for interactive tasks
-  - Goal completed 2026-06-16: 15/15 tests passing (9 unit + 6 e2e against real binary under Xvfb)
-
 ## CLI-Anything Harness Convention
 
 - Package layout: `cli_anything/<product>/` with `core/{process,cdp,state}.py`, `utils/{format,repl_skin}.py`, `tests/`, `skills/SKILL.md`, top-level `<PRODUCT>.md` overview
 - Use `cli-anything-harness` skill (see `skills/cli-anything-harness/SKILL.md`) for the full workflow
-
-## CDP / Electron Notes
-
-- `Target.createTarget` is NOT exposed externally by Electron; CLI `cdp create` must be a no-op
-- After `Page.navigate`, must wait for `Page.loadEventFired` event before subsequent `Page.*` commands (e.g. screenshot) — otherwise fails with `Not attached to an active page` (CDP -32000)
-- When using `Target.attachToTarget` with `flatten: true`, store returned `sessionId` and include it as `sessionId` field in subsequent CDP payloads for routing
-- Use `time.time_ns() // 1_000_000` for monotonically increasing message IDs (`time.time()` caused test flakiness)
-- Confirmed working manually: list targets, navigate (data: URLs), eval, screenshot on existing target
 
 ## 9Remote (Remote Access TUI)
 
@@ -67,6 +52,7 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
   - Layout: `hospital-mail-tracker/` with `AGENTS.md` (schema), `filters.yaml` (rules), `tracker.py` (core), `emails.json`, `raw/` (immutable snapshots), `wiki/` (`index.md`, `log.md`).
   - Cron: daily 07:30 checks previous day's mail, sends Telegram summary. Urgent flag for TATB equipment / MRI / CT notices.
   - Filters exclude "TIN BUỒN" (death notices) from urgent alerts per user preference.
+  - By default fetches only email metadata (snippet); full body fetched on demand via `read <id>` or `readall`.
   - Source emails stored under `/home/tan/.nanobot/workspace/hospital-emails.json`.
 
 ## Tâm Anh Hospital Context
