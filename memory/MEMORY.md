@@ -59,8 +59,11 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
 - **Device Wiki** (`kb/wiki/devices/`) — 38 ultrasound device pages for Tâm Anh Q7 from Excel, with AETitle registry (51 devices). Uses LLM Wiki 3-layer pattern (`raw/`, `wiki/`, `AGENTS.md`).
 
 - **Central Orchestrator** (`/home/tan/central-orchestrator/`) — CrewAI multi-agent system connecting nanobot + Hermes on two nodes (192.168.2.22 and 192.168.2.237), both running Hermes + nanobot.
-  - Node 2 (192.168.2.237) is a TV box; SSH access via port 2104.
-  - Hermes and nanobot originally shared the same Telegram token causing polling conflicts; separate tokens assigned.
+  - Architecture: Hermes handles planning/coordination (calls Node 1), Nanobot handles code/GPU-heavy tasks (calls Node 2). Both agents run on both nodes.
+  - Node 2 (192.168.2.237) is a TV box; SSH access via port 2104 (root/tvbox).
+  - Config in `.env`: `NODE1_BASE_URL`, `NODE2_BASE_URL`, `SHARED_MODEL_NAME=MiniMax-M2.7`.
+  - Structure: `main.py` (entry), `bot.py` (Telegram handler), `orchestrator.py` (CrewAI logic), `agents.py` (agent defs), `requirements.txt`, `.env.example`.
+  - Hermes and nanobot originally shared the same Telegram token causing polling conflicts; separate tokens assigned per bot.
 
 ## Tâm Anh Hospital Context
 

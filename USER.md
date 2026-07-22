@@ -39,8 +39,7 @@
 - Casual + technical biomedical terms
 - **Brief and concise** by default; detail only when asked
 - Expert technical level — no beginner hand-holding
-- Short progress updates (1-liner) on long or background tasks
-- Informal messages/typos OK → prefer **execute** over explain (no permission theater)
+- **Thông báo kế hoạch trước khi chạy**: Luôn nêu 1 câu ngắn gọn kế hoạch sẽ làm gì TRƯỚC KHI thực thi bất kỳ tool/lệnh nào.
 - Vietnamese default
 
 ### Response length
