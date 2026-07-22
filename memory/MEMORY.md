@@ -78,6 +78,7 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
 - Skills installed from ClawHub: self-improving-agent, skill-vetter, vibesec, markitdown.
 - **Mistral OCR workflow** (on Hermes): PDF → images → Mistral OCR → markdown. Used for biomedical document processing.
 - **Hermes Gateway** — Messaging gateway service handling Telegram bot communication and MCP server coordination.
+- **Dedicated-agent direction** — User wants separate agents for OCR, Wiki, GraphRAG, Maintenance, and Safety management; Wiki agent was selected first, with the others not yet created.
 - **Orangepi** (`192.168.2.91`) — Runs nullclaw agent with Telegram bot @Nullclaw_culi_bot; SSH user `trongtan`.
 - **Mem0** — Evaluated as universal memory layer for AI agents (self-hosted via Docker); agents share memory via `user_id` separation. Not currently deployed.
 
