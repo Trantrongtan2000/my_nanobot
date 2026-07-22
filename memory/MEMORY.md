@@ -80,14 +80,14 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
 - **Hermes Gateway** — Messaging gateway service handling Telegram bot communication and MCP server coordination.
 - **Dedicated-agent direction** — User wants separate agents for OCR, Wiki, GraphRAG, Maintenance, and Safety management; Wiki agent was selected first, with the others not yet created.
 - **Orangepi** (`192.168.2.91`) — Runs nullclaw agent with Telegram bot @Nullclaw_culi_bot; SSH user `trongtan`.
-- **Mem0** — Evaluated as universal memory layer for AI agents (self-hosted via Docker); agents share memory via `user_id` separation. Not currently deployed.
+- **Mem0** — Self-hosted via Docker on TVBox (192.168.2.237:8888). Agents share memory via `user_id` separation. `.env` created, `make bootstrap` pending for admin/API key generation.
 
 ## Network Nodes
 
 | Node | IP | Role |
 |------|----|------|
 | Pi (main) | 192.168.2.21 (wlan) / 192.168.2.22 (eth) | nanobot + hermes-gateway + 9router |
-| TV Box | 192.168.2.237 | Hermes + nanobot; SSH port 2104 |
+| TV Box | 192.168.2.237 | Hermes + nanobot; SSH port 2104; Docker running Mem0 server on port 8888 |
 | Orangepi | 192.168.2.91 | nullclaw agent |
 
 ---
