@@ -43,7 +43,7 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
 
 - `workspace-mcp` v1.21.1 server runs locally (port 8000, 45 tools, 12 services: Gmail, Drive, Calendar, Docs, Sheets, Slides, Chat, Tasks, Contacts, Forms, Search).
 - Auth: `--single-user` mode with pre-created OAuth token. Credentials dir: `~/.google_workspace_mcp/credentials/`. Requires `WORKSPACE_MCP_HOST=0.0.0.0` for LAN access.
-- Gmail + Calendar + Chat scopes active; Drive/Docs/Sheets require re-auth with broader scopes (browser needed).
+- All scopes active (Gmail, Calendar, Chat, Drive, Docs, Sheets, Slides, Contacts, Tasks, Forms, Search) — re-authorized with full scopes 2026-06-03.
 - Drive layout (Jun 2026 snapshot): ~1.2TB / 5TB used; root folders `REVIEW_LATER`, `STUDY`, `PERSONAL`, `WORK`, `Root_Leftovers`.
 - Constraint: files owned by others in Shared Drives cannot be deleted by the user's token.
 
@@ -59,6 +59,8 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
 - **Device Wiki** (`kb/wiki/devices/`) — 38 ultrasound device pages for Tâm Anh Q7 from Excel, with AETitle registry (51 devices). Uses LLM Wiki 3-layer pattern (`raw/`, `wiki/`, `AGENTS.md`).
 
 - **Central Orchestrator** (`/home/tan/central-orchestrator/`) — CrewAI multi-agent system connecting nanobot + Hermes on two nodes (192.168.2.22 and 192.168.2.237), both running Hermes + nanobot.
+  - Node 2 (192.168.2.237) is a TV box; SSH access via port 2104.
+  - Hermes and nanobot originally shared the same Telegram token causing polling conflicts; separate tokens assigned.
 
 ## Tâm Anh Hospital Context
 
@@ -72,6 +74,17 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
 - **Pi Agent** (Qwen local via Ollama): web search fixed by replacing `@ollama/pi-web-search` with `pi-web-access` (Exa MCP).
 - Skills installed from ClawHub: self-improving-agent, skill-vetter, vibesec, markitdown.
 - **Mistral OCR workflow** (on Hermes): PDF → images → Mistral OCR → markdown. Used for biomedical document processing.
+- **Hermes Gateway** — Messaging gateway service handling Telegram bot communication and MCP server coordination.
+- **Orangepi** (`192.168.2.91`) — Runs nullclaw agent with Telegram bot @Nullclaw_culi_bot; SSH user `trongtan`.
+- **Mem0** — Evaluated as universal memory layer for AI agents (self-hosted via Docker); agents share memory via `user_id` separation. Not currently deployed.
+
+## Network Nodes
+
+| Node | IP | Role |
+|------|----|------|
+| Pi (main) | 192.168.2.21 (wlan) / 192.168.2.22 (eth) | nanobot + hermes-gateway + 9router |
+| TV Box | 192.168.2.237 | Hermes + nanobot; SSH port 2104 |
+| Orangepi | 192.168.2.91 | nullclaw agent |
 
 ---
 
