@@ -11,7 +11,13 @@ This file stores important information that should persist across sessions.
   - Config/logs: `/home/tan/.config/Browser Use/` (logs/, `run/browser-usedesktop-9222.log`, `sessions.db`, `harness/browser-harness-js`)
   - Engines: Claude Code v2.1.170 (authed), Codex v0.137.0 (NOT authed, missing `~/.codex/auth.json`)
 
-- **cli-anything-hub v0.3.0** + 69 `cli-anything-*` skills installed to `~/.agents/skills/`
+- **cli-anything-hub v0.3.0** + 69 `cli-anything-*` skills installed to `~/.agents/skills/
+
+- **MiniMax-AI/skills** (4 office skills installed to Hermes):
+  - `minimax-docx` — Tạo/sửa DOCX chuyên nghiệp (OpenXML SDK .NET)
+  - `minimax-pdf` — Tạo PDF đẹp (15 style), điền form, tái thiết kế
+  - `minimax-xlsx` — Đọc/phân tích/tạo/sửa Excel (XML template approach)
+  - `pptx-generator` — Tạo/sửa PowerPoint (PptxGenJS + design system)
 
 ## CLI-Anything Harness Convention
 
@@ -79,14 +85,14 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
 - **Mistral OCR workflow** (on Hermes): PDF → images → Mistral OCR → markdown. Used for biomedical document processing.
 - **Hermes Gateway** — Messaging gateway service handling Telegram bot communication and MCP server coordination.
 - **Dedicated-agent direction** — User wants separate agents for OCR, Wiki, GraphRAG, Maintenance, and Safety management; Wiki agent was selected first, with the others not yet created.
-- **Orangepi** (`192.168.2.91`) — Runs nullclaw agent with Telegram bot @Nullclaw_culi_bot; SSH user `trongtan`.
+- **Orangepi** (`192.168.2.91`) — Runs nullclaw agent with Telegram bot @Nullclaw_culi_bot; SSH user `trongtan`. Currently uses `custom` provider at `https://opencode.ai/zen/go/v1` with model `kimi-k2.6`. User is exploring switching to 9router provider (same as nanobot).
 - **Mem0** — Self-hosted via Docker on TVBox (192.168.2.237:8888). Agents share memory via `user_id` separation. Architecture: FastAPI + PostgreSQL (pgvector). Authentication via `X-API-Key` header.
 
 ## Network Nodes
 
 | Node | IP | Role |
 |------|----|------|
-| Pi (main) | 192.168.2.21 (wlan) / 192.168.2.22 (eth) | nanobot + hermes-gateway + 9router |
+| Pi (main) | 192.168.2.21 (wlan) / 192.168.2.22 (eth) | nanobot + hermes-gateway + 9router (skill: https://raw.githubusercontent.com/decolua/9router/refs/heads/master/skills/9router/SKILL.md) |
 | TV Box | 192.168.2.237 | Hermes + nanobot; SSH port 2104; Docker running Mem0 server on port 8888 |
 | Orangepi | 192.168.2.91 | nullclaw agent |
 
