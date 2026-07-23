@@ -80,7 +80,7 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
 - **Hermes Gateway** — Messaging gateway service handling Telegram bot communication and MCP server coordination.
 - **Dedicated-agent direction** — User wants separate agents for OCR, Wiki, GraphRAG, Maintenance, and Safety management; Wiki agent was selected first, with the others not yet created.
 - **Orangepi** (`192.168.2.91`) — Runs nullclaw agent with Telegram bot @Nullclaw_culi_bot; SSH user `trongtan`.
-- **Mem0** — Self-hosted via Docker on TVBox (192.168.2.237:8888). Agents share memory via `user_id` separation. `.env` created, `make bootstrap` pending for admin/API key generation.
+- **Mem0** — Self-hosted via Docker on TVBox (192.168.2.237:8888). Agents share memory via `user_id` separation. Architecture: FastAPI + PostgreSQL (pgvector). Authentication via `X-API-Key` header.
 
 ## Network Nodes
 
