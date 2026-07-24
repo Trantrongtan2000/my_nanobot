@@ -6,6 +6,8 @@ This file stores important information that should persist across sessions.
 
 ## Installed Software
 
+- `croc` v10.6.0 is installed for secure file transfers between devices. Reference documentation is maintained in the workspace wiki.
+
 - **browser-use-desktop v0.0.31** (`.deb`) → `/usr/bin/browser-use-desktop`
   - Electron app, controllable via CDP at `127.0.0.1:9222`
   - Must launch with `--remote-debugging-port=9222` AND `--remote-allow-origins=*` (else WebSocket 403)

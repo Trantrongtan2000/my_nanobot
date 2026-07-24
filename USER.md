@@ -41,6 +41,7 @@
 - Expert technical level — no beginner hand-holding
 - **Thông báo kế hoạch trước khi chạy**: Luôn nêu 1 câu ngắn gọn kế hoạch sẽ làm gì TRƯỚC KHI thực thi bất kỳ tool/lệnh nào.
 - Vietnamese default
+- **No heartbeat status reports** — disable all heartbeat reporting
 
 ### Response length
 - Telegram: 2–3 paragraphs typical
