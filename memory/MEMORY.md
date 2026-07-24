@@ -98,6 +98,15 @@ Shotcut, SiYuan, WireMock, Zoom, Zotero, 3MF, Tigris, VideoCaptioner, WaveTone, 
 | TV Box | 192.168.2.237 | Hermes + nanobot; SSH port 2104; Docker running Mem0 server on port 8888 |
 | Orangepi | 192.168.2.91 | nullclaw agent |
 
+## Maintenance Schedule Planning (July 2026)
+
+- File Excel kế hoạch bảo trì tháng 7/2026: `/home/tan/.nanobot/media/telegram/AgADkCAAAoCtGVc.xlsx`
+- Sheet chính: `KHBT T07.206` (điều chỉnh từ `KHBT T07.2026`)
+- Danh sách khoa cần lập lịch: Khám bệnh, Lọc máu, Tim mạch, Da liễu, Nội tiết, Mắt, Nhi, Nội thần kinh, Nội tổng hợp, Răng hàm mặt, Sản phụ khoa, Tai mũi họng (loại trừ Cấp cứu)
+- Lịch bảo trì: 24/07/2026 – 31/07/2026, 80 đầu mục, 210 thiết bị, mỗi ngày 10 đầu mục
+- Quy tắc ưu tiên: thiết bị M2 lên lịch trước M1
+- Lịch đã lưu tại: `/tmp/lich_bt_t07_2026.txt`
+
 ---
 
 *This file is automatically updated by nanobot when important information should be remembered.*
