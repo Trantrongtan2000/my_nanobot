@@ -61,6 +61,7 @@
 - Calibration & PM optimization, asset tracking
 - CLI / agent automation, LLM Wiki knowledge bases
 - Hospital ops for BV Quận 7 equipment docs/OCR
+- Maintenance checklist generation (DOCX templates, Excel data mapping)
 
 ## Special Instructions
 
