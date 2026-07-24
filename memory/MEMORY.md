@@ -6,7 +6,7 @@ This file stores important information that should persist across sessions.
 
 ## Installed Software
 
-- `croc` v10.6.0 is installed for secure file transfers between devices. Reference documentation is maintained in the workspace wiki.
+- `croc` v10.6.0 — CLI tool for secure file transfers using relay + PAKE. Cross-platform, resume support, Tor proxy. Installed at `/usr/local/bin` (Linux-ARM64). Documentation in `wiki/croc.md`.
 
 - **browser-use-desktop v0.0.31** (`.deb`) → `/usr/bin/browser-use-desktop`
   - Electron app, controllable via CDP at `127.0.0.1:9222`
