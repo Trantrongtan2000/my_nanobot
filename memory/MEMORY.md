@@ -19,7 +19,7 @@ This file stores important information that should persist across sessions.
 
 - **n8n-atom** — n8n workflow orchestrator installed via `npx -y @atom8n/n8n@latest`, runs as `n8n-atom.service` on port 5888. Handles workflow coordination; nanobot handles OCR, wiki, and GraphRAG.
 
-- **Page Agent** (beta) — GUI agent for Alibaba JS pages; enables natural language web control without extensions/headless browsers; supports LLM integration, Chrome extension, and MCP; installed via `npm install page-agent`.
+- **Page Agent** (beta) — GUI agent for Alibaba JS pages; enables natural language web control without extensions/headless browsers; supports LLM integration, Chrome extension, and MCP; installed via `npm install page-agent`. User wants to integrate with MEIMS/QLTB frontend (client-side) for automating equipment management operations.
 
 - **MiniMax-AI/skills** (4 office skills installed to Hermes):
   - `minimax-docx` — Tạo/sửa DOCX chuyên nghiệp (OpenXML SDK .NET)
@@ -44,7 +44,7 @@ This file stores important information that should persist across sessions.
   - By default fetches only email metadata (snippet); full body fetched on demand via `read <id>` or `readall`.
   - Source emails stored under `/home/tan/.nanobot/workspace/hospital-emails.json`.
 
-- **Device Wiki** (`kb/wiki/devices/`) — 38 ultrasound device pages for Tâm Anh Q7 from Excel, with AETitle registry (51 devices). Uses LLM Wiki 3-layer pattern (`raw/`, `wiki/`, `AGENTS.md`).
+- **Device Wiki** (`wiki/entities/`) — 52+ entity markdown files for Tâm Anh Q7 medical devices, including ultrasound devices from Excel with AETitle registry (51 devices). Uses LLM Wiki 3-layer pattern (`raw/`, `wiki/`, `AGENTS.md`).
 
 - **Central Orchestrator** (`/home/tan/central-orchestrator/`) — CrewAI multi-agent system connecting nanobot + Hermes on two nodes (192.168.2.22 and 192.168.2.237), both running Hermes + nanobot.
   - Architecture: Hermes handles planning/coordination (calls Node 1), Nanobot handles code/GPU-heavy tasks (calls Node 2). Both agents run on both nodes.
@@ -98,7 +98,8 @@ This file stores important information that should persist across sessions.
 - Extractor (`core/extractor.py`) uses two-step process: OCR/PDF text extraction, then chat-based JSON parsing with API key rotation and retry on quota errors
 - Data schema: top-level `shd`, `shd_type`, `cty`, `ds` (array of devices); each device uses `ttb`, `model`, `ref`, `hang`, `nsx`, `dvt`, `sl`, `seri`, `pk` (pk must be array of strings)
 - Grouping logic: merges devices by normalized name, model, REF, manufacturer, country of origin, unit of measure, and accessories; sums quantities; collects unique serials
-- Workflow currently mismatches repo schema: uses `devices/name/serial` instead of `ds/ttb/seri`, lacks grouping and filename logic, depends on internal DOCX services with no evidence they exist
+- Workflow needs corrections: parse OCR response JSON, handle image file types, proper file type routing, add error handling
+- Workflow skeleton doesn't match repo schema: uses `devices/name/serial` instead of `ds/ttb/seri`, lacks grouping and filename logic, depends on internal DOCX services with no evidence they exist
 
 ## References & Learning
 
