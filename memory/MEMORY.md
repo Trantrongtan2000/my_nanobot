@@ -84,6 +84,14 @@ This file stores important information that should persist across sessions.
 - Checklist DOCX output: `/home/tan/.nanobot/workspace/maintenance_checklists/` (55 files: 54 by date/dept + 1 Emergency)
 - Checklist template: 12 cột (STT, Ngày, Kỹ thuật viên, Thiết bị, Model, SN, SL, Loại BT, Tìm thấy, Xử lý, Phụ tùng, Tình trạng) với mã M1/M2 theo ISO 13485
 
+## n8n Handover Document Automation
+
+- User building n8n workflow for handover document automation using Mistral OCR + Word template `bbbg.docx`
+- Reference repo: https://github.com/Trantrongtan2000/bbbgtaq7
+- n8n workflow skeleton at `/home/tan/.nanobot/workspace/n8n-bbbg/`
+- `python-docx` v1.2.0 installed in environment
+- Mistral OCR API endpoint: `/v1/ocr` (not `/v1/chat/completions`)
+
 ---
 
 *This file is automatically updated by nanobot when important information should be remembered.*
