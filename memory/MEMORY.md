@@ -15,7 +15,11 @@ This file stores important information that should persist across sessions.
   - Config/logs: `/home/tan/.config/Browser Use/` (logs/, `run/browser-usedesktop-9222.log`, `sessions.db`, `harness/browser-harness-js`)
   - Engines: Claude Code v2.1.170 (authed), Codex v0.137.0 (NOT authed, missing `~/.codex/auth.json`)
 
-- **cli-anything-hub v0.3.0** + 69 `cli-anything-*` skills installed to `~/.agents/skills/
+- **cli-anything-hub v0.3.0** + 69 `cli-anything-*` skills installed to `~/.agents/skills/`
+
+- **n8n-atom** — n8n workflow orchestrator installed via `npx -y @atom8n/n8n@latest`, runs as `n8n-atom.service` on port 5888. Handles workflow coordination; nanobot handles OCR, wiki, and GraphRAG.
+
+- **Page Agent** (beta) — GUI agent for Alibaba JS pages; enables natural language web control without extensions/headless browsers; supports LLM integration, Chrome extension, and MCP; installed via `npm install page-agent`.
 
 - **MiniMax-AI/skills** (4 office skills installed to Hermes):
   - `minimax-docx` — Tạo/sửa DOCX chuyên nghiệp (OpenXML SDK .NET)
@@ -88,11 +92,14 @@ This file stores important information that should persist across sessions.
 
 - User building n8n workflow for handover document automation using Mistral OCR + Word template `bbbg.docx`
 - Reference repo: https://github.com/Trantrongtan2000/bbbgtaq7
-- n8n workflow skeleton at `/home/tan/.nanobot/workspace/n8n-bbbg/`
+- n8n workflow skeleton at `/home/tan/.nanobot/workspace/n8n-bbbgtaq7-workflow.json`; template `bbbg.docx` in workspace
 - `python-docx` v1.2.0 installed in environment
-- Mistral OCR API endpoint: `/v1/ocr` (not `/v1/chat/completions`)
+- Mistral OCR API endpoint: `/v1/ocr` (not `/v1/chat/completions` — workflow currently calls wrong endpoint)
+- Extractor (`core/extractor.py`) uses two-step process: OCR/PDF text extraction, then chat-based JSON parsing with API key rotation and retry on quota errors
+- Data schema: top-level `shd`, `shd_type`, `cty`, `ds` (array of devices); each device uses `ttb`, `model`, `ref`, `hang`, `nsx`, `dvt`, `sl`, `seri`, `pk` (pk must be array of strings)
+- Grouping logic: merges devices by normalized name, model, REF, manufacturer, country of origin, unit of measure, and accessories; sums quantities; collects unique serials
+- Workflow currently mismatches repo schema: uses `devices/name/serial` instead of `ds/ttb/seri`, lacks grouping and filename logic, depends on internal DOCX services with no evidence they exist
 
 ---
 
 *This file is automatically updated by nanobot when important information should be remembered.*
-- **Page Agent** (beta) — GUI agent for Alibaba JS pages; enables natural language web control without extensions/headless browsers; supports LLM integration, Chrome extension, and MCP; installed via `npm install page-agent`.
