@@ -91,7 +91,7 @@ This file stores important information that should persist across sessions.
 ## n8n Handover Document Automation
 
 - User building n8n workflow for handover document automation using Mistral OCR + Word template `bbbg.docx`
-- Reference repo: https://github.com/Trantrongtan2000/bbbgtaq7
+- Reference repo: https://github.com/Trantrongtan2000/bbbgtaq7 (Streamlit app for handover document processing)
 - n8n workflow skeleton at `/home/tan/.nanobot/workspace/n8n-bbbgtaq7-workflow.json`; template `bbbg.docx` in workspace
 - `python-docx` v1.2.0 installed in environment
 - Mistral OCR API endpoint: `/v1/ocr` (not `/v1/chat/completions` — workflow currently calls wrong endpoint)
@@ -99,6 +99,10 @@ This file stores important information that should persist across sessions.
 - Data schema: top-level `shd`, `shd_type`, `cty`, `ds` (array of devices); each device uses `ttb`, `model`, `ref`, `hang`, `nsx`, `dvt`, `sl`, `seri`, `pk` (pk must be array of strings)
 - Grouping logic: merges devices by normalized name, model, REF, manufacturer, country of origin, unit of measure, and accessories; sums quantities; collects unique serials
 - Workflow currently mismatches repo schema: uses `devices/name/serial` instead of `ds/ttb/seri`, lacks grouping and filename logic, depends on internal DOCX services with no evidence they exist
+
+## References & Learning
+
+- **ai-agent-book** (`bojieli/ai-agent-book`) — 10 chương, 92 thí nghiệm; công thức Agent = LLM + Context + Tools. Bản HTML tương tác đa ngôn ngữ tại https://bojieli.github.io/ai-agent-book/
 
 ---
 
