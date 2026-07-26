@@ -108,3 +108,14 @@ This file stores important information that should persist across sessions.
 ---
 
 *This file is automatically updated by nanobot when important information should be remembered.*
+
+## System Health
+
+- Heartbeat job is a protected system-managed cron job that cannot be removed.
+- 9router health check fails because required user-session D-Bus environment variables are missing.
+- Nanobot self health check also fails for the same missing user-session D-Bus environment variables.
+
+## Tutorial Structure
+
+- Tutorial split into Category A (DigitalPlat Platform) covering account creation, domain registration, external nameserver connection, status/renewal, and Category B (General Domain & Website) covering DNS fundamentals, website build, email records, operations, advanced architecture, and capstone project.
+- Quick-path sections: only connect external nameservers; only publish first website; full course path from Category A through capstone.
