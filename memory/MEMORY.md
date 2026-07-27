@@ -96,7 +96,7 @@ This file stores important information that should persist across sessions.
 - `python-docx` v1.2.0 installed in environment
 - Mistral OCR API endpoint: `/v1/ocr` (not `/v1/chat/completions` — workflow currently calls wrong endpoint)
 - Extractor (`core/extractor.py`) uses two-step process: OCR/PDF text extraction, then chat-based JSON parsing with API key rotation and retry on quota errors
-- Data schema: top-level `shd`, `shd_type`, `cty`, `ds` (array of devices); each device uses `ttb`, `model`, `ref`, `hang`, `nsx`, `dvt`, `sl`, `seri`, `pk` (pk must be array of strings)
+- Data schema: defined in `qltb-doc-automation` skill (`shd`, `shd_type`, `cty`, `ds[]` with `ttb`, `model`, `ref`, `hang`, `nsx`, `dvt`, `sl`, `seri`, `pk[]`)
 - Grouping logic: merges devices by normalized name, model, REF, manufacturer, country of origin, unit of measure, and accessories; sums quantities; collects unique serials
 - Workflow needs corrections: parse OCR response JSON, handle image file types, proper file type routing, add error handling
 - Workflow skeleton doesn't match repo schema: uses `devices/name/serial` instead of `ds/ttb/seri`, lacks grouping and filename logic, depends on internal DOCX services with no evidence they exist
