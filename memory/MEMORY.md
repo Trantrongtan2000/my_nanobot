@@ -104,9 +104,11 @@ This file stores important information that should persist across sessions.
 ## References & Learning
 
 - **ai-agent-book** (`bojieli/ai-agent-book`) — 10 chương, 92 thí nghiệm; công thức Agent = LLM + Context + Tools. Bản HTML tương tác đa ngôn ngữ tại https://bojieli.github.io/ai-agent-book/
+- **OpenScience** (`@synsci/openscience`) — AI workbench mã nguồn mở Apache 2.0 cho nghiên cứu khoa học: 290+ skills, 30+ CSDL, workspace trên trình duyệt, hỗ trợ nhiều model providers.
+- **DigitalPlat FreeDomain** — Miễn phí domain (5 TLD: .DPDNS.ORG, .US.KG, .QZZ.IO, .XX.KG, .QD.JE). DigitalPlat chỉ xử lý đăng ký + delegate NS; tất cả DNS records quản lý ở external authoritative DNS.
+- **OpenSpace** (`HKUDS/OpenSpace`) — Skill Management Layer cho AI Agents: 6 MCP tools, hỗ trợ stdio/SSE/streamable-http. User từ chối áp dụng cho workflow bảo trì thiết bị.
 
 ---
-
 *This file is automatically updated by nanobot when important information should be remembered.*
 
 ## System Health
@@ -114,9 +116,3 @@ This file stores important information that should persist across sessions.
 - Heartbeat job is a protected system-managed cron job that cannot be removed.
 - 9router health check fails because required user-session D-Bus environment variables are missing.
 - Nanobot self health check also fails for the same missing user-session D-Bus environment variables.
-
-## Tutorial Structure
-
-- Tutorial split into Category A (DigitalPlat Platform) covering account creation, domain registration, external nameserver connection, status/renewal, and Category B (General Domain & Website) covering DNS fundamentals, website build, email records, operations, advanced architecture, and capstone project.
-- DigitalPlat only handles registration and external NS delegation; all DNS records (A, AAAA, CNAME, MX, TXT) must be managed in an external authoritative DNS service.
-- Quick-path sections: only connect external nameservers; only publish first website; full course path from Category A through capstone.
