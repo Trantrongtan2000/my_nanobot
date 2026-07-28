@@ -27,6 +27,13 @@ This file stores important information that should persist across sessions.
   - `minimax-xlsx` — Đọc/phân tích/tạo/sửa Excel (XML template approach)
   - `pptx-generator` — Tạo/sửa PowerPoint (PptxGenJS + design system)
 
+- **Zimit** — Docker-based web scraper that builds ZIM offline archives from any website.
+  - Crawls sites using Browsertrix Crawler, converts WARC files to ZIM via warc2zim.
+  - Output stored in mountable `/output` directory.
+  - Core command: `docker run -v /output:/output ghcr.io/openzim/zimit zimit --seeds <URL> --name <file> [options]`
+  - Key options: `--pageLimit`, `--scopeExcludeRx` (URL exclusion), `--workers` (parallelism).
+  - User wants to use as a skill for offline website browsing; deployment incomplete (404/503 errors).
+
 ## Google Workspace Integration
 
 - `workspace-mcp` v1.21.1 server runs locally (port 8000, 45 tools, 12 services: Gmail, Drive, Calendar, Docs, Sheets, Slides, Chat, Tasks, Contacts, Forms, Search).
@@ -94,19 +101,17 @@ This file stores important information that should persist across sessions.
 - Reference repo: https://github.com/Trantrongtan2000/bbbgtaq7 (Streamlit app for handover document processing)
 - n8n workflow skeleton at `/home/tan/.nanobot/workspace/n8n-bbbgtaq7-workflow.json`; template `bbbg.docx` in workspace
 - `python-docx` v1.2.0 installed in environment
-- Mistral OCR API endpoint: `/v1/ocr` (not `/v1/chat/completions` — workflow currently calls wrong endpoint)
-- Extractor (`core/extractor.py`) uses two-step process: OCR/PDF text extraction, then chat-based JSON parsing with API key rotation and retry on quota errors
-- Data schema: defined in `qltb-doc-automation` skill (`shd`, `shd_type`, `cty`, `ds[]` with `ttb`, `model`, `ref`, `hang`, `nsx`, `dvt`, `sl`, `seri`, `pk[]`)
-- Grouping logic: merges devices by normalized name, model, REF, manufacturer, country of origin, unit of measure, and accessories; sums quantities; collects unique serials
-- Workflow needs corrections: parse OCR response JSON, handle image file types, proper file type routing, add error handling
-- Workflow skeleton doesn't match repo schema: uses `devices/name/serial` instead of `ds/ttb/seri`, lacks grouping and filename logic, depends on internal DOCX services with no evidence they exist
+- Schema JSON (theo bbbgtaq7): `shd`, `shd_type`, `cty`, `ds[]` với `ttb`, `model`, `ref`, `hang`, `nsx`, `dvt`, `sl`, `seri`, `pk[]`
+- Extractor (`core/extractor.py`) hai bước: OCR/PDF → chat JSON parsing, key rotation + retry khi quota error
+- Grouping: gộp thiết bị theo tên chuẩn hóa + model + REF + hãng + nước SX + DVT + phụ kiện; cộng SL, gom seri
+- Workflow skeleton hiện không khớp repo: dùng `devices/name/serial` thay vì `ds/ttb/seri`, thiếu grouping, gọi sai endpoint Mistral OCR (`/v1/chat/completions` thay vì `/v1/ocr`), phụ thuộc service DOCX nội bộ chưa tồn tại
 
 ## References & Learning
 
 - **ai-agent-book** (`bojieli/ai-agent-book`) — 10 chương, 92 thí nghiệm; công thức Agent = LLM + Context + Tools. Bản HTML tương tác đa ngôn ngữ tại https://bojieli.github.io/ai-agent-book/
 - **OpenScience** (`@synsci/openscience`) — AI workbench mã nguồn mở Apache 2.0 cho nghiên cứu khoa học: 290+ skills, 30+ CSDL, workspace trên trình duyệt, hỗ trợ nhiều model providers.
-- **DigitalPlat FreeDomain** — Miễn phí domain (5 TLD: .DPDNS.ORG, .US.KG, .QZZ.IO, .XX.KG, .QD.JE). DigitalPlat chỉ xử lý đăng ký + delegate NS; tất cả DNS records quản lý ở external authoritative DNS.
-- **OpenSpace** (`HKUDS/OpenSpace`) — Skill Management Layer cho AI Agents: 6 MCP tools, hỗ trợ stdio/SSE/streamable-http. User từ chối áp dụng cho workflow bảo trì thiết bị.
+- **DigitalPlat FreeDomain** — Miễn phí domain (5 TLD: .DPDNS.ORG, .US.KG, .QZZ.IO, .XX.KG, .QD.JE). DigitalPlat chỉ xử lý đăng ký + delegate NS; tất cả DNS records quản lý ở external authoritative DNS. Dashboard: dash.domain.digitalplat.org. Telegram chính thức bị compromise — không tin cậy comms Telegram. Repo: DigitalPlatDev/Domain-OSS. Workflow MEIMS: đăng ký tài khoản, chọn domain (vd `tbytq7.us.kg`), connect NS đến Cloudflare/VPS, cấu hình DNS trỏ MEIMS backend, HTTPS qua Let's Encrypt.
+- **OpenSpace** (`HKUDS/OpenSpace`) — Skill Management Layer cho AI Agents: 6 MCP tools (`cloud_auth_flow`, `execute_task`, `search_skills`, `cloud_browse_skills`, `fix_skill`, `upload_skill`), 2 host skills (`skill-discovery`, `delegate-task`), hỗ trợ stdio/SSE/streamable-http. User từ chối áp dụng cho workflow bảo trì thiết bị.
 
 ---
 *This file is automatically updated by nanobot when important information should be remembered.*
