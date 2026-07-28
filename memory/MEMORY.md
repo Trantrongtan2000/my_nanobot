@@ -121,3 +121,4 @@ This file stores important information that should persist across sessions.
 - Heartbeat job is a protected system-managed cron job that cannot be removed.
 - 9router health check fails because required user-session D-Bus environment variables are missing.
 - Nanobot self health check also fails for the same missing user-session D-Bus environment variables.
+- Environment deny pattern filter blocks `rm`, `npm --force`, and similar destructive commands for security.
