@@ -59,6 +59,7 @@ This file stores important information that should persist across sessions.
   - Config in `.env`: `NODE1_BASE_URL`, `NODE2_BASE_URL`, `SHARED_MODEL_NAME=MiniMax-M2.7`.
   - Structure: `main.py` (entry), `bot.py` (Telegram handler), `orchestrator.py` (CrewAI logic), `agents.py` (agent defs), `requirements.txt`, `.env.example`.
   - Hermes and nanobot originally shared the same Telegram token causing polling conflicts; separate tokens assigned per bot.
+- **Goflow** — Source directory `/tmp/Goflow` is missing; need to clone the repository or copy source into workspace to continue.
 
 ## Tâm Anh Hospital Context
 
