@@ -88,13 +88,8 @@ This file stores important information that should persist across sessions.
 
 ## Maintenance Schedule Planning (July 2026)
 
-- File Excel kế hoạch bảo trì tháng 7/2026: `/home/tan/.nanobot/media/telegram/AgADkCAAAoCtGVc.xlsx`
-- Sheet chính: `KHBT T07.206` (điều chỉnh từ `KHBT T07.2026`)
-- Danh sách khoa: Khám bệnh, Lọc máu, Tim mạch, Da liễu, Nội tiết, Mắt, Nhi, Nội thần kinh, Nội tổng hợp, Răng hàm mặt, Sản phụ khoa, Tai mũi họng, Cấp cứu (12 khoa)
-- Lịch bảo trì: 24/07/2026 – 31/07/2026, 80 đầu mục, 210 thiết bị, mỗi ngày 10 đầu mục
-- Quy tắc ưu tiên: thiết bị M2 lên lịch trước M1
-- Checklist DOCX output: `/home/tan/.nanobot/workspace/maintenance_checklists/` (55 files: 54 by date/dept + 1 Emergency)
-- Checklist template: 12 cột (STT, Ngày, Kỹ thuật viên, Thiết bị, Model, SN, SL, Loại BT, Tìm thấy, Xử lý, Phụ tùng, Tình trạng) với mã M1/M2 theo ISO 13485
+- File Excel kế hoạch bảo trì tháng 7/2026 của Bệnh viện Tâm Anh Quận 7: `/home/tan/.nanobot/media/telegram/AgADkCAAAoCtGVc.xlsx`
+- Sheet kế hoạch: `KHBT 2026 TRÌNH BLD`
 
 ## n8n Handover Document Automation
 
