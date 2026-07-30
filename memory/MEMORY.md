@@ -91,6 +91,24 @@ This file stores important information that should persist across sessions.
 - File Excel kế hoạch bảo trì tháng 7/2026 của Bệnh viện Tâm Anh Quận 7: `/home/tan/.nanobot/media/telegram/AgADkCAAAoCtGVc.xlsx`
 - Sheet kế hoạch: `KHBT 2026 TRÌNH BLD`
 
+## Device Maintenance Details
+
+**Total devices scheduled**: 18
+
+**Inspection (I) with maintenance (3 devices)**:
+- Dao mổ ZEUS-150
+- Máy điện tim 6 kênh ECG-1250K
+- Máy phá rung tim TEC-5621
+
+**Type M2 devices (2 devices)**:
+- Hệ thống nội soi bàng quang KARL STORZ
+- Handheld SpO2 meter Rad-5v
+
+**Type M1 devices (13 devices)**:
+- Remaining 13 devices for routine maintenance
+
+**Verification**: Corrected from initial report of 0 devices - actual schedule shows 18 devices across M1, M2, and inspection categories
+
 ## n8n Handover Document Automation
 
 - User building n8n workflow for handover document automation using Mistral OCR + Word template `bbbg.docx`
