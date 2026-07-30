@@ -93,21 +93,26 @@ This file stores important information that should persist across sessions.
 
 ## Device Maintenance Details
 
-**Total devices scheduled**: 18
+**Total devices scheduled**: 22 (corrected from initial report of 18)
 
 **Inspection (I) with maintenance (3 devices)**:
 - Dao mổ ZEUS-150
 - Máy điện tim 6 kênh ECG-1250K
-- Máy phá rung tim TEC-5621
+- Máy phá rung tim TEC-5621 (SN: 09284, năm sản xuất 2022)
 
-**Type M2 devices (2 devices)**:
+**Type M2 devices (3 devices)**:
 - Hệ thống nội soi bàng quang KARL STORZ
-- Handheld SpO2 meter Rad-5v
+- Máy đo SpO₂ Rad-5v (SN: N241406)
+- Xe đẩy SC32PRO (SN: BM25-P0954) — xuất hiện 2 lần trong kế hoạch, cần rà soát trùng lặp
 
-**Type M1 devices (13 devices)**:
-- Remaining 13 devices for routine maintenance
+**Type M1 devices (16 devices)**:
+- Remaining 16 devices for routine maintenance
 
-**Verification**: Corrected from initial report of 0 devices - actual schedule shows 18 devices across M1, M2, and inspection categories
+**Room assignments (Khoa Khám bệnh - Da liễu, Phòng 3001)**:
+- Máy số 17: Monitor 5 thông số, mã tài sản 5114910500018, S/N SQF22050074SA, phòng 0047 - Phòng thủ thuật (đã sửa từ Khoa Cấp cứu)
+- Máy số 18: Monitor 5 thông số, mã tài sản 5114910500011, S/N SQF22050030SA, phòng 0049 - Cấp cứu Sản (đã sửa từ Khoa Cấp cứu)
+- Máy số 19: Monitor 5 thông số, mã tài sản 5114910500001, S/N SQF22040127SA, phòng chưa xác nhận
+- Monitor 6 thông số: Monitor vận chuyển
 
 ## n8n Handover Document Automation
 
