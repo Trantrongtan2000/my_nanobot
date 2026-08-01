@@ -1,0 +1,16 @@
+{
+  "input": "/home/tan/.nanobot/media/telegram/AQADFRNrG_n2CFd8.jpg",
+  "out_dir": "/home/tan/.nanobot/workspace/AQADFRNrG_n2CFd8_ocr_org",
+  "images": [
+    "/home/tan/.nanobot/workspace/AQADFRNrG_n2CFd8_ocr_org/images/AQADFRNrG_n2CFd8.jpg"
+  ],
+  "ocr_model": "mistral-ocr-latest",
+  "organize": false,
+  "organize_model": null,
+  "organize_via": null,
+  "files": {
+    "ocr_raw_json": "/home/tan/.nanobot/workspace/AQADFRNrG_n2CFd8_ocr_org/ocr_raw.json",
+    "ocr_raw_md": "/home/tan/.nanobot/workspace/AQADFRNrG_n2CFd8_ocr_org/ocr_raw.md",
+    "organized_md": "/home/tan/.nanobot/workspace/AQADFRNrG_n2CFd8_ocr_org/organized.md"
+  }
+}

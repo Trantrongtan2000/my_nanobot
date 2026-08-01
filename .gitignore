@@ -1,6 +1,15 @@
-/*
-!memory/
-!SOUL.md
-!USER.md
-!memory/MEMORY.md
-!.gitignore
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+
+# Logs & temporary run files
+logs/
+run/
+*.log
+
+# Databases & local session logs
+*.db
+*.sqlite
+sessions/

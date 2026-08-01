@@ -1,0 +1,16 @@
+/*
+!memory/
+!SOUL.md
+!USER.md
+!AGENTS.md
+!TOOLS.md
+!IDENTITY.md
+!HEARTBEAT.md
+!memory/MEMORY.md
+!.gitignore
+# Source the agent may edit / code-review-graph should index
+!*.py
+!skills/
+!skills/**
+!wiki/
+!wiki/**

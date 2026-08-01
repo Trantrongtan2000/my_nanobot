@@ -1,0 +1,24 @@
+<!-- page 1 -->
+ELEPHOCARDIOGRAPH
+ECG-3350
+2023
+
+0129451521014776(21)00300
+
+NIKON KOHDEN CORPORATION
+
+10th at Narhechi, Shinjuku-ku, Tokyo 161-8560, Japan
+
+![img-0.jpeg](img-0.jpeg)
+
+00300 POWER INPUT 150VA
+
+ECG-3350K
+00300 AB
+
+NIKON KOHDEN CORPORATION
+10th at Narhechi, Shinjuku-ku,
+Tokyo 161-8560, Japan
+
+ECG-3350K
+00300 AB

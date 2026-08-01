@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "heartbeat",
+      "name": "heartbeat",
+      "enabled": false,
+      "schedule": {
+        "kind": "every",
+        "atMs": null,
+        "everyMs": 1800000,
+        "expr": null,
+        "tz": "UTC"
+      },
+      "payload": {
+        "kind": "system_event",
+        "message": "",
+        "deliver": false,
+        "channel": null,
+        "to": null,
+        "channelMeta": {},
+        "sessionKey": null,
+        "originChannel": null,
+        "originChatId": null,
+        "originMetadata": {}
+      },
+      "state": {
+        "nextRunAtMs": 1785119664516,
+        "lastRunAtMs": 1785117815524,
+        "lastStatus": "ok",
+        "lastError": null,
+        "runHistory": [
+          {
+            "runAtMs": 1785082442941,
+            "status": "ok",
+            "durationMs": 57639,
+            "error": null
+          },
+          {
+            "runAtMs": 1785084300583,
+            "status": "ok",
+            "durationMs": 63315,
+            "error": null
+          },
+          {
+            "runAtMs": 1785086163910,
+            "status": "ok",
+            "durationMs": 40470,
+            "error": null
+          },
+          {
+            "runAtMs": 1785088004383,
+            "status": "ok",
+            "durationMs": 89295,
+            "error": null
+          },
+          {
+            "runAtMs": 1785089893681,
+            "status": "ok",
+            "durationMs": 102584,
+            "error": null
+          },
+          {
+            "runAtMs": 1785091796268,
+            "status": "ok",
+            "durationMs": 68968,
+            "error": null
+          },
+          {
+            "runAtMs": 1785093665239,
+            "status": "ok",
+            "durationMs": 47931,
+            "error": null
+          },
+          {
+            "runAtMs": 1785095513173,
+            "status": "ok",
+            "durationMs": 36511,
+            "error": null
+          },
+          {
+            "runAtMs": 1785097349686,
+            "status": "ok",
+            "durationMs": 27381,
+            "error": null
+          },
+          {
+            "runAtMs": 1785099177093,
+            "status": "ok",
+            "durationMs": 16074,
+            "error": null
+          },
+          {
+            "runAtMs": 1785100993170,
+            "status": "ok",
+            "durationMs": 88632,
+            "error": null
+          },
+          {
+            "runAtMs": 1785102881805,
+            "status": "ok",
+            "durationMs": 45730,
+            "error": null
+          },
+          {
+            "runAtMs": 1785104727537,
+            "status": "ok",
+            "durationMs": 33649,
+            "error": null
+          },
+          {
+            "runAtMs": 1785106561189,
+            "status": "ok",
+            "durationMs": 17696,
+            "error": null
+          },
+          {
+            "runAtMs": 1785108378891,
+            "status": "ok",
+            "durationMs": 21387,
+            "error": null
+          },
+          {
+            "runAtMs": 1785110200282,
+            "status": "ok",
+            "durationMs": 47805,
+            "error": null
+          },
+          {
+            "runAtMs": 1785112048093,
+            "status": "ok",
+            "durationMs": 111345,
+            "error": null
+          },
+          {
+            "runAtMs": 1785113959441,
+            "status": "ok",
+            "durationMs": 25888,
+            "error": null
+          },
+          {
+            "runAtMs": 1785115785354,
+            "status": "ok",
+            "durationMs": 33375,
+            "error": null
+          },
+          {
+            "runAtMs": 1785117815524,
+            "status": "ok",
+            "durationMs": 48992,
+            "error": null
+          }
+        ]
+      },
+      "createdAtMs": 1784974488964,
+      "updatedAtMs": 1785117864516,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "dream",
+      "name": "dream",
+      "enabled": true,
+      "schedule": {
+        "kind": "every",
+        "atMs": null,
+        "everyMs": 7200000,
+        "expr": null,
+        "tz": null
+      },
+      "payload": {
+        "kind": "system_event",
+        "message": "",
+        "deliver": false,
+        "channel": null,
+        "to": null,
+        "channelMeta": {},
+        "sessionKey": null,
+        "originChannel": null,
+        "originChatId": null,
+        "originMetadata": {}
+      },
+      "state": {
+        "nextRunAtMs": 1785577831996,
+        "lastRunAtMs": 1785570631728,
+        "lastStatus": "ok",
+        "lastError": null,
+        "runHistory": [
+          {
+            "runAtMs": 1785432455894,
+            "status": "ok",
+            "durationMs": 268,
+            "error": null
+          },
+          {
+            "runAtMs": 1785439656166,
+            "status": "ok",
+            "durationMs": 404,
+            "error": null
+          },
+          {
+            "runAtMs": 1785446856575,
+            "status": "ok",
+            "durationMs": 267,
+            "error": null
+          },
+          {
+            "runAtMs": 1785454056845,
+            "status": "ok",
+            "durationMs": 213,
+            "error": null
+          },
+          {
+            "runAtMs": 1785461257315,
+            "status": "ok",
+            "durationMs": 1179,
+            "error": null
+          },
+          {
+            "runAtMs": 1785468458498,
+            "status": "ok",
+            "durationMs": 268177,
+            "error": null
+          },
+          {
+            "runAtMs": 1785475926679,
+            "status": "ok",
+            "durationMs": 286,
+            "error": null
+          },
+          {
+            "runAtMs": 1785483126982,
+            "status": "ok",
+            "durationMs": 329,
+            "error": null
+          },
+          {
+            "runAtMs": 1785490327322,
+            "status": "ok",
+            "durationMs": 370803,
+            "error": null
+          },
+          {
+            "runAtMs": 1785497898133,
+            "status": "ok",
+            "durationMs": 620771,
+            "error": null
+          },
+          {
+            "runAtMs": 1785505718908,
+            "status": "ok",
+            "durationMs": 376,
+            "error": null
+          },
+          {
+            "runAtMs": 1785512919286,
+            "status": "ok",
+            "durationMs": 111077,
+            "error": null
+          },
+          {
+            "runAtMs": 1785520230365,
+            "status": "ok",
+            "durationMs": 241,
+            "error": null
+          },
+          {
+            "runAtMs": 1785527430612,
+            "status": "ok",
+            "durationMs": 89,
+            "error": null
+          },
+          {
+            "runAtMs": 1785534630705,
+            "status": "ok",
+            "durationMs": 139,
+            "error": null
+          },
+          {
+            "runAtMs": 1785541830850,
+            "status": "ok",
+            "durationMs": 212,
+            "error": null
+          },
+          {
+            "runAtMs": 1785549031064,
+            "status": "ok",
+            "durationMs": 38,
+            "error": null
+          },
+          {
+            "runAtMs": 1785556231104,
+            "status": "ok",
+            "durationMs": 231,
+            "error": null
+          },
+          {
+            "runAtMs": 1785563431380,
+            "status": "ok",
+            "durationMs": 227,
+            "error": null
+          },
+          {
+            "runAtMs": 1785570631728,
+            "status": "ok",
+            "durationMs": 268,
+            "error": null
+          }
+        ]
+      },
+      "createdAtMs": 1785244658427,
+      "updatedAtMs": 1785570631996,
+      "deleteAfterRun": false
+    }
+  ]
+}

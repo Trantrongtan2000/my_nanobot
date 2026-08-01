@@ -1,0 +1,119 @@
+{
+  "pages": [
+    {
+      "index": 0,
+      "markdown": "ELEPHOCARDIOGRAPH\nECG-3350\n2023\n\n0129451521014776(21)00300\n\nNIKON KOHDEN CORPORATION\n\n10th at Narhechi, Shinjuku-ku, Tokyo 161-8560, Japan\n\n![img-0.jpeg](img-0.jpeg)\n\n00300 POWER INPUT 150VA\n\nECG-3350K\n00300 AB\n\nNIKON KOHDEN CORPORATION\n10th at Narhechi, Shinjuku-ku,\nTokyo 161-8560, Japan\n\nECG-3350K\n00300 AB",
+      "images": [
+        {
+          "id": "img-0.jpeg",
+          "top_left_x": 651,
+          "top_left_y": 509,
+          "bottom_right_x": 856,
+          "bottom_right_y": 682,
+          "image_base64": null,
+          "image_annotation": null
+        }
+      ],
+      "tables": [],
+      "hyperlinks": [],
+      "header": null,
+      "footer": null,
+      "dimensions": {
+        "dpi": 200,
+        "height": 1920,
+        "width": 2560
+      },
+      "confidence_scores": null,
+      "blocks": [
+        {
+          "top_left_x": 689,
+          "top_left_y": 865,
+          "bottom_right_x": 830,
+          "bottom_right_y": 1317,
+          "content": "ELEPHOCARDIOGRAPH\nECG-3350\n2023",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 805,
+          "top_left_y": 951,
+          "bottom_right_x": 884,
+          "bottom_right_y": 1326,
+          "content": "0129451521014776(21)00300",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 856,
+          "top_left_y": 769,
+          "bottom_right_x": 958,
+          "bottom_right_y": 1326,
+          "content": "NIKON KOHDEN CORPORATION",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 958,
+          "top_left_y": 769,
+          "bottom_right_x": 1010,
+          "bottom_right_y": 1326,
+          "content": "10th at Narhechi, Shinjuku-ku, Tokyo 161-8560, Japan",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 651,
+          "top_left_y": 509,
+          "bottom_right_x": 856,
+          "bottom_right_y": 682,
+          "content": "![img-0.jpeg](img-0.jpeg)",
+          "confidence_scores": null,
+          "type": "image",
+          "image_id": "img-0.jpeg"
+        },
+        {
+          "top_left_x": 1035,
+          "top_left_y": 586,
+          "bottom_right_x": 1138,
+          "bottom_right_y": 1422,
+          "content": "00300 POWER INPUT 150VA",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 1138,
+          "top_left_y": 932,
+          "bottom_right_x": 1343,
+          "bottom_right_y": 1451,
+          "content": "ECG-3350K\n00300 AB",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 1343,
+          "top_left_y": 1067,
+          "bottom_right_x": 1522,
+          "bottom_right_y": 1451,
+          "content": "NIKON KOHDEN CORPORATION\n10th at Narhechi, Shinjuku-ku,\nTokyo 161-8560, Japan",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 1522,
+          "top_left_y": 1067,
+          "bottom_right_x": 1676,
+          "bottom_right_y": 1451,
+          "content": "ECG-3350K\n00300 AB",
+          "confidence_scores": null,
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "model": "mistral-ocr-latest",
+  "document_annotation": null,
+  "usage_info": {
+    "pages_processed": 1,
+    "doc_size_bytes": 274522
+  }
+}

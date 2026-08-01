@@ -1,0 +1,249 @@
+{
+  "name": "Nanobot + DocuFlow OCR Workflow",
+  "description": "n8n workflow integrating nanobot AI agent, Mistral OCR, and DocuFlow document generation. Triggered by Telegram or webhook.",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "webhook-trigger",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [250, 300],
+      "webhook": "POST /docuflow-task"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.file_type}}",
+              "operation": "equal",
+              "value2": "image"
+            }
+          ]
+        }
+      },
+      "id": "check-file-type",
+      "name": "Check File Type",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [450, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.mistral.ai/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "model": "mistral-ocr-latest",
+          "messages": [
+            {
+              "role": "user",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "Extract all text and structured data from this image. Return as clean markdown."
+                },
+                {
+                  "type": "image_url",
+                  "image_url": {
+                    "url": "={{$json.image_data}}"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "options": {
+          "timeout": 180000
+        }
+      },
+      "id": "mistral-ocr",
+      "name": "Mistral OCR",
+      "type": "n8n-nodes-base.http-request",
+      "typeVersion": 4.1,
+      "position": [650, 200],
+      "credentials": {
+        "httpHeaderAuth": "mistral-api-key"
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8766/v1/chat/completions",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "model": "orfree",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a biomedical equipment management assistant. Extract device info (name, serial, model, department) from the following OCR text. Return JSON with fields: device_name, serial_number, model, department, notes."
+            },
+            {
+              "role": "user",
+              "content": "={{$json.ocr_text}}"
+            }
+          ],
+          "max_tokens": 2048,
+          "temperature": 0.1
+        },
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "nanobot-api",
+      "name": "Call Nanobot API",
+      "type": "n8n-nodes-base.http-request",
+      "typeVersion": 4.1,
+      "position": [850, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://127.0.0.1:8766/v1/chat/completions",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "model": "orfree",
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a document generation assistant. Based on the device data, generate a handover document summary. Include: device name, serial number, department, handover date, and notes. Return as markdown."
+            },
+            {
+              "role": "user",
+              "content": "={{$json.task}}"
+            }
+          ],
+          "max_tokens": 4096,
+          "temperature": 0.1
+        },
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "nanobot-process",
+      "name": "Nanobot Process Task",
+      "type": "n8n-nodes-base.http-request",
+      "typeVersion": 4.1,
+      "position": [650, 400]
+    },
+    {
+      "parameters": {
+        "text": "={{$json.choices[0].message.content}}",
+        "chat_id": "={{$env.TELEGRAM_NOTIFY_CHAT_ID}}",
+        "parse_mode": "Markdown"
+      },
+      "id": "send-telegram",
+      "name": "Send to Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 2,
+      "position": [1050, 300]
+    },
+    {
+      "parameters": {
+        "text": "Workflow completed. Result: {{$json.choices[0].message.content}}"
+      },
+      "id": "return-result",
+      "name": "Return Result",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [1050, 500]
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Check File Type",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Nanobot Process Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check File Type": {
+      "main": [
+        [
+          {
+            "node": "Mistral OCR",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Nanobot Process Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mistral OCR": {
+      "main": [
+        [
+          {
+            "node": "Nanobot API",
+            "type": "main",
+            "index": 0
+          ]
+        ]
+      ]
+    },
+    "Nanobot API": {
+      "main": [
+        [
+          {
+            "node": "Send to Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nanobot Process Task": {
+      "main": [
+        [
+          {
+            "node": "Send to Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send to Telegram": {
+      "main": [
+        [
+          {
+            "node": "Return Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "2",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  }
+}

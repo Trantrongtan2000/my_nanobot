@@ -1,0 +1,93 @@
+{
+  "pages": [
+    {
+      "index": 0,
+      "markdown": "ELECTROCARDIOGRAPH\nModel: ECG-3350\n(01)04831921014776(21)00299\nNHON KOHDEN CORPORATION\nJapan 1-31-4 Nishiochiai, Shinjuku-ku, Tokyo 161-8560, Japan\nOp No.00K1\n00299 POWER INPUT 150VA\n\n![img-0.jpeg](img-0.jpeg)\n\n![img-1.jpeg](img-1.jpeg)\n\nFor the member staff\nContact\nrepresent\nend of\n\nECG-3350K\n00299 AB\nNHON KOHDEN CORPORATION\n1-31-4 Nishiochiai, Shinjuku-ku,\nTokyo 161-8560, Japan\nNHON KOHDEN EUROPE GmbH\nMünchenstrasse 9, D-51191 Rostach, Germany",
+      "images": [
+        {
+          "id": "img-0.jpeg",
+          "top_left_x": 513,
+          "top_left_y": 509,
+          "bottom_right_x": 666,
+          "bottom_right_y": 653,
+          "image_base64": null,
+          "image_annotation": null
+        },
+        {
+          "id": "img-1.jpeg",
+          "top_left_x": 513,
+          "top_left_y": 259,
+          "bottom_right_x": 794,
+          "bottom_right_y": 452,
+          "image_base64": null,
+          "image_annotation": null
+        }
+      ],
+      "tables": [],
+      "hyperlinks": [],
+      "header": null,
+      "footer": null,
+      "dimensions": {
+        "dpi": 200,
+        "height": 1920,
+        "width": 2560
+      },
+      "confidence_scores": null,
+      "blocks": [
+        {
+          "top_left_x": 436,
+          "top_left_y": 480,
+          "bottom_right_x": 923,
+          "bottom_right_y": 1343,
+          "content": "ELECTROCARDIOGRAPH\nModel: ECG-3350\n(01)04831921014776(21)00299\nNHON KOHDEN CORPORATION\nJapan 1-31-4 Nishiochiai, Shinjuku-ku, Tokyo 161-8560, Japan\nOp No.00K1\n00299 POWER INPUT 150VA",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 513,
+          "top_left_y": 509,
+          "bottom_right_x": 666,
+          "bottom_right_y": 653,
+          "content": "![img-0.jpeg](img-0.jpeg)",
+          "confidence_scores": null,
+          "type": "image",
+          "image_id": "img-0.jpeg"
+        },
+        {
+          "top_left_x": 513,
+          "top_left_y": 259,
+          "bottom_right_x": 794,
+          "bottom_right_y": 452,
+          "content": "![img-1.jpeg](img-1.jpeg)",
+          "confidence_scores": null,
+          "type": "image",
+          "image_id": "img-1.jpeg"
+        },
+        {
+          "top_left_x": 384,
+          "top_left_y": 0,
+          "bottom_right_x": 820,
+          "bottom_right_y": 452,
+          "content": "For the member staff\nContact\nrepresent\nend of",
+          "confidence_scores": null,
+          "type": "text"
+        },
+        {
+          "top_left_x": 871,
+          "top_left_y": 874,
+          "bottom_right_x": 1317,
+          "bottom_right_y": 1382,
+          "content": "ECG-3350K\n00299 AB\nNHON KOHDEN CORPORATION\n1-31-4 Nishiochiai, Shinjuku-ku,\nTokyo 161-8560, Japan\nNHON KOHDEN EUROPE GmbH\nMünchenstrasse 9, D-51191 Rostach, Germany",
+          "confidence_scores": null,
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "model": "mistral-ocr-latest",
+  "document_annotation": null,
+  "usage_info": {
+    "pages_processed": 1,
+    "doc_size_bytes": 278100
+  }
+}

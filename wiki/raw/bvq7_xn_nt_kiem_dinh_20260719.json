@@ -1,0 +1,1281 @@
+{
+  "source_csv": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/danh_sach_thiet_bi_toi_han_v2.csv",
+  "extracted_at": "2026-07-19",
+  "counts": {
+    "xet_nghiem": 47,
+    "nha_thuoc": 9,
+    "certs_unique": 8
+  },
+  "xet_nghiem": [
+    {
+      "stt": "23",
+      "ten": "Nhiệt kế tự ghi",
+      "model": "TREL30-16",
+      "serial": "A0630054385O",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "24",
+      "ten": "Nhiệt kế tự ghi",
+      "model": "UTRED30-16",
+      "serial": "A0A80014948O",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "25",
+      "ten": "Nhiệt kế tự ghi",
+      "model": "UTRED30-16",
+      "serial": "A0A8001496SH",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "26",
+      "ten": "Nhiệt kế tự ghi",
+      "model": "UTRED30-16",
+      "serial": "A0A800150030",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "27",
+      "ten": "Nhiệt kế tự ghi",
+      "model": "UTRED30-16",
+      "serial": "A0A8001501DH",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "28",
+      "ten": "Nhiệt kế tự ghi",
+      "model": "UTRED30-16",
+      "serial": "A0A8001492O5",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "29",
+      "ten": "Nhiệt kế tự ghi",
+      "model": "UTRED30-16",
+      "serial": "A0A8001491ET",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "30",
+      "ten": "Nhiệt kế tự ghi",
+      "model": "UTRED30-16",
+      "serial": "A0A8001495I5",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "31",
+      "ten": "Nhiệt kế tự ghi",
+      "model": "UTRED30-16",
+      "serial": "A0A8001498C5",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "32",
+      "ten": "Tủ lạnh âm sâu -30˚C MDF-MU339-PE",
+      "model": " MDF-MU339-PE",
+      "serial": "230960026",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 6. 1 tủ lạnh âm sâu 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 6. 1 tủ lạnh âm sâu 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "33",
+      "ten": "Tủ lạnh bảo quản MPR-722-PE",
+      "model": "MPR-722-PE",
+      "serial": "23110761",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "34",
+      "ten": "Tủ lạnh bảo quản MPR-722-PE",
+      "model": "MPR-722-PE",
+      "serial": "23110763",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "35",
+      "ten": "Tủ lạnh bảo quản MPR-722-PE",
+      "model": "MPR-722-PE",
+      "serial": "23110762",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "36",
+      "ten": "Tủ lạnh bảo quản MPR-722-PE",
+      "model": "MPR-722-PE",
+      "serial": "23110772",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "37",
+      "ten": "Tủ lạnh bảo quản MPR-722-PE",
+      "model": "MPR-722-PE",
+      "serial": "23110770",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "38",
+      "ten": "Tủ lạnh bảo quản MPR-722-PE",
+      "model": "MPR-722-PE",
+      "serial": "23110771",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "39",
+      "ten": "Máy ly tâm dùng cho phân tích nhóm máu DG Spin",
+      "model": "DG Spin",
+      "serial": "320-0009182",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 8. 2 máy ly tâm.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 8. 2 máy ly tâm.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "40",
+      "ten": "Máy ly tâm 5804",
+      "model": "5804",
+      "serial": "5804MQ070762",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 8. 2 máy ly tâm.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 8. 2 máy ly tâm.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "41",
+      "ten": "Tủ an toàn sinh học cấp 2 AC2-4E8",
+      "model": "AC2-4E8",
+      "serial": "2024-205134",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "07.29.25 tủ an toàn sinh học0001.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/07.29.25 tủ an toàn sinh học0001.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "42",
+      "ten": "Tủ an toàn sinh học cấp 2 AC2-4E8",
+      "model": "AC2-4E8",
+      "serial": "2024-205133",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "08.06.24 tủ an toàn sinh học, tủ lạnh bảo quản, tủ lạnh âm sâu0001.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/08.06.24 tủ an toàn sinh học, tủ lạnh bảo quản, tủ lạnh âm sâu0001.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "44",
+      "ten": "Micropipette",
+      "model": "Piston",
+      "serial": "M77872L",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "45",
+      "ten": "Micropipette",
+      "model": "Eppendorf",
+      "serial": "L45072L",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "46",
+      "ten": "Micropipette",
+      "model": "Eppendorf",
+      "serial": "I34514L",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "47",
+      "ten": "Micropipette",
+      "model": "Eppendorf",
+      "serial": "K53971L",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "48",
+      "ten": "Micropipette",
+      "model": "Piston",
+      "serial": "L45169L",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "49",
+      "ten": "Micropipette",
+      "model": "Eppendorf",
+      "serial": "K53929L",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "50",
+      "ten": "Micropipette",
+      "model": "Eppendorf",
+      "serial": "O11842K",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "51",
+      "ten": "Micropipette",
+      "model": "Piston",
+      "serial": "P93135K",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "52",
+      "ten": "Micropipette",
+      "model": "Eppendorf",
+      "serial": "O81039L",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "53",
+      "ten": "Micropipette",
+      "model": "Eppendorf",
+      "serial": "K53935L",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "54",
+      "ten": "Micropipette",
+      "model": "Eppendorf",
+      "serial": "I34625L",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "55",
+      "ten": "Micropipette",
+      "model": "Eppendorf",
+      "serial": "O11909K",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "56",
+      "ten": "Micropipette",
+      "model": "Eppendorf",
+      "serial": "L45438L",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "57",
+      "ten": "Micropipette",
+      "model": "Eppendorf",
+      "serial": "I34723L",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "58",
+      "ten": "Micropipette",
+      "model": "Piston",
+      "serial": "O11884K",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "59",
+      "ten": "Micropipette",
+      "model": "Eppendorf",
+      "serial": "N73464L",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "66",
+      "ten": "Tủ lạnh bảo quản MPR-722-PE",
+      "model": "MPR-722-PE",
+      "serial": "23110761",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "67",
+      "ten": "Tủ lạnh bảo quản MPR-722-PE",
+      "model": "MPR-722-PE",
+      "serial": "23110763",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "68",
+      "ten": "Tủ lạnh bảo quản MPR-722-PE",
+      "model": "MPR-722-PE",
+      "serial": "23110762",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "69",
+      "ten": "Tủ lạnh bảo quản MPR-722-PE",
+      "model": "MPR-722-PE",
+      "serial": "23110772",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "70",
+      "ten": "Tủ lạnh bảo quản MPR-722-PE",
+      "model": "MPR-722-PE",
+      "serial": "23110770",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "71",
+      "ten": "Tủ lạnh bảo quản MPR-722-PE",
+      "model": "MPR-722-PE",
+      "serial": "23110771",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "100",
+      "ten": "Nhiệt ẩm kế tự ghi ",
+      "model": "UHADO-16",
+      "serial": "A0C1042588KT",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "101",
+      "ten": "Nhiệt ẩm kế tự ghi ",
+      "model": "UHADO-16",
+      "serial": "A0C1042580C5",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "102",
+      "ten": "Nhiệt ẩm kế tự ghi ",
+      "model": "UHADO-16",
+      "serial": "A0C104258600",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "103",
+      "ten": "Nhiệt ẩm kế tự ghi ",
+      "model": "UHADO-16",
+      "serial": "A0C1042584GH",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "104",
+      "ten": "Nhiệt ẩm kế tự ghi ",
+      "model": "UHADO-16",
+      "serial": "A0C10369038O",
+      "khoa": "XÉT NGHIỆM ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_pdf": null
+    }
+  ],
+  "nha_thuoc": [
+    {
+      "stt": "60",
+      "ten": "Tủ mát MPR-S313-PK",
+      "model": "MPR-S313-PK",
+      "serial": "23090063",
+      "khoa": "NHÀ THUỐC ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "61",
+      "ten": "Tủ mát MPR-S313-PK",
+      "model": "MPR-S313-PK",
+      "serial": "23090064",
+      "khoa": "NHÀ THUỐC ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "62",
+      "ten": "Tủ mát MPR-S313-PK",
+      "model": "MPR-S313-PK",
+      "serial": "23090062",
+      "khoa": "NHÀ THUỐC ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "63",
+      "ten": "Tủ lạnh bảo quản có ngăn đông MPR-715F-PE",
+      "model": "MPR-715F-PE",
+      "serial": "231190097",
+      "khoa": "NHÀ THUỐC ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "64",
+      "ten": "Tủ lạnh bảo quản có ngăn đông MPR-715F-PE",
+      "model": "MPR-715F-PE",
+      "serial": "231090071",
+      "khoa": "NHÀ THUỐC ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "65",
+      "ten": "Tủ lạnh bảo quản có ngăn đông MPR-715F-PE",
+      "model": "MPR-715F-PE",
+      "serial": "231090072",
+      "khoa": "NHÀ THUỐC ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "105",
+      "ten": "Nhiệt ẩm kế tự ghi ",
+      "model": "UHADO-16",
+      "serial": "A0C1042579LS",
+      "khoa": "NHÀ THUỐC ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "106",
+      "ten": "Nhiệt ẩm kế tự ghi ",
+      "model": "UHADO-16",
+      "serial": "A0C1042582WT",
+      "khoa": "NHÀ THUỐC ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_pdf": null
+    },
+    {
+      "stt": "107",
+      "ten": "Nhiệt ẩm kế tự ghi ",
+      "model": "UHADO-16",
+      "serial": "A0C1042585QT",
+      "khoa": "NHÀ THUỐC ",
+      "han_master": "2026-07-31",
+      "trang_thai": "Chỉ có chứng nhận cũ (2025)",
+      "cert_file": "MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "cert_pdf": null
+    }
+  ],
+  "by_type_xet_nghiem": {
+    "Micropipette": 16,
+    "Máy ly tâm 5804": 1,
+    "Máy ly tâm dùng cho phân tích nhóm máu DG Spin": 1,
+    "Nhiệt kế tự ghi": 9,
+    "Nhiệt ẩm kế tự ghi ": 5,
+    "Tủ an toàn sinh học cấp 2 AC2-4E8": 2,
+    "Tủ lạnh bảo quản MPR-722-PE": 12,
+    "Tủ lạnh âm sâu -30˚C MDF-MU339-PE": 1
+  },
+  "by_type_nha_thuoc": {
+    "Nhiệt ẩm kế tự ghi ": 3,
+    "Tủ lạnh bảo quản có ngăn đông MPR-715F-PE": 3,
+    "Tủ mát MPR-S313-PK": 3
+  },
+  "certs": {
+    "MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md": {
+      "md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 10. 14 Nhiệt ẩm kế điện tử UTREL.md",
+      "pdf": null,
+      "ocr_extract": [
+        {
+          "serials_found": [
+            "A0A50034017C",
+            "A0A5003405BT",
+            "A0A5003402HT",
+            "A0A5003371QT",
+            "M",
+            "A0A80014948O",
+            "A0A8001496SH",
+            "A0A800150030",
+            "A0A8001501DH",
+            "A0630054385O",
+            "A0A8001492O5",
+            "A0A8001491ET",
+            "A0A8001495I5",
+            "A0A8001498C5"
+          ],
+          "objects_found": [
+            "NHIỆT KẾ",
+            "NHIỆT KẾ",
+            "NHIỆT KẾ",
+            "NHIỆT KẾ",
+            "NHIỆT KẾ",
+            "NHIỆT KẾ",
+            "NHIỆT KẾ",
+            "NHIỆT KẾ",
+            "NHIỆT KẾ",
+            "NHIỆT KÊ",
+            "NHIỆT KẾ",
+            "NHIỆT KẾ",
+            "NHIỆT KẾ",
+            "NHIỆT KẾ"
+          ],
+          "places_found": [
+            "Khoa dược -Nhà thuốc tầng trệt",
+            "Khoa dược -Nhà thuốc tầng trệt",
+            "Khoa dược -Nhà thuốc tầng 3",
+            "Khoa dược -Nhà thuốc tầng 3",
+            "Khoa dược -Nhà thuốc tầng 1",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm"
+          ],
+          "cert_numbers": [
+            "056-003/07.25",
+            "25A 201179",
+            "056-004/07.25",
+            "25A 201180",
+            "056-005/07.25",
+            "25A 201189",
+            "056-006/07.25",
+            "25A 201190",
+            "056-002/07.25",
+            "25A 201185",
+            "056-245/07.25",
+            "25A 201170",
+            "056-246/07.25",
+            "25A 201171",
+            "056-247/07.25",
+            "25A 201172",
+            "056-248/07.25",
+            "25A 201173",
+            "056-249/07.25",
+            "25A 201207"
+          ],
+          "recal_dates": [
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026"
+          ],
+          "chars": 48080
+        }
+      ]
+    },
+    "MỤC 6. 1 tủ lạnh âm sâu 05.07.2025.md": {
+      "md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 6. 1 tủ lạnh âm sâu 05.07.2025.md",
+      "pdf": null,
+      "ocr_extract": [
+        {
+          "serials_found": [
+            "230960026"
+          ],
+          "objects_found": [
+            "TỦ ÂM SÂU"
+          ],
+          "places_found": [
+            "Khoa xét nghiệm"
+          ],
+          "cert_numbers": [
+            "056-203/07.25",
+            "25A 201204"
+          ],
+          "recal_dates": [
+            "31/07/2026"
+          ],
+          "chars": 3481
+        }
+      ]
+    },
+    "MỤC 5. 12 tủ lạnh bảo quản.md": {
+      "md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 5. 12 tủ lạnh bảo quản.md",
+      "pdf": null,
+      "ocr_extract": [
+        {
+          "serials_found": [
+            "23090063",
+            "23090064",
+            "23090062",
+            "231190097",
+            "231090071",
+            "231090072",
+            "23110761",
+            "23110763",
+            "23110762",
+            "23110772",
+            "23110770",
+            "23110771"
+          ],
+          "objects_found": [
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN"
+          ],
+          "places_found": [
+            "Khoa dược - Nhà thuốc tầng 3",
+            "Khoa dược - Nhà thuốc tầng trệt",
+            "Khoa dược - Nhà thuốc tầng 3",
+            "Khoa dược - Nhà thuốc tầng 1",
+            "Khoa dược - Nhà thuốc tầng 1",
+            "Khoa dược - Nhà thuốc tầng trệt",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm"
+          ],
+          "cert_numbers": [
+            "056-014/07.25",
+            "25A 201187",
+            "056-013/07.25",
+            "25A 201178",
+            "056-015/07.25",
+            "25A 201188",
+            "056-010/07.25",
+            "25A 201182",
+            "056-011/07.25",
+            "25A 201183",
+            "056-012/07.25",
+            "25A 201177",
+            "056-226/07.25",
+            "25A 201165",
+            "056-227/07.25",
+            "25A 201166",
+            "056-228/07.25",
+            "25A 201167",
+            "056-229/07.25",
+            "25A 201168"
+          ],
+          "recal_dates": [
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026"
+          ],
+          "chars": 42432
+        }
+      ]
+    },
+    "MỤC 8. 2 máy ly tâm.md": {
+      "md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 8. 2 máy ly tâm.md",
+      "pdf": null,
+      "ocr_extract": [
+        {
+          "serials_found": [
+            "320-0009182",
+            "5804MQ070762"
+          ],
+          "objects_found": [
+            "MÁY LY TÂM",
+            "MÁY LY TÂM"
+          ],
+          "places_found": [
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm"
+          ],
+          "cert_numbers": [
+            "056-270/07.25",
+            "25A 201195",
+            "056-271/07.25",
+            "25A 201201"
+          ],
+          "recal_dates": [
+            "31/07/2026",
+            "31/07/2026"
+          ],
+          "chars": 6684
+        }
+      ]
+    },
+    "07.29.25 tủ an toàn sinh học0001.md": {
+      "md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/07.29.25 tủ an toàn sinh học0001.md",
+      "pdf": null,
+      "ocr_extract": [
+        {
+          "serials_found": [
+            "2024205134",
+            "2024205133"
+          ],
+          "objects_found": [
+            "TỦ AN TOÀN SINH HỌC CẤP II",
+            "TỦ AN TOÀN SINH HỌC CẤP II"
+          ],
+          "places_found": [
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm"
+          ],
+          "cert_numbers": [
+            "056-272/02.25",
+            "25A 201196",
+            "056-273/07.25",
+            "25A 201197"
+          ],
+          "recal_dates": [
+            "31/07/2026",
+            "31/07/2026"
+          ],
+          "chars": 13818
+        }
+      ]
+    },
+    "08.06.24 tủ an toàn sinh học, tủ lạnh bảo quản, tủ lạnh âm sâu0001.md": {
+      "md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/08.06.24 tủ an toàn sinh học, tủ lạnh bảo quản, tủ lạnh âm sâu0001.md",
+      "pdf": null,
+      "ocr_extract": [
+        {
+          "serials_found": [
+            "M",
+            "M",
+            "23110771",
+            "23110762",
+            "23110763",
+            "23110761",
+            "23110770",
+            "23110772",
+            "230960026"
+          ],
+          "objects_found": [
+            "TỦ AN TOÀN SINH HỌC CẤP II",
+            "TỦ AN TOÀN SINH HỌC CẤP II",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH BẢO QUẢN",
+            "TỦ LẠNH ÂM SÂU"
+          ],
+          "places_found": [],
+          "cert_numbers": [
+            "056-1135/07.24",
+            "24A 205540",
+            "056-1134/07.24",
+            "24A 205534",
+            "056-1113/07.24",
+            "24A 205535",
+            "056-1114/07.24",
+            "24A 205546",
+            "056-1115/07.24",
+            "24A 205541",
+            "056-1116/07.24",
+            "24A 205538",
+            "056-1117/07.24",
+            "24A 205544",
+            "056-1118/07.24",
+            "24A 205545",
+            "056-1119/07.24",
+            "24A 205536"
+          ],
+          "recal_dates": [
+            "31/07/2025",
+            "31/07/2025",
+            "31/07/2025",
+            "31/07/2025",
+            "31/07/2025",
+            "31/07/2025",
+            "31/07/2025",
+            "31/07/2025",
+            "31/07/2025"
+          ],
+          "chars": 37981
+        }
+      ]
+    },
+    "MỤC 4. 16 pipet 05.07.2025.md": {
+      "md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 4. 16 pipet 05.07.2025.md",
+      "pdf": null,
+      "ocr_extract": [
+        {
+          "serials_found": [
+            "M77872L",
+            "L45072L",
+            "I34514L",
+            "K53971L",
+            "L45169L",
+            "K53929L",
+            "O11842K",
+            "P93135K",
+            "O81039L",
+            "K53935L",
+            "I34625L",
+            "O11909K",
+            "L45438L",
+            "I34723L",
+            "O11884K",
+            "N73464L"
+          ],
+          "objects_found": [
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE",
+            "MICROPIPETTE"
+          ],
+          "places_found": [
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm"
+          ],
+          "cert_numbers": [
+            "056-181/07.25",
+            "25A 201153",
+            "056-182/07.25",
+            "25A 201154",
+            "056-183/07.25",
+            "25A 201155",
+            "056-184/07.25",
+            "25A 201156",
+            "056-185/07.25",
+            "25A 201157",
+            "056-186/07.25",
+            "25A 201158",
+            "056-187/07.25",
+            "25A 201159",
+            "056-188/07.25",
+            "25A 201160",
+            "056-189/07.25",
+            "25A 201161",
+            "056-190/07.25",
+            "25A 201162"
+          ],
+          "recal_dates": [
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026"
+          ],
+          "chars": 55128
+        }
+      ]
+    },
+    "MỤC 7. 14 nhiệt ẩm kế tự ghi.md": {
+      "md": "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/2025_pdf/MỤC 7. 14 nhiệt ẩm kế tự ghi.md",
+      "pdf": null,
+      "ocr_extract": [
+        {
+          "serials_found": [
+            "A0C1042588KT",
+            "A0C1042580C5",
+            "A0C104258600",
+            "A0C1042584GH",
+            "A0C10369038O",
+            "A0C1042579LS",
+            "A0C1042582WT",
+            "A0C1042585QT",
+            "1211",
+            "1222",
+            "1224",
+            "1226",
+            "2256",
+            "A0C1042579L5"
+          ],
+          "objects_found": [
+            "NHIỆT ẨM KẾ TỰ GHI",
+            "NHIỆT ÂM KẾ TỰ GHI",
+            "NHIỆT ẨM KỂ TỰ GHI",
+            "NHIỆT ẨM KẾ TỰ GHI",
+            "NHIỆT ẨM KẾ TỰ GHI",
+            "NHIỆT ẨM KẾ TỰ GHI",
+            "NHIỆT ẨM KẾ TỰ GHI",
+            "NHIỆT ẨM KẾ TỰ GHI",
+            "NHIỆT ÂM KẾ TỰ GHI",
+            "NHIỆT ẨM KỂ TỰ GHI",
+            "NHIỆT ÂM KẾ TỰ GHI",
+            "NHIỆT ẨM KỂ TỰ GHI",
+            "NHIỆT ÂM KẾ TỰ GHI",
+            "NHIỆT ẨM KẾ TỰ GHI"
+          ],
+          "places_found": [
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa xét nghiệm",
+            "Khoa dược - Nhà thuốc tầng 3",
+            "Khoa dược - Nhà thuốc tầng trệt",
+            "Khoa dược - Nhà thuốc tầng 1",
+            "Khoa cấp cứu",
+            "Khoa cấp cứu lọc thận",
+            "Khoa cấp cứu lọc thận",
+            "Khoa nội soi tiêu hoá",
+            "Khoa khám bệnh- khám sản",
+            "Khoa dược - Nhà thuốc tầng 3"
+          ],
+          "cert_numbers": [
+            "056-275/07.25",
+            "25A 201198",
+            "056-276/07.25",
+            "25A 201199",
+            "056-277/07.25",
+            "25A 201200",
+            "056-278/07.25",
+            "25A 201202",
+            "056-279/07.25",
+            "25A 201174",
+            "056-007/07.25",
+            "25A 201191",
+            "056-008/07.25",
+            "25A 201181",
+            "056-009/07.25",
+            "25A 201186",
+            "056-645/07.25",
+            "25A 201211",
+            "056-338/07.25",
+            "25A 201222"
+          ],
+          "recal_dates": [
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026",
+            "31/07/2026"
+          ],
+          "chars": 53628
+        }
+      ]
+    }
+  },
+  "handover_files": {
+    "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Xét nghiệm": [
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Xét nghiệm/01 Automated Hematology Analyzer XN series (XN-10)-01 PNEUMATIC UNIT PU-17 (200V WHITE)-01 SA-10 COMPLETE(SA-10)-01 XN-1000 Supply part-01 Intake .pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Xét nghiệm/01 Máy phân tích sinh hóa-01 Máy in Canon LBP6030-01 Bộ lưu điện UPS SOROTEC HP9116C 6KT (6KVA5.4KW)-01 Bộ lọc nước RO-50Lh 1 tầng RO, UV (T1-300).pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Xét nghiệm/01 Máy xét nghiệm miễn dịch tự động-01 Máy in Canon LBP6030-01 Bộ lưu điện UPS Pro903WS-01 Ô Lioa, Giấy in-01 Bộ phụ kiện chuẩn kèm máy-01 Bộ hóa .pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Xét nghiệm/2026/BBBG NB_15.03_1 máy xét nghiệm Alinity i.pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Xét nghiệm/21.05.2025_Q8 trả nồi hấp tiệt trùng khoa XN cho Q7.pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Xét nghiệm/BBBG NB (4 bên)-XN TB-Xn Q7-1 máy xét nghiệm tốc độ máu lắng 1 máy ly tâm lạnh.pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Xét nghiệm/BBBG NB_1 nồi hấp SA-300VF.pdf"
+    ],
+    "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc": [
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2025/01 CHỈ THỊ ĐÔNG BĂNG_Nhà thuốc_25040165.pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2025/05 CHỈ THỊ ĐÔNG BĂNG LOGTAG-01 Nhiệt ẩm kế LOGTAG-01 Nhiệt kế LOGTAG_Nhà thuốc_25040165.pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2025/BBBG NB (3 bên)_2 Tủ bảo quản MPR-S313-PK 2 UPS 2 Logtag_Tân Bình chuyển qua.pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2025/BBBG NB_1 thiết bị đo nhiệt độ-1 chỉ thị đông băng-1 thiết bị ghi nhiệt độ_PO 25100181.pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2026/BBBG NB_04.06.26_1 chi thỉ đông băng.pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2026/BBBG NB_1 tủ bảo quản Haier HYC-118A_HD 705 2025.pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2026/BBBG NB_17.03.26_1 tủ pha chế thuốc_HD 1349.pdf",
+      "02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2026/BBBGNB_1 nhiệt kế logtag_PO Q725120019.pdf"
+    ],
+    "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm": [
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/01 Bể ổn nhiệt nắp thấp_Xét nghiệm_.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/01 Pipet,03 máy ly tâm_Xét nghiệm_240425BCE-BVTΑΜΑΝΗ_BCE.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/01 Sinh hiển vi 2 mắt _073.2024.ĐM.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/01 kính hiển vi 2 mắt _ Đức Minh _073.2024.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/01 máy đo đông máu_20.2024_nano.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/02 Tủ an toàn sinh học_Xét nghiệm_240423HĐMBTA-BVTATPHCM_Toàn Ánh.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/02 tủ lạnh bảo quản 2 cánh HYC-1099_Xét nghiệm_06.2004HHHMBSmartTech-TamAnhQ7.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/05 máy của HĐ 31.2024_DuyMinh.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/06 Tủ mát bảo quản,01 tủ lạnh âm sâu_Xét nghiệm_130524HNC-TAHĐMB.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/15 Pipet,01 máy ly tâm_Xét nghiệm_240425BCE-BVTΑΜΑΝΗ_BCE.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/19 pipet, 04 máy ly tâm_Xét nghiệm_240425BCE-BVTΑΜΑΝΗ_BCE.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/BBBG NB_1 HT tiền phân tích Cobas 8100 v2 type Alpha_ HD 14309 0524 HD-RV-3P.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/BBBGNB_010724_Xét nghiệm_Máy Alinity i.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/Checklist máy xét nghiệm.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Xét nghiệm/UPS6KVA_Xét nghiệm_Thu hồi từ CDHA.pdf"
+    ],
+    "2024/SCAN BÀN GIAO NỘI BỘ/Nhà thuốc": [
+      "2024/SCAN BÀN GIAO NỘI BỘ/Nhà thuốc/01 nhiệt kế wifi_Nhà thuốc_24090327.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Nhà thuốc/03 tủ mát, 03 tủ lạnh, 06 nhiệt kế wifi, 03 nhiệt ẩm kế logtag_Nhà thuốc_06.2024HĐMBSmartTech-TamAnh.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Nhà thuốc/06 bộ nguồn cấp liên tục Salicru_Nhà thuốc_.pdf",
+      "2024/SCAN BÀN GIAO NỘI BỘ/Nhà thuốc/Scan_ mượn máy hút ẩm từ CDHA.pdf"
+    ]
+  },
+  "notes": [
+    "OCR markdown already exists for all 8 unique cert files under 05_KIEM DINH/*_pdf.",
+    "Handover folders may contain PDFs without OCR; listed for inventory cross-check.",
+    "Master expiry mostly 2026-07-31 for current batch."
+  ]
+}

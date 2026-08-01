@@ -1,0 +1,27 @@
+# Mem0 Setup Skill
+
+## When to use
+When setting up a self-hosted Mem0 server for multiple AI agents to share memory via user_id.
+
+## Steps
+1. Clone the Mem0 repository
+2. Create a .env file with required configuration
+3. Run docker compose up to start the Mem0 server
+4. Run make bootstrap to complete setup
+5. Configure agents with the correct MEM0_API_KEY
+
+## Example
+```bash
+git clone https://github.com/mem0/mem0.git
+cd mem0
+cp .env.example .env
+# Edit .env with your API key and server settings
+docker compose up -d
+make bootstrap
+```
+
+## Notes
+- Mem0 uses FastAPI + PostgreSQL (pgvector) for storage
+- Authentication is via X-API-Key header
+- Memory is separated by user_id for each agent
+- To share memory between agents, use the same user_id
