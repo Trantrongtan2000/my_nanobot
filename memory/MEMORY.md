@@ -6,33 +6,12 @@ This file stores important information that should persist across sessions.
 
 ## Installed Software
 
-- `croc` v10.6.0 — CLI tool for secure file transfers using relay + PAKE. Cross-platform, resume support, Tor proxy. Installed at `/usr/local/bin` (Linux-ARM64). Documentation in `wiki/croc.md`.
-
-- **browser-use-desktop v0.0.31** (`.deb`) → `/usr/bin/browser-use-desktop`
-  - Electron app, controllable via CDP at `127.0.0.1:9222`
-  - Must launch with `--remote-debugging-port=9222` AND `--remote-allow-origins=*` (else WebSocket 403)
-  - Headless on this host requires Xvfb on `DISPLAY=:99` (overridable via `XTEST_DISPLAY` env var for e2e tests)
-  - Config/logs: `/home/tan/.config/Browser Use/` (logs/, `run/browser-usedesktop-9222.log`, `sessions.db`, `harness/browser-harness-js`)
-  - Engines: Claude Code v2.1.170 (authed), Codex v0.137.0 (NOT authed, missing `~/.codex/auth.json`)
-
-- **cli-anything-hub v0.3.0** + 69 `cli-anything-*` skills installed to `~/.agents/skills/`
-
-- **n8n-atom** — n8n workflow orchestrator installed via `npx -y @atom8n/n8n@latest`, runs as `n8n-atom.service` on port 5888. Handles workflow coordination; nanobot handles OCR, wiki, and GraphRAG.
-
-- **Page Agent** (beta) — GUI agent for Alibaba JS pages; enables natural language web control without extensions/headless browsers; supports LLM integration, Chrome extension, and MCP; installed via `npm install page-agent`. User wants to integrate with MEIMS/QLTB frontend (client-side) for automating equipment management operations.
-
-- **MiniMax-AI/skills** (4 office skills installed to Hermes):
-  - `minimax-docx` — Tạo/sửa DOCX chuyên nghiệp (OpenXML SDK .NET)
-  - `minimax-pdf` — Tạo PDF đẹp (15 style), điền form, tái thiết kế
-  - `minimax-xlsx` — Đọc/phân tích/tạo/sửa Excel (XML template approach)
-  - `pptx-generator` — Tạo/sửa PowerPoint (PptxGenJS + design system)
-
-- **Zimit** — Docker-based web scraper that builds ZIM offline archives from any website.
-  - Crawls sites using Browsertrix Crawler, converts WARC files to ZIM via warc2zim.
-  - Output stored in mountable `/output` directory.
-  - Core command: `docker run -v /output:/output ghcr.io/openzim/zimit zimit --seeds <URL> --name <file> [options]`
-  - Key options: `--pageLimit`, `--scopeExcludeRx` (URL exclusion), `--workers` (parallelism).
-  - User wants to use as a skill for offline website browsing; deployment incomplete (404/503 errors).
+- `croc` v10.6.0: Secure file transfer with relay/PAKE
+- `browser-use-desktop`: CDP automation (requires `--remote-debugging-port=9222`)
+- `cli-anything-hub`: 69 CLI skills
+- `n8n-atom`: Workflow orchestrator (port 5888)
+- `MiniMax-AI/skills`: DOCX/PDF/XLSX/PPTX tools
+- `Zimit`: Web→ZIM archiver (incomplete deployment)
 
 ## Google Workspace Integration
 
@@ -59,7 +38,6 @@ This file stores important information that should persist across sessions.
   - Config in `.env`: `NODE1_BASE_URL`, `NODE2_BASE_URL`, `SHARED_MODEL_NAME=MiniMax-M2.7`.
   - Structure: `main.py` (entry), `bot.py` (Telegram handler), `orchestrator.py` (CrewAI logic), `agents.py` (agent defs), `requirements.txt`, `.env.example`.
   - Hermes and nanobot originally shared the same Telegram token causing polling conflicts; separate tokens assigned per bot.
-- **Goflow** — Source directory `/tmp/Goflow` is missing; need to clone the repository or copy source into workspace to continue.
 
 ## Tâm Anh Hospital Context
 
@@ -86,34 +64,6 @@ This file stores important information that should persist across sessions.
 | TV Box | 192.168.2.237 | Hermes + nanobot; SSH port 2104; Docker running Mem0 server on port 8888 |
 | Orangepi | 192.168.2.91 | nullclaw agent |
 
-## Maintenance Schedule Planning (July 2026)
-
-- File Excel kế hoạch bảo trì tháng 7/2026 của Bệnh viện Tâm Anh Quận 7: `/home/tan/.nanobot/media/telegram/AgADkCAAAoCtGVc.xlsx`
-- Sheet kế hoạch: `KHBT 2026 TRÌNH BLD`
-
-## Device Maintenance Details
-
-**Total devices scheduled**: 22 (corrected from initial report of 18)
-
-**Inspection (I) with maintenance (3 devices)**:
-- Dao mổ ZEUS-150
-- Máy điện tim 6 kênh ECG-1250K
-- Máy phá rung tim TEC-5621 (SN: 09284, năm sản xuất 2022)
-
-**Type M2 devices (3 devices)**:
-- Hệ thống nội soi bàng quang KARL STORZ
-- Máy đo SpO₂ Rad-5v (SN: N241406)
-- Xe đẩy SC32PRO (SN: BM25-P0954) — xuất hiện 2 lần trong kế hoạch, cần rà soát trùng lặp
-
-**Type M1 devices (16 devices)**:
-- Remaining 16 devices for routine maintenance
-
-**Room assignments (Khoa Khám bệnh - Da liễu, Phòng 3001)**:
-- Máy số 17: Monitor 5 thông số, mã tài sản 5114910500018, S/N SQF22050074SA, phòng 0047 - Phòng thủ thuật (đã sửa từ Khoa Cấp cứu)
-- Máy số 18: Monitor 5 thông số, mã tài sản 5114910500011, S/N SQF22050030SA, phòng 0049 - Cấp cứu Sản (đã sửa từ Khoa Cấp cứu)
-- Máy số 19: Monitor 5 thông số, mã tài sản 5114910500001, S/N SQF22040127SA, phòng chưa xác nhận
-- Monitor 6 thông số: Monitor vận chuyển
-
 ## n8n Handover Document Automation
 
 - User building n8n workflow for handover document automation using Mistral OCR + Word template `bbbg.docx`
@@ -135,9 +85,3 @@ This file stores important information that should persist across sessions.
 ---
 *This file is automatically updated by nanobot when important information should be remembered.*
 
-## System Health
-
-- Heartbeat job is a protected system-managed cron job that cannot be removed.
-- 9router health check fails because required user-session D-Bus environment variables are missing.
-- Nanobot self health check also fails for the same missing user-session D-Bus environment variables.
-- Environment deny pattern filter blocks `rm`, `npm --force`, and similar destructive commands for security.
