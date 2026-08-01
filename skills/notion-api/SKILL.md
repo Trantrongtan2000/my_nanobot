@@ -16,6 +16,7 @@ description: Notion API presentation rules and workspace map. Use when creating,
 4. Bulk UpNote HTML: `python3 /home/tan/.nanobot/workspace/import_upnote.py` (needs `NOTION_TOKEN`).
 5. After write: verify retrieve-markdown; replace if flat/broken.
 6. Never paste secrets into Notion pages outside Secrets folder.
+7. **Never share Notion tokens in chat, code, or guides** — users must obtain personal tokens from Notion integrations and store them in config files.
 
 ## Workspace Map
 
@@ -33,7 +34,7 @@ Home hub: `3a30c997-8722-817d-b8d6-fea5c234bd61`
 | 99 Inbox | `3a30c997-8722-8189-801d-f21517a3439e` |
 
 Full guide: `WORKSPACE_NOTION.md` in workspace. Never paste tokens into Notion pages outside Secrets folder.
-Full guide: `WORKSPACE_NOTION.md` in workspace. Never paste tokens into Notion pages outside Secrets folder.
+User-facing Vietnamese guide: `huong-dan-ket-noi-notion.md` in workspace (sent via Telegram 2026-08-01).
 
 ## Authentication Setup
 
@@ -45,3 +46,5 @@ To obtain a Notion integration token:
 5. Store the token securely (e.g., in environment variable or secrets manager)
 
 The token is required for scripts like `import_upnote.py` and Notion MCP server operation.
+
+**Security rule:** never share the Notion token in chat, code, wiki, memory, or commits — instruct users to create their own personal token and keep it in a config file / secrets manager.

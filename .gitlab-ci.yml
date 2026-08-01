@@ -1,0 +1,25 @@
+image: python:3.10-slim
+
+stages:
+  - lint
+  - test
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+
+lint_syntax:
+  stage: lint
+  script:
+    - python -m pip install --upgrade pip
+    - python -m py_compile nanobot_self_improve.py import_upnote.py ocr_process.py self_improve_cron.py session_fts.py
+    - echo "Syntax check passed cleanly!"
+
+test_self_improve:
+  stage: test
+  script:
+    - python nanobot_self_improve.py report
+    - echo "Nanobot self-improvement report check passed!"
