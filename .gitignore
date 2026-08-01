@@ -13,3 +13,4 @@ run/
 *.db
 *.sqlite
 sessions/
+graphify-out/
