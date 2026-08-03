@@ -32,6 +32,7 @@
 - CLI tooling & automation, CDP/Electron harnesses
 - Agent harness design, local-first LLM Wiki
 - 9router / nanobot / opencode stack on Pi
+- Remotion for video creation projects
 
 ## Preferences
 
@@ -42,6 +43,7 @@
 - **Thông báo kế hoạch trước khi chạy**: Luôn nêu 1 câu ngắn gọn kế hoạch sẽ làm gì TRƯỚC KHI thực thi bất kỳ tool/lệnh nào.
 - Vietnamese default
 - **No heartbeat status reports** — disable all heartbeat reporting
+- Docx documents: use Heading 1/2, bullet lists, centered titles, italic figure captions
 
 ### Response length
 - Telegram: 2–3 paragraphs typical
