@@ -2,7 +2,7 @@
 
 ## Basic Information
 
-- **Name**: tan (Telegram: @trongtan2104)
+- **Name**: Tấn (Telegram: @trongtan2104)
 - **Telegram chat ID**: `1449852069`
 - **Role**: Kỹ sư thiết bị y tế (Biomedical Equipment Engineer)
 - **Main project**: MEIMS / QLTB — phần mềm Quản lý thiết bị y tế

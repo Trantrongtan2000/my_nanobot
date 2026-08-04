@@ -43,7 +43,7 @@ This file stores important information that should persist across sessions.
 
 - User interfaces with Tâm Anh Hospital system (Q7, Q8, HCM; Viện Nghiên Cứu Tâm Anh).
 - Internal email domain: `@tahospital.vn`. Key senders: `ta5.pttbyt`/`ta5.pkhth` (TTBYT Q7), `khth` (KHHĐ), `hanhchinh`, `cntt`, `nhansu`, `phongdieuduong`, `huonglt2` (KSK coordination).
-- User builds tools around hospital ops (mail tracking, equipment reports like `MÁY SIÊU ÂM Q7`, `TBYTQ7_BCCL`).
+- User works with Excel equipment maintenance schedules from Telegram media files, stored at `/home/tan/.nanobot/media/telegram/`, with sheet naming pattern `T{module}.{year}` (e.g., `T08.2026` or `KHBT 2026 TRÌNH BLD`). These files contain maintenance schedules for various hospital departments, including 22 devices in Khoa Khám bệnh with 3 devices having I+M1 checks (Dao mổ ZEUS-150, Máy điện tim ECG-1250K, Máy phá rung tim TEC-5621) and 13 M1 devices requiring periodic maintenance.
 
 ## Agent Ecosystem
 
