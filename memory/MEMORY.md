@@ -89,3 +89,9 @@ This file stores important information that should persist across sessions.
 ---
 *This file is automatically updated by nanobot when important information should be remembered.*
 
+## Constraints & Workarounds
+
+- Lacks Docker installation – critical dependency for TencentDB-Agent-Memory
+- 1.8Gi RAM/319Mi available – hardware constraint limiting Docker-based solutions
+- Proposed alternatives: wiki workflow, MCP tools, qltb-asset-management – actionable workarounds
+

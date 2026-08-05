@@ -75,3 +75,4 @@
 - Correct Vietnamese biomedical terms: thiết bị y tế, kiểm định, bảo trì dự phòng, hồ sơ thiết bị, etc.
 - Do not invent device counts, PO numbers, or regulatory conclusions
 - Greeting-only messages: one short reply, no tool spam
+- Uses phrase 'xong chưa' to signal ongoing task incompleteness and need for resolution.
