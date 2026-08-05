@@ -64,6 +64,10 @@ This file stores important information that should persist across sessions.
 | TV Box | 192.168.2.237 | Hermes + nanobot; SSH port 2104; Docker running Mem0 server on port 8888 |
 | Orangepi | 192.168.2.91 | nullclaw agent |
 
+## Scheduled Jobs
+
+- **kudu-cleanup-12h** (id a031a684): Runs `kudu-cli.sh scan --all --clean` at 00:00 and 12:00 daily (Asia/Ho_Chi_Minh) for APT/font cache cleanup.
+
 ## n8n Handover Document Automation
 
 - User building n8n workflow for handover document automation using Mistral OCR + Word template `bbbg.docx`
