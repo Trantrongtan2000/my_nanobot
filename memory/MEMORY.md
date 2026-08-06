@@ -13,6 +13,7 @@ This file stores important information that should persist across sessions.
 - `n8n-atom`: Workflow orchestrator (port 5888)
 - `MiniMax-AI/skills`: DOCX/PDF/XLSX/PPTX tools
 - `Zimit`: Web→ZIM archiver (incomplete deployment)
+- **Qoder Desktop**: Not installed — automation script (`main.py`) cannot launch or interact with Qoder without it
 
 ## Google Workspace Integration
 
@@ -67,7 +68,7 @@ This file stores important information that should persist across sessions.
 
 ## Scheduled Jobs
 
-- **kudu-cleanup-12h** (id a031a684): Runs `kudu-cli.sh scan --all --clean` at 00:00 and 12:00 daily (Asia/Ho_Chi_Minh) for APT/font cache cleanup.
+- **kudu-cleanup-12h** (id a031a684): Runs `kudu-cli.sh scan --all --clean` at 06:00 and 18:00 daily (Asia/Ho_Chi_Minh) for APT/font cache cleanup. Each run scans ~164 MB (APT cache ~160 MB, temp files, font caches) but cleans only ~2.5–2.8 MB; 250+ items skipped due to in-use files (/tmp sockets, systemd-private dirs) and permission denied.
 
 ## n8n Handover Document Automation
 
