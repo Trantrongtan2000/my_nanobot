@@ -8,6 +8,7 @@ This file stores important information that should persist across sessions.
 
 - `croc` v10.6.0: Secure file transfer with relay/PAKE
 - `browser-use-desktop`: CDP automation (requires `--remote-debugging-port=9222`)
+- `playwright`: Web automation on Raspberry Pi (ARM64); Chromium headless verified working
 - `cli-anything-hub`: 69 CLI skills
 - `n8n-atom`: Workflow orchestrator (port 5888)
 - `MiniMax-AI/skills`: DOCX/PDF/XLSX/PPTX tools
