@@ -46,6 +46,7 @@ This file stores important information that should persist across sessions.
 - User interfaces with Tâm Anh Hospital system (Q7, Q8, HCM; Viện Nghiên Cứu Tâm Anh).
 - Internal email domain: `@tahospital.vn`. Key senders: `ta5.pttbyt`/`ta5.pkhth` (TTBYT Q7), `khth` (KHHĐ), `hanhchinh`, `cntt`, `nhansu`, `phongdieuduong`, `huonglt2` (KSK coordination).
 - User works with Excel equipment maintenance schedules from Telegram media files, stored at `/home/tan/.nanobot/media/telegram/`, with sheet naming pattern `T{module}.{year}` (e.g., `T08.2026` or `KHBT 2026 TRÌNH BLD`). These files contain maintenance schedules for various hospital departments, including 22 devices in Khoa Khám bệnh with 3 devices having I+M1 checks (Dao mổ ZEUS-150, Máy điện tim ECG-1250K, Máy phá rung tim TEC-5621) and 13 M1 devices requiring periodic maintenance.
+- Bơm tiêm điện TERUMO TE-SS835N03 tại Khoa Cấp cứu BV Quận 7: 5 máy (số 1, 2, 3, 8 + 1 máy ở CC Sản); máy số 2, 3 và máy CC Sản chờ thay pin. Lịch bảo trì: kiểm tra pin 3 tháng/lần, hiệu chuẩn 12 tháng/lần, thay pin 6–12 tháng tùy mức sử dụng. Chi tiết: `wiki/entities/terumo_te_ss835n03_*.md` (4 bản ghi).
 
 ## Agent Ecosystem
 
