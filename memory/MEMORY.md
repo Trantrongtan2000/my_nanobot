@@ -13,6 +13,7 @@ This file stores important information that should persist across sessions.
 - `n8n-atom`: Workflow orchestrator (port 5888)
 - `MiniMax-AI/skills`: DOCX/PDF/XLSX/PPTX tools
 - `Zimit`: Web→ZIM archiver (incomplete deployment)
+- `mistral-vibe` (vibe): Mistral Libraries API CLI for managing document libraries; configured with a Mistral API key (sourced from Notion) in `~/.vibe/config.toml`
 - **Qoder Desktop**: Not installed — automation script (`main.py`) cannot launch or interact with Qoder without it
 
 ## Google Workspace Integration
@@ -33,6 +34,7 @@ This file stores important information that should persist across sessions.
   - Source emails stored under `/home/tan/.nanobot/workspace/hospital-emails.json`.
 
 - **Device Wiki** (`wiki/entities/`) — 52+ entity markdown files for Tâm Anh Q7 medical devices, including ultrasound devices from Excel with AETitle registry (51 devices). Uses LLM Wiki 3-layer pattern (`raw/`, `wiki/`, `AGENTS.md`).
+- **Mistral Library "MEIMS Equipment Docs"** (ID: `019fdc0a-5da8-7396-85f1-55b98bbd4379`) — Mistral Libraries API store, description "Hồ sơ kiểm định, bảo trì thiết bị y tế"; intended to mirror `wiki/entities/` and `ocr/` files. Created 2026-08-07.
 
 - **Central Orchestrator** (`/home/tan/central-orchestrator/`) — CrewAI multi-agent system connecting nanobot + Hermes on two nodes (192.168.2.22 and 192.168.2.237), both running Hermes + nanobot.
   - Architecture: Hermes handles planning/coordination (calls Node 1), Nanobot handles code/GPU-heavy tasks (calls Node 2). Both agents run on both nodes.
