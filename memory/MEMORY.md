@@ -40,7 +40,7 @@ This file stores important information that should persist across sessions.
   - Config in `.env`: `NODE1_BASE_URL`, `NODE2_BASE_URL`, `SHARED_MODEL_NAME=MiniMax-M2.7`.
   - Structure: `main.py` (entry), `bot.py` (Telegram handler), `orchestrator.py` (CrewAI logic), `agents.py` (agent defs), `requirements.txt`, `.env.example`.
   - Hermes and nanobot originally shared the same Telegram token causing polling conflicts; separate tokens assigned per bot.
-- **KiroCrew Workspace** — Open-source development workspace with persistent sessions, self-learning, scheduled jobs, multi-surface support (desktop, web, CLI, Slack, Telegram, Discord), extensible MCP, and defense-in-depth architecture.
+- **KiroCrew Workspace** (https://github.com/kirodotdev/KiroCrew) — Open-source development workspace with persistent sessions, self-learning, scheduled jobs, multi-surface support (desktop, web, CLI, Slack, Telegram, Discord), extensible MCP, and defense-in-depth architecture. User wants to use it to improve nanobot.
 
 ## Tâm Anh Hospital Context
 
