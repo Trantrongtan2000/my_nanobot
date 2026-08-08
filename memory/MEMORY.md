@@ -51,6 +51,7 @@ This file stores important information that should persist across sessions.
 - Internal email domain: `@tahospital.vn`. Key senders: `ta5.pttbyt`/`ta5.pkhth` (TTBYT Q7), `khth` (KHHĐ), `hanhchinh`, `cntt`, `nhansu`, `phongdieuduong`, `huonglt2` (KSK coordination).
 - User works with Excel equipment maintenance schedules from Telegram media files, stored at `/home/tan/.nanobot/media/telegram/`, with sheet naming pattern `T{module}.{year}` (e.g., `T08.2026` or `KHBT 2026 TRÌNH BLD`). These files contain maintenance schedules for various hospital departments, including 22 devices in Khoa Khám bệnh with 3 devices having I+M1 checks (Dao mổ ZEUS-150, Máy điện tim ECG-1250K, Máy phá rung tim TEC-5621) and 13 M1 devices requiring periodic maintenance.
 - Bơm tiêm điện TERUMO TE-SS835N03 tại Khoa Cấp cứu BV Quận 7: 5 máy (số 1, 2, 3, 8 + 1 máy ở CC Sản); máy số 2, 3 và máy CC Sản chờ thay pin (serial: 2205010006, 2205010032, 2205010005). Lịch bảo trì: kiểm tra pin 3 tháng/lần, hiệu chuẩn 12 tháng/lần, thay pin 6–12 tháng tùy mức sử dụng. Chi tiết: `wiki/entities/terumo_te_ss835n03_*.md` (4 bản ghi).
+- Đặt gas PKTA Q7: quy ước "oxy lớn" = Oxy 6 m³, "oxy nhỏ" = Oxy 7 lít, "co2 lớn" = CO2 6 m³, "co2 nhỏ" = CO2 7 lít. Mẫu tin nhắn gửi @Acetylen Cn Saigon trong skill `qltb-doc-automation` (template `don_binh_khi.txt`).
 
 ## Agent Ecosystem
 
@@ -58,7 +59,7 @@ This file stores important information that should persist across sessions.
 - **Pi Agent** (Qwen local via Ollama): web search fixed by replacing `@ollama/pi-web-search` with `pi-web-access` (Exa MCP).
 - Skills installed from ClawHub: self-improving-agent, skill-vetter, vibesec, markitdown.
 - **Mistral OCR workflow** (on Hermes): PDF → images → Mistral OCR → markdown. Used for biomedical document processing.
-- **Hermes Gateway** — Messaging gateway service handling Telegram bot communication and MCP server coordination.
+- **Hermes Agent / Hermes Gateway** — NousResearch/hermes-agent installed at `~/.hermes/` (venv `~/.hermes/venvs/hermes`, Python 3.11–3.13, `uv` available). Telegram gateway runs as systemd user service on Raspberry Pi, connected to Telegram with its own dedicated bot token in `~/.hermes/.env` (separate from nanobot's token, tránh polling conflicts). Uses OpenCodex (port 10100) as LLM provider.
 - **Dedicated-agent direction** — User wants separate agents for OCR, Wiki, GraphRAG, Maintenance, and Safety management; Wiki agent was selected first, with the others not yet created.
 - **Orangepi** (`192.168.2.91`) — Runs nullclaw agent (v2026.5.4, config `~/.nullclaw/config.json`) with Telegram bot @Nullclaw_culi_bot; SSH user `trongtan`. Confirmed switch to 9router provider (same as Pi nanobot) on 2026-05-29.
 - **Mem0** — Self-hosted via Docker on TVBox (192.168.2.237:8888). Agents share memory via `user_id` separation. Architecture: FastAPI + PostgreSQL (pgvector). Authentication via `X-API-Key` header.
@@ -93,7 +94,7 @@ This file stores important information that should persist across sessions.
 - **OpenScience** (`@synsci/openscience`) — AI workbench mã nguồn mở Apache 2.0 cho nghiên cứu khoa học: 290+ skills, 30+ CSDL, workspace trên trình duyệt, hỗ trợ nhiều model providers.
 - **DigitalPlat FreeDomain** — Miễn phí domain (5 TLD: .DPDNS.ORG, .US.KG, .QZZ.IO, .XX.KG, .QD.JE). DigitalPlat chỉ xử lý đăng ký + delegate NS; tất cả DNS records quản lý ở external authoritative DNS. Dashboard: dash.domain.digitalplat.org. Telegram chính thức bị compromise — không tin cậy comms Telegram. Repo: DigitalPlatDev/Domain-OSS. Workflow MEIMS: đăng ký tài khoản, chọn domain (vd `tbytq7.us.kg`), connect NS đến Cloudflare/VPS, cấu hình DNS trỏ MEIMS backend, HTTPS qua Let's Encrypt.
 - **OpenSpace** (`HKUDS/OpenSpace`) — Skill Management Layer cho AI Agents: 6 MCP tools (`cloud_auth_flow`, `execute_task`, `search_skills`, `cloud_browse_skills`, `fix_skill`, `upload_skill`), 2 host skills (`skill-discovery`, `delegate-task`), hỗ trợ stdio/SSE/streamable-http. User từ chối áp dụng cho workflow bảo trì thiết bị.
-- **Hermes Agent** (NousResearch/hermes-agent) — Repo: https://github.com/NousResearch/hermes-agent. Discovered during ocx setup; relationship to local Hermes Gateway unclear.
+
 
 ---
 *This file is automatically updated by nanobot when important information should be remembered.*
