@@ -14,6 +14,7 @@ This file stores important information that should persist across sessions.
 - `MiniMax-AI/skills`: DOCX/PDF/XLSX/PPTX tools
 - `Zimit`: Web→ZIM archiver (incomplete deployment)
 - `mistral-vibe` (vibe): Mistral Libraries API CLI for managing document libraries; configured with a Mistral API key (sourced from Notion) in `~/.vibe/config.toml`
+- `ocx` (Opencodex) v2.11.0: CLI agent tool installed at `/home/tan/.npm-global/bin/ocx` (not in PATH by default). Custom provider `poolside` configured with adapter `openai-chat`, base URL `https://inference.poolside.ai/v1`, key pool (3 keys). Default provider: `openai`. Proxy serves on `http://127.0.0.1:10100`.
 - **Qoder Desktop**: Not installed — automation script (`main.py`) cannot launch or interact with Qoder without it
 
 ## Google Workspace Integration
@@ -73,6 +74,7 @@ This file stores important information that should persist across sessions.
 ## Scheduled Jobs
 
 - **kudu-cleanup-12h** (id a031a684): Runs `kudu-cli.sh scan --all --clean` at 06:00 and 18:00 daily (Asia/Ho_Chi_Minh) for APT/font cache cleanup. Each run scans ~164 MB (APT cache ~160 MB, temp files, font caches) but cleans only ~2.5–2.8 MB; 250+ items skipped due to in-use files (/tmp sockets, systemd-private dirs) and permission denied.
+- **ocx-reboot**: Runs `ocx` at `@reboot` and reports result via cron.
 
 ## n8n Handover Document Automation
 
@@ -91,6 +93,7 @@ This file stores important information that should persist across sessions.
 - **OpenScience** (`@synsci/openscience`) — AI workbench mã nguồn mở Apache 2.0 cho nghiên cứu khoa học: 290+ skills, 30+ CSDL, workspace trên trình duyệt, hỗ trợ nhiều model providers.
 - **DigitalPlat FreeDomain** — Miễn phí domain (5 TLD: .DPDNS.ORG, .US.KG, .QZZ.IO, .XX.KG, .QD.JE). DigitalPlat chỉ xử lý đăng ký + delegate NS; tất cả DNS records quản lý ở external authoritative DNS. Dashboard: dash.domain.digitalplat.org. Telegram chính thức bị compromise — không tin cậy comms Telegram. Repo: DigitalPlatDev/Domain-OSS. Workflow MEIMS: đăng ký tài khoản, chọn domain (vd `tbytq7.us.kg`), connect NS đến Cloudflare/VPS, cấu hình DNS trỏ MEIMS backend, HTTPS qua Let's Encrypt.
 - **OpenSpace** (`HKUDS/OpenSpace`) — Skill Management Layer cho AI Agents: 6 MCP tools (`cloud_auth_flow`, `execute_task`, `search_skills`, `cloud_browse_skills`, `fix_skill`, `upload_skill`), 2 host skills (`skill-discovery`, `delegate-task`), hỗ trợ stdio/SSE/streamable-http. User từ chối áp dụng cho workflow bảo trì thiết bị.
+- **Hermes Agent** (NousResearch/hermes-agent) — Repo: https://github.com/NousResearch/hermes-agent. Discovered during ocx setup; relationship to local Hermes Gateway unclear.
 
 ---
 *This file is automatically updated by nanobot when important information should be remembered.*
