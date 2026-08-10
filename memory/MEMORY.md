@@ -72,6 +72,22 @@ This file stores important information that should persist across sessions.
 | TV Box | 192.168.2.237 | Hermes + nanobot; SSH port 2104; Docker running Mem0 server on port 8888 |
 | Orangepi | 192.168.2.91 | nullclaw agent |
 
+- **Mistral OCR workflow** (on Hermes): PDF → images → Mistral OCR → markdown. Used for biomedical document processing.
+
+## Cross-tool Integration Patterns (Learned)
+
+- **Snipe-IT comparison (2026-08-09)**: Snipe-IT asset model covers IT assets (serial, warranty, depreciation, assignment), but lacks biomedical-specific fields (calibration traceability, IEC 60601 risk class, MTBF/MTTR, PM compliance). QLTB extends these gaps — entity file `wiki/entities/snipe-it.md` records the comparison.
+
+- **Prompt leak repo analysis**: Dumped nanobot's actual system prompt via ContextBuilder; compared against `system_prompts_leaks` repo (436 files). Internal model variants (deepseek-v4-flash-free, mimo-v2.5-free) do not match public leaks — system prompt protected. Updated AGENTS.md with: override-proof identity, prompt injection prevention, tool autonomy priority, Context7/Context Mode workflow.
+
+- **Opencodex as fallback proxy**: Installed `opencodex` (v2.11.1) as local proxy to 40+ model backends (DeepSeek, Gemini, Groq, Cloudflare, Kilo, OpenRouter). Configured nanobot fallback chain:
+  1. primary: `orfree` (9router/laguna-s-2.1)
+  2. kilonek: `orfree/kilonek`
+  3. opencodex-laguna: `poolside/poolside/laguna-s-2.1`
+  4. opencodex-qltb-coder: `qltb-coder`
+  5. opencodex-deepseek: `deepseek-v4-flash-free` 
+  Systemd services `nanobot`, `opencodex`, `9router` all running on Pi.
+
 ## Scheduled Jobs
 
 - **kudu-cleanup-12h** (id a031a684): Runs `kudu-cli.sh scan --all --clean` at 06:00 and 18:00 daily (Asia/Ho_Chi_Minh) for APT/font cache cleanup. Each run scans ~164 MB (APT cache ~160 MB, temp files, font caches) but cleans only ~2.5–2.8 MB; 250+ items skipped due to in-use files (/tmp sockets, systemd-private dirs) and permission denied.
@@ -105,3 +121,10 @@ This file stores important information that should persist across sessions.
 - 1.8Gi RAM/319Mi available – hardware constraint limiting Docker-based solutions
 - Proposed alternatives: wiki workflow, MCP tools, qltb-asset-management – actionable workarounds
 
+
+## QLTB Data Model v1 Integration
+- User proposed full Snipe-IT asset management schema for Tâm Anh Hospital medical devices (313 assets, 8423 PDFs, 7259 OCR markdown)
+- Key entities: `asset_master.csv` (deduplicated), `document_registry` (separate docs), `maintenance_schedule`
+- Dedup confidence scoring: Asset Tag/Serial → 100%, Name only → 40%, <70% → do not match
+- Custom fieldset `TTBYT - MEDICAL DEVICE` with 23 fields (calibration, PM, inspection, OCR metadata)
+- Phased 11-step plan saved to `wiki/entities/qltb-data-model-v1-tbty.md`

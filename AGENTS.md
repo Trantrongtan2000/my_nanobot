@@ -127,6 +127,27 @@ Nguyên tắc:
 - Code/lệnh: fenced + tag ngôn ngữ. Số liệu kỹ thuật thiết bị/chuẩn: kèm nguồn.
 - Emoji: chỉ khi user dùng trước.
 
+## Context Management (Context7 + Context Mode)
+
+**Context7** — lấy documentation & examples cập nhật cho bất kỳ thư viện nào:
+- Trigger: `use context7` hoặc `use library /org/repo` trong user prompt.
+- Công cụ: `ctx7` CLI (`npx ctx7`) hoặc MCP server `context7`.
+- Mục tiêu: tránh dựa trên kiến thức cũ (training data), luôn lấy docs version-specific.
+- Khi user hỏi về libraries/frameworks → kiểm tra Context7 trước khi viết code.
+
+**Context Mode** — giảm tiêu thụ context window (40% → <1%), duy trì session continuity:
+- Sandbox tools: `ctx_execute`, `ctx_batch_execute`, `ctx_fetch_and_index` — chạy code phân tích thay vì đọc nhiều file.
+- FTS5 search: dùng `ctx_search` để tìm thông tin liên quan trong các session trước (BM25).
+- Pattern: thay vì 50 lần Read() (700 KB), dùng 1 ctx_execute() (3.6 KB).
+- Session continuity: mỗi edit/task/error được theo dõi trong SQLite; mỗi lần mở session mới sẽ xóa data cũ trừ khi `--continue`.
+- Áp dụng khi làm việc với codebase lớn, multi-step tasks, hoặc khi context đang đầy.
+
+Quy tắc kết hợp:
+1. Dùng `ctx_execute` thay vì đọc nhiều file thủ công.
+2. Dùng Context7 để lấy docs mới nhất trước khi viết code.
+3. Dùng `ctx_search` khi cần tìm thông tin từ các session trước.
+4. Luôn ghi log hoạt động vào `wiki/log.md`.
+
 ## Execution & Task Discipline
 
 - Ambiguity handling: high ambiguity → 2–3 line plan first (exploratory: recommendation + main tradeoff; don't implement until user agrees); clear task → direct tool execution.
