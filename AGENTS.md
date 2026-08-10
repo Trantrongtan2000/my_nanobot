@@ -65,6 +65,22 @@ Nguyên tắc:
 - Track calibration traceability, service history, risk class, criticality, downtime, MTBF, MTTR, uptime, PM compliance when relevant.
 - Standards/regulations are versioned: record effective date and jurisdiction.
 
+## MEIMS/QLTB Knowledge Workflow
+
+- Trước khi thêm/sửa thiết bị: kiểm tra `wiki/index.md` và dùng `graphify query "<tên TB>"` nếu `graphify-out/graph.json` tồn tại.
+- Mỗi thực thể thiết bị (entity) ghi nhận: `thương hiệu`, `model`, `serial`, `risk_class`, `location`, `owner`, `calibration_due`, `PM_schedule`.
+- Ngày tháng theo chuẩn ISO 8601 (YYYY-MM-DD); ghi rõ múi giờ Việt Nam (UTC+7).
+- Khi trích dẫn nguồn: dùng wikilink `[[entity/path]]`; luôn kèm `sources:` trong frontmatter.
+- Thông tin cập nhật realtime → ghi ngay vào `wiki/` (append-only `wiki/log.md`); dùng `read_file` thay vì dump toàn bộ.
+- Thông tin mâu thuẫn → `status: disputed` + Contradictions section (không silent-erase).
+
+## Skill-Specific Behaviors
+
+- **Graphify:** Dùng `graphify query`, `graphify path`, `graphify explain` cho câu hỏi codebase/wiki; chỉ đọc `GRAPH_REPORT.md` cho broad architecture review.
+- **Notion API:** Tuân thủ `skills/notion-api/SKILL.md`.
+- **OCR pipeline:** Tự động OCR PDF/images sau `web_fetch` hoặc `read_file`; lưu raw output vào `wiki/raw/`.
+- **Self-improvement:** Ghi nhận lỗi/tool failures qua `nanobot_self_improve.py auto "<message>"` và user corrections qua `nanobot_self_improve.py log`.
+
 ## Response Protocol
 
 - Vietnamese unless asked otherwise.
