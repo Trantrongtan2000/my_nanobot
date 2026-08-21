@@ -1,256 +1,369 @@
-# Nanobot NOOA Upgrade Plan
+# Nanobot NOOA — Kế hoạch cải thiện
 
 ## 1. Mục tiêu
 
-Đưa `nanobot_nooa_upgrade_package_v2` từ scaffold/heuristic implementation hiện tại thành runtime edge-cloud có contract rõ ràng, confidence provenance đúng, tool execution an toàn và có bằng chứng kiểm thử thực tế.
+Đưa `nanobot_nooa_upgrade_package_v2` từ scaffold/heuristic implementation thành runtime edge-cloud có:
 
-Không đánh dấu hoàn tất chỉ dựa trên code inspection hoặc benchmark regex. Một hạng mục chỉ được xem là `DONE` khi:
+- Cactus Hybrid và Needle 2 được tích hợp bằng API/runtime thực tế.
+- Confidence có provenance rõ ràng, không hardcode trong business logic.
+- Agent và tool có registry, factory, lifecycle và permission rõ ràng.
+- Kết quả có trust level/provenance đúng.
+- Có cơ chế ghi nhận feedback, tự đánh giá và tạo dataset để cải thiện có kiểm soát.
+- Có test unit, integration, safety và benchmark chạy trên flow thật.
 
-1. Code tồn tại và import được.
-2. Unit test tương ứng pass.
-3. Integration/smoke path pass.
-4. Runtime dependency/API thật đã được xác minh.
-5. Không còn mock/stub trong production path của hạng mục đó.
+Không đánh dấu `DONE` chỉ dựa trên code inspection, docs hoặc benchmark regex.
 
-## 2. Hiện trạng đã xác minh
+---
 
-- `pytest -q`: 19 tests passed.
-- SQLite hiện có 27 devices và 11 facilities.
-- `RoutingDecision`, `ConfidencePolicy`, `TrustLevel` đã tồn tại.
-- Repository đang truy vấn SQLite thật.
-- `CactusHybridRouter` hiện vẫn là regex/keyword router với confidence hardcoded.
-- `NeedleToolAdapter` hiện chỉ dispatch callable trong registry, chưa gọi package `cactus-needle`.
-- Mistral OCR, Notion và Cloudflare runtime vẫn là stub/simulation.
-- Tool contract hiện không tương thích với cách `NanobotCoordinator` truyền `{"query": text}` cho mọi tool.
+## 2. Hiện trạng sau khi khám phá lại
 
-## 3. Nguyên tắc kiến trúc đích
+### Đã có
+
+- SQLite repository thật với 27 devices và 11 facilities.
+- `RoutingDecision`, `ConfidencePolicy`, `TrustLevel`.
+- `ToolDefinition` với Pydantic argument validation.
+- `CapabilityRegistry` cho tool definitions.
+- `NanobotCoordinator` có argument extraction theo từng tool.
+- Các class sơ bộ:
+  - `MedicalEquipmentAgent`
+  - `NotionWorkspaceAgent`
+  - `OCRPipelineAgent`
+- `NineRouterClient` có circuit state và retry cơ bản.
+- `NormalizedDocument`/`DocumentBlock` cho OCR.
+- Test đã mở rộng thêm OCR, specialized agent, tool validation và circuit breaker.
+
+### Chưa đạt production
+
+- `CactusHybridRouter` vẫn là regex/keyword router và gán confidence cố định.
+- `NeedleAgentAdapter` chỉ thử import `needle`; nếu thất bại sẽ silently fallback.
+- Execute path của Needle vẫn gán confidence `0.98` hardcoded.
+- Chưa xác minh Needle `complete()`/`run()` thật sự trả function calls và confidence được sử dụng.
+- Mistral OCR tạo block dữ liệu mẫu, chưa gọi HTTP API thật.
+- Notion agent trả page ID cố định, chưa gọi Notion API/MCP.
+- Specialized agents chưa có `AgentRegistry`, factory, capability metadata hoặc lifecycle.
+- Chưa có `SelfImprovementAgent`, event store, feedback collector, dataset exporter hoặc retraining/evaluation loop.
+- `ObservabilityTracer` chỉ lưu log trong memory và chưa đo/persist đầy đủ latency.
+- 9Router có circuit breaker sơ bộ nhưng chưa có error taxonomy và model fallback chain đầy đủ.
+- Một số production path vẫn báo `success` khi provider chỉ degraded/fallback.
+
+---
+
+## 3. Kiến trúc đích
 
 ```text
 Telegram
   -> Security / Allowlist
-  -> Cactus Hybrid routing confidence
-  -> Needle 2 complete/run
-  -> Tool confidence gate
-  -> Capability Registry
+  -> Cactus Hybrid routing
+  -> Needle 2 agent loop
+  -> Agent/Tool confidence gate
+  -> Agent Registry / Capability Registry
   -> Specialized NOOA Agent
   -> Service
-  -> Repository / Provider
+  -> Repository / External Provider
   -> Provenance-aware result
+  -> Persistent telemetry + improvement events
 ```
 
 ### Phân tách confidence
 
-- `CACTUS_HYBRID`: confidence quyết định edge hay cloud.
+- `CACTUS_HYBRID`: quyết định edge/cloud.
 - `NEEDLE`: confidence của tool selection/function call.
-- `OCR`: confidence nhận dạng ký tự/block.
-- `ROUTER`: chỉ dùng cho fallback heuristic, phải được ghi nhận rõ.
-- `PROVENANCE`: mức độ xác minh nguồn dữ liệu, không đồng nhất với model confidence.
+- `OCR`: confidence của block/field nhận dạng.
+- `ROUTER`: chỉ dùng cho heuristic fallback.
+- `PROVENANCE`: mức độ xác minh nguồn dữ liệu, không phải model confidence.
 
 ### Trust level
 
 Router không được tạo `VERIFIED_FACT`. Trust chỉ được xác định sau execution và provenance validation.
 
-- SQLite match chưa chắc là `VERIFIED_FACT` nếu chưa có verification metadata.
-- OCR luôn bắt đầu ở `RAW_OCR`.
-- LLM reasoning là `INFERRED`.
-- Đề xuất là `PROPOSAL`.
-- Thiếu bằng chứng là `UNKNOWN`.
+- OCR: `RAW_OCR`.
+- LLM reasoning: `INFERRED`.
+- AI recommendation: `PROPOSAL`.
+- Thiếu bằng chứng: `UNKNOWN`.
+- SQLite match chỉ là dữ liệu tìm thấy.
+- Chỉ gán `VERIFIED_FACT` khi có verification metadata hoặc authoritative source.
 
-## 4. Phân kỳ thực hiện
+---
 
-## Phase 0 — Baseline và kiểm soát phạm vi
+## 4. Phase 0 — Baseline và inventory
 
 ### Việc cần làm
 
-- Giữ lại benchmark hiện tại làm baseline heuristic.
-- Tách test synthetic routing khỏi test runtime integration.
-- Lập bảng inventory cho mọi component: `REAL`, `PARTIAL`, `STUB`, `MOCK`, `DEAD_CODE`.
-- Không dùng README/docs làm bằng chứng implementation.
-
-### Deliverables
-
-- Baseline metrics có route, tool, confidence source và false-local rate.
-- Danh sách dependency/runtime cần cài và version cần pin.
+- Chạy lại toàn bộ test suite hiện tại và lưu số liệu baseline.
+- Tách benchmark heuristic khỏi integration benchmark.
+- Inventory mỗi module là:
+  - `REAL`
+  - `PARTIAL`
+  - `STUB`
+  - `MOCK`
+  - `DEAD_CODE`
+  - `DOCUMENTED_BUT_NOT_IMPLEMENTED`
+- Kiểm tra tất cả production imports.
+- Xác minh package/version/runtime của:
+  - `cactus-needle`
+  - Cactus Hybrid
+  - Mistral OCR
+  - 9Router
+  - NOOA/NVIDIA OO-Agents nếu có sử dụng trực tiếp.
 
 ### Acceptance criteria
 
-- Baseline được chạy reproducible.
-- Mọi test mới phân biệt rõ heuristic fallback và provider thật.
+- Baseline reproducible.
+- Không coi test dictionary/stub là runtime verification.
+- Mỗi provider có health check và trạng thái availability rõ ràng.
+- Có danh sách dependency/version được pin.
 
-## Phase 1 — Sửa correctness và execution safety
+---
 
-### 1. Chuẩn hóa tool contract
+## 5. Phase 1 — Agent creation, registry và lifecycle
 
-Tạo typed `ToolDefinition` gồm:
+### 5.1 Tạo Agent contract
 
-- `name`
-- `description`
-- `input_schema`
-- `handler`
-- `required_permission`
-- `risk_level`
-- `result_schema`
+Mở rộng `NOOABaseAgent` thành contract có:
 
-Dùng Pydantic để validate arguments trước khi gọi handler.
+```text
+AgentMetadata
+  - name
+  - version
+  - description
+  - required_permissions
+  - capabilities
+  - supported_routes
+  - max_iterations
 
-Sửa các tool hiện tại:
+AgentContext
+  - request_id
+  - user_id
+  - input
+  - routing_decision
+  - dependencies
+  - cancellation/deadline
 
-- `lookup_device(query, department)`
-- `lookup_device_by_serial(serial_no)`
-- `get_calibration_status(days_ahead)`
-- `get_device_location(device_name)`
-- `search_service_record(device_serial)`
-- `create_notion_note(title, content)`
+AgentResult
+  - status
+  - output
+  - trust_level
+  - provenance
+  - events
+  - error_code
+```
 
-Không truyền chung `{"query": text}` cho mọi tool.
+### 5.2 AgentRegistry và factory
 
-### 2. Enforce security policy
+Tạo registry riêng cho agent, không dùng tool registry thay thế:
 
-Trong coordinator/executor:
+```text
+AgentRegistry.register(metadata, agent_class)
+AgentRegistry.list()
+AgentRegistry.get(name)
+AgentFactory.create(name, dependency_container, context)
+```
+
+Yêu cầu:
+
+- Reject duplicate names/version conflict.
+- Không cho agent không đăng ký tự chạy.
+- Validate required permissions/capabilities khi khởi tạo.
+- Dependency injection cho:
+  - `DeviceService`
+  - OCR provider
+  - Notion client
+  - event store
+  - telemetry tracer
+- Coordinator không import trực tiếp mọi specialized agent.
+
+### 5.3 Đăng ký agent hiện có
+
+- `MedicalEquipmentAgent`
+  - lookup
+  - reconciliation
+  - calibration
+- `OCRPipelineAgent`
+  - document validation
+  - OCR
+  - structured extraction
+- `NotionWorkspaceAgent`
+  - Notion write
+  - yêu cầu `WRITE_NOTION`
+- `SelfImprovementAgent`
+  - event analysis
+  - dataset export
+  - evaluation
+  - calibration report
+
+Coordinator chỉ làm:
+
+```text
+route
+  -> create agent through factory
+  -> create AgentContext
+  -> execute agent
+  -> validate AgentResult
+```
+
+### Acceptance criteria
+
+- Có thể thêm agent mới bằng class + metadata + registration mà không sửa coordinator.
+- Factory tạo đúng class và dependency.
+- Có test:
+  - unknown agent;
+  - duplicate registration;
+  - thiếu permission;
+  - thiếu capability;
+  - lifecycle failure.
+- Agent lifecycle có `initialize`, `execute`, `close` hoặc tương đương.
+- Không coi class tồn tại là agent đã được runtime sử dụng.
+
+---
+
+## 6. Phase 2 — Chuẩn hóa tool và execution safety
+
+Mỗi tool phải có:
+
+- name;
+- description;
+- Pydantic input schema;
+- result schema;
+- handler;
+- required permission;
+- risk level;
+- minimum confidence;
+- timeout;
+- idempotency policy.
+
+Các tool cần giữ contract rõ:
+
+```text
+lookup_device(query, department)
+lookup_device_by_serial(serial_no)
+get_calibration_status(days_ahead)
+get_device_location(device_name)
+search_service_record(device_serial)
+create_notion_note(title, content)
+```
+
+### Execution flow
 
 ```text
 allowlist
-  -> classify action
-  -> check permission
-  -> evaluate risk
-  -> apply confidence threshold
+  -> input trust classification
+  -> agent/tool selection
+  -> permission check
+  -> risk evaluation
+  -> confidence threshold
   -> human confirmation if required
+  -> validate arguments
   -> execute
+  -> validate result/provenance
 ```
 
-Quy tắc tối thiểu:
+### Policy tối thiểu
 
-- Read-only lookup: `READ_ONLY` + read threshold.
-- Notion write: `WRITE_NOTION` + write threshold.
-- Database mutation: `WRITE_DATABASE` + mutation threshold + confirmation.
-- Critical/admin action: reject hoặc human confirmation bắt buộc.
+- Read-only lookup:
+  - `READ_ONLY`
+  - threshold mặc định `0.80`
+- Notion write:
+  - `WRITE_NOTION`
+  - threshold mặc định `0.90`
+- Database mutation:
+  - `WRITE_DATABASE`
+  - threshold mặc định `0.95`
+  - human confirmation
+- Critical/admin:
+  - reject hoặc human confirmation bắt buộc.
 
-Sanitizer phải được gọi khi đưa OCR/document/web content vào model. Nội dung tài liệu chỉ là DATA, không phải INSTRUCTION.
+### Acceptance criteria
 
-### 3. Sửa lỗi repository/service
+- Không truyền `{"query": text}` cho mọi tool.
+- Tool sai argument trả typed validation error.
+- Tool write không chạy chỉ vì router chọn đúng tool.
+- Low confidence không execute local tool.
+- Unknown tool/permission/risk đều được audit.
+- Tool result không tự động trở thành `VERIFIED_FACT`.
 
-- Resolve database path từ config một cách deterministic.
-- Không tự tạo database production rỗng khi path sai.
-- Dùng context manager cho SQLite connections.
-- Thực sự áp dụng `days_ahead` trong calibration query.
-- Thêm index cho `serial_no`, `model`, `facility_id`, `next_calibration_due`.
-- Thêm migration/schema version.
-- Xử lý SQLite lock với retry giới hạn.
+---
 
-### Acceptance criteria Phase 1
-
-- Mọi tool có schema và permission rõ ràng.
-- Test sai argument trả lỗi typed, không có `TypeError` không kiểm soát.
-- Tool write không thể chạy chỉ vì router chọn đúng tool.
-- Calibration query tôn trọng `days_ahead`.
-- Test path sai không âm thầm tạo production DB mới.
-
-## Phase 2 — Tích hợp Needle 2 thật
-
-### 1. Dependency và API verification
-
-- Pin version package `cactus-needle` sau khi xác minh môi trường đích.
-- Xác minh import name, constructor, weights và tool schema API từ package thực tế.
-- Không dựa chỉ vào tài liệu thiết kế.
-
-### 2. Tạo `NeedleAgentAdapter`
-
-Adapter phải:
-
-1. Khởi tạo Needle agent.
-2. Truyền typed tool catalog.
-3. Gọi `complete()` hoặc `run()` theo API thực tế.
-4. Parse response envelope.
-5. Lấy `function_calls`.
-6. Lấy confidence từ response.
-7. Xử lý `confidence is None` an toàn.
-8. Giới hạn số bước/iterations.
-9. Trả về typed result.
-
-### 3. Confidence gating
-
-Policy theo action:
-
-- Read-only lookup: threshold configurable, mặc định 0.80.
-- Notion write: mặc định 0.90.
-- Database mutation: mặc định 0.95.
-- High-impact action: human confirmation bất kể confidence.
-
-Luồng:
-
-```text
-confidence >= high
-  -> execute nếu permission hợp lệ
-medium <= confidence < high
-  -> clarify hoặc restricted execution
-confidence < medium
-  -> cloud escalation
-```
-
-### Acceptance criteria Phase 2
-
-- Có test chứng minh confidence Needle thấp không execute tool.
-- Có test confidence `None`.
-- Có test nhiều function calls.
-- Tool arguments được validate trước execution.
-- Không còn confidence giả trong Needle adapter.
-
-## Phase 3 — Tích hợp Cactus Hybrid thật
+## 7. Phase 3 — Tích hợp Needle 2 thật
 
 ### Việc cần làm
 
-- Tạo `CactusHybridClient`/adapter riêng, không trộn logic với regex fallback.
-- Xác minh API/model/weights/runtime của Cactus Hybrid.
-- Router trả `RoutingDecision` typed.
-- Heuristic chỉ là fallback khi provider unavailable.
-- Ghi rõ `confidence_source=ROUTER` cho fallback.
-- Không dùng keyword matching làm primary router.
+- Pin version package sau khi xác minh môi trường thật.
+- Khởi tạo đúng `Needle(...)` theo API installed.
+- Truyền tool schema hợp lệ theo upstream API.
+- Gọi `complete()` hoặc `run()` thực tế.
+- Parse:
+  - response envelope;
+  - `function_calls`;
+  - arguments;
+  - confidence;
+  - error state.
+- Xử lý `confidence is None` an toàn.
+- Giới hạn iterations/tool calls.
+- Ghi `confidence_source=NEEDLE`.
+- Không silently fallback nếu Needle unavailable.
+- Nếu fallback, ghi rõ:
+  - provider unavailable;
+  - fallback reason;
+  - fallback confidence source.
 
-### Safety override
+### Acceptance criteria
 
-Các truy vấn có dấu hiệu safety-critical phải ưu tiên escalation/confirmation, kể cả khi chứa model name hoặc keyword lookup:
+- Test function call theo API installed.
+- Test confidence:
+  - cao;
+  - thấp;
+  - `None`;
+  - malformed.
+- Test nhiều function calls.
+- Không còn `confidence = 0.98` trong Needle execution path.
+- Tool execution chỉ xảy ra sau validation + policy gate.
+
+---
+
+## 8. Phase 4 — Tích hợp Cactus Hybrid thật
+
+### Việc cần làm
+
+- Tạo adapter riêng cho Cactus Hybrid.
+- Heuristic router chỉ là fallback khi provider unavailable.
+- `RoutingDecision` phải lưu:
+  - route;
+  - agent;
+  - tool;
+  - reason;
+  - escalation reason;
+  - confidence;
+  - confidence source.
+- Không dùng model name/keyword làm primary router.
+- Safety-critical queries phải escalation/confirmation.
+
+### Ví dụ safety-critical
 
 - Có được tiếp tục sử dụng không?
-- nguy cơ cho bệnh nhân
-- lỗi nguồn/áp suất/NIBP
-- tiêu chuẩn an toàn
-- đánh giá rủi ro
-- chẩn đoán nguyên nhân
+- Có nguy cơ cho bệnh nhân không?
+- Lỗi áp suất/NIBP/nguồn.
+- Đánh giá rủi ro/ISO.
+- Chẩn đoán nguyên nhân hỏng.
+- Quyết định ảnh hưởng an toàn thiết bị.
 
 ### Acceptance criteria
 
-- Ambiguous medical queries không bị route local chỉ vì chứa tên model.
-- Có đo `false-local rate` riêng.
-- Có fallback behavior rõ khi Cactus Hybrid unavailable.
-- Confidence của Cactus Hybrid được lưu riêng với confidence của Needle.
+- Ambiguous query không bị local chỉ vì có tên model.
+- Đo riêng false-local và false-cloud.
+- Có test provider unavailable/fallback.
+- Cactus confidence và Needle confidence không bị trộn.
+- Router không gán trust level cuối cùng.
 
-## Phase 4 — Hoàn thiện 9Router production client
+---
 
-### Việc cần làm
+## 9. Phase 5 — OCR thật và provenance
 
-- Tách timeout, DNS/network error, 4xx, 5xx, rate limit và auth failure.
-- Implement circuit breaker thật với state: `CLOSED`, `OPEN`, `HALF_OPEN`.
-- Implement model fallback chain configurable.
-- Không trả fallback giả dưới dạng thành công.
-- Validate OpenAI-compatible response bằng schema.
-- Propagate request ID, provider, model và latency.
-- Không hardcode secret mặc định trong production.
-
-### Acceptance criteria
-
-- 9Router offline trả `degraded`/`provider_error`, không trả `success` giả.
-- Circuit breaker ngăn request lặp vô hạn khi provider down.
-- Fallback chain có test.
-- Structured output lỗi bị reject rõ ràng.
-
-## Phase 5 — Hoàn thiện Mistral OCR pipeline
-
-### Pipeline đích
+### Pipeline
 
 ```text
 File upload
-  -> validation / size limit / MIME check
-  -> Mistral OCR API
+  -> MIME/size/path validation
+  -> Mistral OCR HTTP API
   -> OCRResult
   -> NormalizedDocument
   -> structured extraction
@@ -261,167 +374,343 @@ File upload
 
 ### Việc cần làm
 
-- Implement HTTP upload thật đến Mistral OCR.
-- Dùng API key từ environment/config, không hardcode.
-- Timeout, retry/backoff và error mapping.
-- Chuẩn hóa page/block/bbox/evidence.
-- Gắn OCR confidence theo block/field.
-- Không nâng OCR output thành `VERIFIED_FACT`.
-- Tạo schema cho bàn giao/nghiệm thu, kiểm định/hiệu chuẩn và bảo trì/sửa chữa.
-- Phân biệt production provider và test fake.
+- Upload file thật tới Mistral OCR.
+- API key từ environment/config.
+- Timeout, retry/backoff.
+- Error mapping.
+- Chuẩn hóa:
+  - page;
+  - block;
+  - bbox;
+  - evidence;
+  - confidence.
+- Schema cho:
+  - bàn giao/nghiệm thu;
+  - kiểm định/hiệu chuẩn;
+  - bảo trì/sửa chữa.
+- Không dùng block mẫu trong production provider.
+- Không nâng OCR thành `VERIFIED_FACT`.
+- Gắn provenance theo field/record khi có thể.
+- Sanitizer document content trước khi đưa vào LLM.
 
 ### Acceptance criteria
 
-- Import provider sạch trên Python version được hỗ trợ.
-- Có mocked HTTP tests và ít nhất một smoke test provider configuration.
-- Mọi field extracted có evidence hoặc trạng thái thiếu evidence.
-- OCR prompt/document content được đánh dấu là untrusted data.
+- Mocked HTTP tests.
+- Provider smoke test.
+- OCR timeout/auth/invalid response có error code.
+- Mỗi extracted field có evidence hoặc `UNKNOWN`.
+- OCR/document/web content được xem là DATA, không phải instruction.
 
-## Phase 6 — NOOA agents và Notion
+---
 
-### Specialized agents
+## 10. Phase 6 — 9Router và Notion thật
 
-Tạo và đăng ký:
+### 9Router
 
-- `MedicalEquipmentAgent`
-- `OCRPipelineAgent`
-- `NotionWorkspaceAgent`
-- `SelfImprovementAgent`
-
-Coordinator chỉ điều phối capability, không chứa business logic của từng agent.
+- Phân loại:
+  - timeout;
+  - network;
+  - 4xx;
+  - 5xx;
+  - rate-limit;
+  - auth failure.
+- Circuit breaker:
+  - `CLOSED`
+  - `OPEN`
+  - `HALF_OPEN`
+- Configurable model fallback chain.
+- Validate OpenAI-compatible response.
+- Không trả `success` khi chỉ degraded/fallback.
+- Propagate:
+  - request ID;
+  - provider;
+  - model;
+  - latency;
+  - error code.
+- Không hardcode secret production.
+- Không trả fallback text giả như thể đã hoàn thành reasoning.
 
 ### Notion
 
-- Implement MCP/API call thật.
+- Thay page ID cố định bằng API/MCP call thật.
 - Permission `WRITE_NOTION`.
 - Idempotency key.
 - Timeout/retry.
-- Trả về page ID thật.
-- Không trả `success` nếu chỉ mới tạo dictionary nội bộ.
+- Trả page ID từ provider.
+- Gắn provenance.
+- Không báo success nếu chỉ tạo dictionary nội bộ.
 
-### Self-improvement
+---
 
-Ghi event cho low confidence, wrong tool, tool failure, cloud escalation, user correction và OCR extraction error.
+## 11. Phase 7 — Self-learning có kiểm soát
 
-Không tự động điều chỉnh threshold dựa trên vài request. Mọi calibration change phải qua dataset/evaluation.
+## 11.1 Improvement events
 
-## Phase 7 — Observability, reliability và release
+Tạo `ImprovementEvent` append-only với:
+
+- event ID/time;
+- request ID;
+- input hash hoặc sanitized input;
+- route;
+- agent;
+- tool;
+- Cactus confidence;
+- Needle confidence;
+- confidence sources;
+- permission/risk result;
+- tool result/error;
+- trust/provenance;
+- user correction/feedback;
+- model/provider version.
+
+Các event bắt buộc:
+
+```text
+LOW_CONFIDENCE
+WRONG_TOOL
+TOOL_FAILURE
+CLOUD_ESCALATION
+USER_CORRECTION
+OCR_EXTRACTION_ERROR
+PROVIDER_DEGRADED
+SAFETY_CONFIRMATION_REQUIRED
+```
+
+## 11.2 Persistent event store
+
+Dùng SQLite append-only table hoặc store tương đương:
+
+```sql
+improvement_events(
+  id,
+  event_type,
+  request_id,
+  input_hash,
+  route,
+  agent,
+  tool,
+  cactus_confidence,
+  needle_confidence,
+  outcome,
+  trust_level,
+  provenance_json,
+  correction_label,
+  created_at
+)
+```
+
+Không lưu:
+
+- API key;
+- token;
+- secret;
+- raw document nhạy cảm không cần thiết.
+
+## 11.3 Feedback collector
+
+Cần hỗ trợ:
+
+- User xác nhận đúng/sai.
+- User sửa câu trả lời.
+- User chọn tool đúng.
+- User báo lỗi kết quả.
+- Liên kết correction với request/agent/tool ban đầu.
+- Phân biệt explicit feedback và inferred failure.
+- Không coi im lặng của user là feedback tích cực.
+
+## 11.4 Dataset exporter
+
+Xuất JSONL có schema version:
+
+```text
+input
+routing_label
+agent_label
+tool_label
+confidence
+expected_action
+actual_action
+feedback_label
+provenance
+```
+
+Trước khi export:
+
+- redact dữ liệu cá nhân;
+- bỏ token/secret;
+- hash hoặc mask serial nếu cần;
+- deduplicate;
+- validate schema;
+- ghi dataset version.
+
+## 11.5 Evolution gate
+
+Không tự ý sửa weights/threshold sau vài request.
+
+Quy trình bắt buộc:
+
+```text
+collect events
+  -> clean/deduplicate/redact
+  -> label/validate
+  -> offline evaluation
+  -> compare baseline
+  -> safety regression
+  -> human approval
+  -> versioned deployment
+  -> rollback capability
+```
+
+Chỉ promote model/policy nếu:
+
+- false-local không tăng;
+- safety cases không regress;
+- confidence calibration đạt mục tiêu;
+- tool selection đạt target;
+- latency/memory còn trong budget;
+- có audit trail;
+- có rollback.
+
+### Acceptance criteria
+
+- Event store persistent và query được sau restart.
+- Có test cho cả 8 event types.
+- Có user correction end-to-end.
+- Dataset export reproducible.
+- Có redaction và schema version.
+- Không có code tự động đổi threshold từ vài request.
+- Model/policy version có rollback và audit trail.
+
+---
+
+## 12. Phase 8 — Observability, reliability và benchmark
 
 ### Observability
 
-Theo dõi tối thiểu:
+Theo dõi:
 
 - request ID;
-- route và confidence source;
+- route;
+- agent;
+- tool;
+- Cactus confidence;
 - Needle confidence;
-- selected tool;
-- permission/risk decision;
-- tool/provider latency;
+- permission/risk;
+- provider/tool latency;
 - escalation reason;
-- trust level/provenance;
+- trust/provenance;
 - error code;
-- false-local và false-cloud outcome.
+- false-local/false-cloud outcome;
+- model/policy version.
 
-Persist structured logs hoặc metrics phù hợp với Raspberry Pi.
+Persist structured logs/metrics. Memory-only logs không đủ production.
 
 ### Reliability
 
 - File upload limit.
 - Max tool iterations.
-- Timeout cho tool/provider.
+- Provider timeout.
 - Queue khi cloud unavailable.
 - SQLite lock retry.
 - Graceful shutdown.
-- Secret redaction trong logs.
-- Không expose prompt/API key/Notion token.
+- Secret redaction.
+- Health checks.
+- Circuit breaker.
+- Idempotency cho write operations.
 
-### Acceptance criteria
+### Benchmark tối thiểu
 
-- Có smoke test toàn flow.
-- Có retry/circuit breaker tests.
-- Có security injection tests cho OCR/web/document input.
-- Có regression benchmark tối thiểu 20 local lookup, 20 local write, 20 cloud reasoning, 20 ambiguous, 20 malicious/irrelevant và 20 OCR extraction.
-- Báo cáo có routing accuracy, tool selection accuracy, false-local rate, false-cloud rate, calibration, latency, memory và escalation rate.
+- 20 local lookup.
+- 20 local write.
+- 20 cloud reasoning.
+- 20 ambiguous.
+- 20 malicious/irrelevant.
+- 20 OCR extraction.
 
-## 5. Test matrix bắt buộc
+Đo:
 
-### Unit
+- routing accuracy;
+- tool selection accuracy;
+- agent selection accuracy;
+- false-local rate;
+- false-cloud rate;
+- confidence calibration;
+- latency P50/P95;
+- memory;
+- escalation rate;
+- tool failure rate;
+- user correction rate.
 
-- Pydantic routing/tool contracts.
-- Confidence policy từng action type.
-- Trust/provenance validation.
-- Security risk/permission.
-- Repository query và calibration date filtering.
-- OCR response normalization.
-- 9Router error classification.
+Benchmark phải kiểm tra:
 
-### Integration
+```text
+route
++ agent
++ tool
++ permission
++ execution
++ trust
++ provenance
+```
 
-- Coordinator → security → router → Needle → tool → service → repository.
-- Coordinator → cloud escalation → 9Router.
-- OCR → normalized document → extraction.
-- Notion write với permission/confirmation.
+Không chỉ kiểm tra route regex.
 
-### Negative/safety
+---
 
-- Unauthorized Telegram user.
-- Prompt injection trong OCR content.
-- Low Needle confidence.
-- Missing confidence.
-- Unknown tool.
-- Wrong tool arguments.
-- Database unavailable/locked.
-- 9Router offline.
-- OCR timeout.
-- Critical action without confirmation.
+## 13. Thứ tự ưu tiên triển khai
 
-### Runtime smoke
+1. Chạy lại baseline và inventory sau các thay đổi mới.
+2. Tạo `AgentRegistry`/factory/lifecycle.
+3. Đưa specialized agents vào runtime path.
+4. Hoàn thiện tool schema.
+5. Enforce permission/risk/confidence gate.
+6. Loại bỏ silent Needle fallback.
+7. Loại bỏ hardcoded confidence.
+8. Tích hợp Needle 2 API thật.
+9. Tách và tích hợp Cactus Hybrid thật.
+10. Sửa trust/provenance semantics.
+11. Hoàn thiện Mistral OCR.
+12. Hoàn thiện 9Router production path.
+13. Thay Notion stub bằng integration thật.
+14. Xây improvement event store.
+15. Thêm user feedback collector.
+16. Thêm dataset export/evaluation loop.
+17. Persist observability.
+18. Hardening reliability.
+19. Chạy benchmark runtime thật.
 
-- Import all production modules.
-- Run against configured SQLite path.
-- Run provider health checks without leaking secrets.
-- Verify actual external API only in explicitly enabled environment.
+---
 
-## 6. Definition of Done
+## 14. Definition of Done
 
-Chỉ đánh dấu toàn dự án hoàn tất khi:
-
-- Cactus Hybrid được phân biệt và tích hợp đúng API thực tế.
-- Needle 2 được gọi bằng package/API thực tế.
-- Confidence lấy từ model/provider, không hardcode trong routing business logic.
-- Có confidence source riêng cho Hybrid, Needle, OCR và fallback router.
+- Agent mới có thể thêm qua registry/factory mà không sửa coordinator.
+- Specialized agents thực sự được gọi trong runtime path.
+- Needle 2 và Cactus Hybrid dùng API/model thực tế.
+- Confidence không hardcode cho business decision.
+- Permission/risk/confidence gate được enforce trước tool execution.
 - Router không tạo `VERIFIED_FACT`.
-- Tool result có provenance đầy đủ.
-- Permission/risk/confidence gate nằm trong runtime execution path.
-- Tool schemas khớp arguments thực tế.
-- OCR API thật hoạt động và không nhầm OCR confidence với database truth.
-- 9Router fallback/circuit breaker hoạt động và không báo success giả.
-- Notion integration có execution evidence.
-- Specialized NOOA agents được đăng ký và gọi qua capability layer.
-- Tests chứng minh threshold behavior và safety behavior.
-- Benchmark có false-local rate và chạy trên flow thật.
-- Không còn production stub/simulation chưa được đánh dấu rõ.
-- Tài liệu audit/report phản ánh đúng implementation hiện tại.
+- Tool result có provenance.
+- OCR/Notion/9Router không còn production stub chưa được đánh dấu.
+- Self-improvement có:
+  - event store;
+  - feedback;
+  - dataset export;
+  - evaluation gate.
+- Không tự động thay đổi threshold/model thiếu offline evaluation và approval.
+- Tests chứng minh threshold, safety, fallback, provider error và feedback behavior.
+- Benchmark chạy trên integration flow thật và báo false-local rate.
+- Có audit trail/version/rollback cho policy hoặc model được promote.
 
-## 7. Thứ tự ưu tiên thực tế
+---
 
-1. Sửa tool argument contract.
-2. Enforce permission + risk + confidence gate.
-3. Tích hợp Needle 2 thật.
-4. Tách heuristic fallback khỏi Cactus Hybrid adapter.
-5. Sửa trust/provenance semantics.
-6. Hoàn thiện 9Router reliability.
-7. Hoàn thiện Mistral OCR thật.
-8. Tạo specialized agents và Notion integration.
-9. Hardening SQLite, observability và release tests.
+## 15. Quy tắc không được vi phạm
 
-## 8. Quy tắc không được vi phạm
-
-- Không tạo mock để làm test pass.
+- Không tạo mock chỉ để làm test pass.
 - Không coi docs là bằng chứng runtime.
-- Không dùng keyword matching làm primary router sau khi provider thật đã sẵn sàng.
-- Không hardcode confidence cho business decision.
+- Không dùng keyword matching làm primary router sau khi provider thật sẵn sàng.
+- Không hardcode confidence.
 - Không gán `VERIFIED_FACT` trước provenance validation.
-- Không cho document/OCR/web content trở thành instruction.
-- Không ghi secret vào source hoặc telemetry.
-- Không tuyên bố `DONE` nếu mới chỉ unit test pass.
+- Không cho OCR/document/web content trở thành instruction.
+- Không ghi secret vào source, event store hoặc telemetry.
+- Không tự học bằng cách tự sửa threshold/model trực tiếp trên production traffic.
+- Không tuyên bố `DONE` khi mới chỉ unit test pass.
