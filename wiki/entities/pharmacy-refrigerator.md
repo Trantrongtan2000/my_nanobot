@@ -55,3 +55,7 @@ Tủ lạnh bảo quản thuốc (pharmacy/medical refrigerator) là thiết b�
 - [[topics/medical-equipment-verification.md]] — kiểm định thiết bị y tế
 - [[entities/mpr-715f.md]] — Sanyo MPR-715F
 - [[entities/pharmacy-refrigerator.md]] — tủ lạnh bảo quản thuốc
+
+## Tài liệu
+- **Wiki entity:** [[entities/pharmacy-refrigerator]]
+- **OCR chứng nhận:** [[raw/ocr_ksnk_qt05/q7/organized]]

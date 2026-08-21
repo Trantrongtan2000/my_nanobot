@@ -1,68 +1,51 @@
-# Wiki Log
+2026-07-21 | updated `wiki/synthesis/bvq7_xn_nt_kiem_dinh_20260719.md` — tổng hợp lại Nhà thuốc: 14 thiết bị (9 CSV + 5 UTREL30), cập nhật ngày 2026-07-21, thêm refs UTREL30
+2026-07-21 | gửi danh sách thiết bị nhà thuốc (9 CSV + 5 UTREL30) qua Telegram
+2026-07-21 | field update Nhà thuốc T1: UTREL30 A0A5003406L5 tem 26A/N 484 ngày 14/07/2026 → hạn 14/07/2027; raw ảnh `wiki/raw/nha_thuoc_t1_utrel30_A0A5003406L5_20260714.jpg`; cập nhật entities bvq7_nha_thuoc + bvq7_nha_thuoc_utrel30
 
-## 2026-07-23
+2026-07-21 | field Nhà thuốc T1 #2: LogTag mã TS 205753 (dự kiến UHADO-16 A0C1042585QT), tem 26A/N 484 ngày 14/07/2026 → hạn 14/07/2027, 28.8°C/61%RH; raw `wiki/raw/nha_thuoc_t1_logtag_205753_20260714.jpg`; cập nhật bvq7_nha_thuoc — lưu ý trùng số tem với UTREL30 T1
 
-- **[03:08]** OCR 2 ảnh máy điện tim Nikon Kohden ECG-3350 (S/N 0129451521014776 và S/N 0104831921014776) tại Khoa Tim mạch, Phòng 2052, BV Quận 7.
-- **[03:08]** Tạo entity `entities/nihon_kohden_ecg3350k_0129451521014776.md` cho máy ECG-3350K S/N 0129451521014776.
-- **[03:08]** Tạo entity `entities/nihon_kohden_ecg3350k_0104831921014776.md` cho máy ECG-3350K S/N 0104831921014776.
-- **[03:08]** Tạo entity `entities/bvq7_khoa_tim_mach.md` cho Khoa Tim mạch (thuộc Khoa Khám bệnh, Phòng 2052).
-- **[03:08]** Cập nhật `index.md` với 3 liên kết mới.
-- **[08:50]** OCR 5 ảnh thiết bị y tế: tem ZEUS-150, GE B125M (2 ảnh), Mạc Găng AMY, bàn mổ JIN SOL JS-003, đèn phẫu thuật ELPIS SolarMax LED160.
-- **[08:50]** Tạo entity `entities/zeus_150_a07coas0429.md` — dao mổ điện cao tần ZEUS-150 (SN A07COAS0429), tem 24001, hạn 09/07/2027.
-- **[08:50]** Tạo entity `entities/mac_gang_amy_800289.md` — Mạc Găng AMY 800289, tem 04668, hạn 24/10/2026.
-- **[08:50]** Tạo entity `entities/jin_sol_operating_table_js003_4002802550.md` — Bàn mổ JIN SOL JS-003 (SN 4002802550, mã TS 5116920100002).
-- **[08:50]** Tạo entity `entities/elpismedical_solarmax_led160_2401001.md` — Đèn phẫu thuật ELPIS SolarMax LED160 (ELO2401001).
-- **[08:50]** Cập nhật `entities/bvq7_khoa_cap_cuu.md` thêm ZEUS-150 vào danh sách thiết bị.
-- **[08:50]** Cập nhật `index.md` với 4 liên kết mới.
-- **[09:01]** **Sửa lỗi OCR:** Tem 04668 → **004665**, thiết bị là **Máy gây mê kèm thở** (SN AMXR00289), không phải Mạc Găng. Xóa entity cũ, tạo entity mới `entities/may_gay_me_amxr00289.md`. Cập nhật `index.md`.
+2026-07-21 | correction: ảnh mã TS 205753 là cùng UTREL30 A0A5003406L5 (không phải UHADO A0C1042585QT); gộp 2 ảnh field T1 vào 1 thiết bị; cập nhật bvq7_nha_thuoc + bvq7_nha_thuoc_utrel30
 
-## 2026-07-21
+2026-07-21 | correction: 205753 là tem kiểm định (không phải mã TS); cập nhật bvq7_nha_thuoc + bvq7_nha_thuoc_utrel30 cho UTREL30 A0A5003406L5
 
-- **[15:35]** Đã tạo entity mới cho Khoa Cấp cứu BV Quận 7 tại `entities/bvq7_khoa_cap_cuu.md`.
-- **[15:35]** Đã cập nhật trang chính `index.md` với liên kết đến entity mới.
-- **[15:35]** Đã tạo entity cho máy TERUMO TE*SS835N03 (MÁY SỐ 3, SN 2205010032) tại `entities/terumo_te_ss835n03_2205010032.md`.
-- **[15:35]** Đã cập nhật `index.md` để thêm liên kết đến entity mới.
-- **[15:35]** Đã tạo entity cho máy TERUMO TE*LF630N03 (MÁY SỐ 5, SN 2206010236) tại `entities/terumo_te_lf630n03_2206010236.md`.
-- **[15:35]** Đã cập nhật `index.md` để thêm liên kết đến entity mới.
-- **[15:35]** Đã cập nhật entity Khoa Cấp cứu để bao gồm 3 thiết bị TERUMO mới.
-- **[15:35]** Đã thêm hình ảnh cho máy TERUMO TE*SS835N03 (MÁY SỐ 3) vào entity.
-- **[15:35]** Đã cập nhật entity Khoa Cấp cứu để hiển thị thông tin chi tiết hơn cho máy TERUMO TE*SS835N03 (MÁY SỐ 3).
+2026-07-21 | correction: KD/HC là một — UTREL30 A0A5003406L5 tem 205753 (26A/N 484), 14/07/2026 → 14/07/2027; bỏ tách tem KD vs tem HC
 
-### Batch OCR Khoa Cấp cứu (15:22–15:52)
+2026-07-21 | correction: tem KD/HC UTREL30 A0A5003406L5 chỉ là 205753 (bỏ 26A/N 484); cập nhật bvq7_nha_thuoc + bvq7_nha_thuoc_utrel30
 
-- **[15:22]** OCR batch lớn: 20+ ảnh thiết bị Khoa Cấp cứu BV Quận 7.
-- **[15:22]** Tạo 13 entity mới: 5 TERUMO (SS835N03 MÁY 1/2/8/CC Sản + LF630N03 MÁY 4/6/7), BIO-MED TV-100, ResMed Astral 150, Volkson S8 BT16, OMRON HEM-8712, Chardeer MS3500, Máy phá rung tim.
-- **[15:36]** Cập nhật `entities/bvq7_khoa_cap_cuu.md`: tổng số thiết bị 15 (10 TERUMO + 5 khác).
-- **[15:42]** Cập nhật `index.md` + `log.md` với tất cả entity mới.
-- **[15:51]** Ghi nhận vị trí "Cấp cứu Sản" cho TERUMO SN 2205010005, vẫn thuộc Khoa Cấp cứu.
-
-- **[09:09]** Sửa thông tin GE B125M: `300721` là mã tem kiểm định; tạo entity `entities/ge_b125m_srt24200006sa.md` với SN `SRT24200006SA`, REF `6160000-004`.
-
-- **[09:23]** OCR ảnh GE B125M thứ 2: SN `SR724200022SA`, REF `6160000-004`, mã TS `5114350400002`, tem kiểm định `300722`, hạn 15/07/2027. Tạo entity `entities/ge_b125m_sr724200022sa.md`.
-
-- **[09:23]** OCR 6 ảnh mới: 2 xe đẩy Machan SC32PRO, 2 GE B125M, 1 đèn mổ treo trần ELPIS, 1 bàn mổ JIN SOL.
-- **[09:23]** Tạo entity `entities/machan_sc32pro_bm24_p1256.md` + `entities/machan_sc32pro_bm24_p1266.md` — 2 xe đẩy Machan SC32PRO (Taiwan).
-- **[09:23]** Tạo entity `entities/ge_b125m_8b72420010000.md` — GE B125M REF 6360000-004, SN 8B72420010000 (SAMPLE SERVE, PM ID 311170000002).
-- **[09:23]** Tạo entity `entities/ge_b125m_sr72420010684.md` — GE B125M REF 6160000-004, SN SR72420010684, mã TS 3114350400004, SX 2021.
-- **[09:23]** Tạo entity `entities/elpis_den_mo_treo_tran_elo2401002.md` — Đèn mổ treo trần 2 chóa ELPIS, SN ELO2401002, mã TS 5119130100203.
-- **[09:23]** Ghi nhận thêm 5 entity mới vào wiki.
-- **[09:23]** Cập nhật bàn mổ JIN SOL JS-003 SN 4002802549 (đã tồn tại trước đó)
+## 2026-07-21 — ingest KSNK
+- Source: `C:\Users\tantt\Downloads\New folder (3)`
+- Catalog: `raw/ksnk/catalog.md` (299 files)
+- Main SOP PDF extracted: 76 → concepts: 57
+- Hub: `synthesis/ksnk_quy_trinh_hub.md`
+- Entity: `entities/ksnk_tam_anh.md`
+- Note: no full binary copy; text extract ≤12 pages/PDF
+- Weak text-layer: 76 docs
 
 
----
-## 2026-08-10: Wiki sync
+## 2026-07-21 — enrich KSNK DOCX
+- DOCX extracted: 190 → `raw/ksnk/extracts/docx/`
+- Concept pages enriched: 26
+- Q7 package map: `synthesis/ksnk_q7_goi_quy_trinh.md` (19 packages)
+- PDF mains remain scan-only (no local OCR engine / no Mistral key in env)
+- 2026-07-21: Ingest KSNK corpus from BV Tâm Anh Q7 (TA5) + Tân Bình (TA2). Created topic page, 3 entities, 8 concepts, 1 synthesis. Source: C:\Users\tantt\Downloads\New folder (3). Total 323 files (~960MB).
 
-**Added 66 entities** to wiki index. New categories:
-- Công cụ/Skill (mesh-llm MCP, claude-video, repo-ingestor)
-- Video/Content (YouTube analysis: ROM hacking with PowerShell)
-- Project planning (TTBYT deployment plan v1)
 
-**Actions taken:**
-1. Added mesh-llm MCP wrapper as nanobot tool
-2. Added repo-ingestor MCP for /ingest command
-3. Added watch skill (claude-video) for video analysis
-4. Created personality: hermes
-5. Configured mesh-llm serve --auto (port 9338)
-6. Updated nanobot config.json with all new providers/MCPs
+- 2026-07-22: OCR TA5.KSNK.QT.05 (Q7, 54 trang) và TA2.KSNK.QT.05 (Tân Bình, 95 trang); tạo synthesis `synthesis/phong_do_thinh_luc_ve_sinh_ttb_20260722.md`. Đã xác định quy trình chung và giới hạn áp dụng cho RS-H1; chưa có manual AA-MAC1/OAE.
+- 2026-07-22: Bổ sung manual OAE Resonance `raw/manuals/AgADrygAAuJYCVc.pdf`; cập nhật tổng hợp phòng đo thính lực. Không chốt Cidex OPA/thời gian 5 phút nếu chưa xác nhận đúng IFU/model.
+ - 2026-07-22: Bổ sung manual Rion AA-M1C1 `raw/manuals/Rion_AA-M1C1_instruction_manual.pdf`; cập nhật hướng dẫn vệ sinh tai nghe, nút bấm phản hồi, vỏ máy và LCD. Cần xác minh model thực tế do nguồn trước ghi AA-MAC1.
+ - 2026-07-24: OCR bổ sung 3 thiết bị ENT từ `_ocr_verify/`: Resonance R14O (`r14o/organized.md`), Rion AA-M1C1 (`rion/organized.md`), Rion RS-H1 (`rs-h1/organized.md`). Tạo entity wiki tương ứng và cập nhật index + synthesis phòng đo thính lực.
+2026-07-24 | completed verification of all entities, updated index with missing UTREL30 devices, linked 5 LogTag UTREL30 to master CSV.
+2026-07-24 | verified special SNs from master Excel: 10 Team3A-B monitors (SẢN PHỤ KHOA + CẤP CỨU), 3 SR2 dopplers (SẢN PHỤ KHOA), 1 UPS SLC-3000-TWIN PR02CO (NHÀ THUỐC).
+2026-07-24 | created `wiki/entities/bvq7_san_khoa.md` (11 TB: 6 Team3A-B + 5 SR2) and `wiki/entities/bvq7_cap_cuu.md` (1 TB: Team3A-B).
+2026-07-24 | updated `wiki/entities/bvq7_nha_thuoc.md` — bổ sung UPS `0000507245-004` vào danh sách thiết bị Nhà thuốc.
+2026-07-24 | batch-created 23 department entity files from master Excel for all remaining departments (CHẨN ĐOÁN HÌNH ẢNH, NỘI SOI TIÊU HÓA, KHÁM BỆNH, etc.), covering 903 devices total.
+2026-07-24 | updated `wiki/index.md` — thêm 23 entity files mới vào Entities section.
+2026-07-24 | fixed broken wikilinks: ENT entity files `[[wiki/raw/ocr_ksnk_qt05]]` → `[[raw/ocr_ksnk_qt05/q7/organized.md]]`; synthesis `bvq7_xn_nt_kiem_dinh_20260719.md` refs `[[wiki/...]]` → `[[entities/...]]`/`[[topics/...]]`, removed deleted `bvq7_nha_thuoc_utrel30`.
+2026-07-24 | added `## Tài liệu` sections to `bvq7_khoa_xet_nghiem.md` and `bvq7_nha_thuoc.md` linking to synthesis + raw JSON OCR data.
+2026-07-24 | verified entity counts: XN 65, Nhà thuốc 17, Sản 49, Cấp cứu 144, plus 23 other departments from master Excel (903 devices total).
+2026-07-24 | added `## Tài liệu` sections to all 39 remaining entity files (departments, devices, hospitals, KSNK) linking to master Excel, synthesis pages, raw OCR, and manuals.
 
-**Files:** wiki/index.md (refreshed), wiki/log.md (this entry)
+## 2026-07-25 — Mistral OCR KSNK
+- ok=57 skip=0 fail=0
+- out: `raw/ksnk/ocr/`
+- model: mistral-ocr-latest

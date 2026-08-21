@@ -42,3 +42,7 @@ Cân bệnh nhân điện tử có thước đo chiều cao dùng tại quầy �
 - [[examination-equipment-verification.md]] — overall topic
 - [[tam-anh-clinic-q7.md]] — PK Đa Khoa Tâm Anh Q7
 - [[medical-equipment-verification.md]] — general verification rules & tem
+
+## Tài liệu
+- **Wiki entity:** [[entities/patient-scale]]
+- **OCR chứng nhận:** [[raw/ocr_ksnk_qt05/q7/organized]]

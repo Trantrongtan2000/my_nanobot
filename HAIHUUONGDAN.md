@@ -47,7 +47,7 @@ Tạo file `~/.nanobot/config.json` với nội dung sau:
   "channels": {
     "telegram": {
       "enabled": true,
-      "token": "${TELEGRAM_BOT_TOKEN}",
+      "token": "[REDACTED]",
       "groupPolicy": "mention",
       "allowFrom": ["*"]
     }
@@ -65,7 +65,7 @@ Tạo file `~/.nanobot/config.json` với nội dung sau:
 
 ```bash
 export TELEGRAM_BOT_TOKEN='<token_cua_bot_B>'
-export ORFREE_API_KEY='sk-d30919421d5cd08a-ds56if-b8645d33'
+export ORFREE_API_KEY='[REDACTED_SECRET]'
 
 rm -f ~/.nanobot/run/gateway.json
 nohup nanobot gateway >> ~/.nanobot/logs/gateway.log 2>&1 &

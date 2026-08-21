@@ -1,75 +1,48 @@
 ---
 type: entity
-title: "BV Quận 7 - Nhà thuốc (thiết bị kiểm định)"
-status: reviewed
+title: "BV Quận 7 - NHÀ THUỐC - Thiết bị kiểm định"
+status: draft
 sources:
-  - "wiki/raw/bvq7_xn_nt_kiem_dinh_20260719.json"
-  - "wiki/raw/mistral_ocr_muc7_14_nhiet_am_ke_tu_ghi_summary.json"
-  - "wiki/raw/mistral_ocr_muc10_14_nhiet_am_ke_dien_tu_utrel_summary.json"
-  - "/media/tan/T93/BV QUẬN 7_OCR_WORK_20260712/05_KIEM DINH/danh_sach_thiet_bi_toi_han_v2.csv"
-updated: 2026-07-19
-tags: [medical-equipment, calibration, NHÀ THUỐC, BV_QUẬN_7]
-refs: ["[[wiki/synthesis/bvq7_xn_nt_kiem_dinh_20260719]]", "[[wiki/entities/bvq7_nha_thuoc_utrel30]]"]
+  - "G:/05_KIEM DINH/data/Kiểm định Master Test.xlsx"
+updated: 2026-07-24
+tags: [medical-equipment, calibration, NHÀ_THUỐC, BV_QUẬN_7]
+refs: []
 ---
 
-## Tóm tắt
-- Số thiết bị trong master kiểm định: **9**
-- Hạn kiểm định master: **2026-07-31** (toàn bộ)
-- Trạng thái hệ thống: **Chỉ có chứng nhận cũ (2025)**
+# BV Quận 7 - NHÀ THUỐC
 
-## Phân loại
-- Nhiệt ẩm kế tự ghi : 3
-- Tủ lạnh bảo quản có ngăn đông MPR-715F-PE: 3
-- Tủ mát MPR-S313-PK: 3
+## Tổng quan
+- **Nguồn:** Master Excel `Kiểm định Master Test.xlsx`
+- **Số thiết bị:** 17
+- **Hạn kiểm định master:** 2026-07-31 (toàn bộ)
 
 ## Danh sách thiết bị
-- STT 60: **Tủ mát MPR-S313-PK** | Model `MPR-S313-PK` | SN `23090063` | Hạn 2026-07-31
-  - Cert: `MỤC 5. 12 tủ lạnh bảo quản.md`
-- STT 61: **Tủ mát MPR-S313-PK** | Model `MPR-S313-PK` | SN `23090064` | Hạn 2026-07-31
-  - Cert: `MỤC 5. 12 tủ lạnh bảo quản.md`
-- STT 62: **Tủ mát MPR-S313-PK** | Model `MPR-S313-PK` | SN `23090062` | Hạn 2026-07-31
-  - Cert: `MỤC 5. 12 tủ lạnh bảo quản.md`
-- STT 63: **Tủ lạnh bảo quản có ngăn đông MPR-715F-PE** | Model `MPR-715F-PE` | SN `231190097` | Hạn 2026-07-31
-  - Cert: `MỤC 5. 12 tủ lạnh bảo quản.md`
-- STT 64: **Tủ lạnh bảo quản có ngăn đông MPR-715F-PE** | Model `MPR-715F-PE` | SN `231090071` | Hạn 2026-07-31
-  - Cert: `MỤC 5. 12 tủ lạnh bảo quản.md`
-- STT 65: **Tủ lạnh bảo quản có ngăn đông MPR-715F-PE** | Model `MPR-715F-PE` | SN `231090072` | Hạn 2026-07-31
-  - Cert: `MỤC 5. 12 tủ lạnh bảo quản.md`
-- STT 105: **Nhiệt ẩm kế tự ghi ** | Model `UHADO-16` | SN `A0C1042579LS` | Hạn 2026-07-31
-  - Cert: `MỤC 7. 14 nhiệt ẩm kế tự ghi.md`
-- STT 106: **Nhiệt ẩm kế tự ghi ** | Model `UHADO-16` | SN `A0C1042582WT` | Hạn 2026-07-31
-  - Cert: `MỤC 7. 14 nhiệt ẩm kế tự ghi.md`
-- STT 107: **Nhiệt ẩm kế tự ghi ** | Model `UHADO-16` | SN `A0C1042585QT` | Hạn 2026-07-31
-  - Cert: `MỤC 7. 14 nhiệt ẩm kế tự ghi.md`
 
-## Bàn giao liên quan
-- 02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc: 8 file
-  - `02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2025/01 CHỈ THỊ ĐÔNG BĂNG_Nhà thuốc_25040165.pdf`
-  - `02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2025/05 CHỈ THỊ ĐÔNG BĂNG LOGTAG-01 Nhiệt ẩm kế LOGTAG-01 Nhiệt kế LOGTAG_Nhà thuốc_25040165.pdf`
-  - `02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2025/BBBG NB (3 bên)_2 Tủ bảo quản MPR-S313-PK 2 UPS 2 Logtag_Tân Bình chuyển qua.pdf`
-  - `02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2025/BBBG NB_1 thiết bị đo nhiệt độ-1 chỉ thị đông băng-1 thiết bị ghi nhiệt độ_PO 25100181.pdf`
-  - `02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2026/BBBG NB_04.06.26_1 chi thỉ đông băng.pdf`
-  - `02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2026/BBBG NB_1 tủ bảo quản Haier HYC-118A_HD 705 2025.pdf`
-  - `02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2026/BBBG NB_17.03.26_1 tủ pha chế thuốc_HD 1349.pdf`
-  - `02_HOP DONG MUA SAM/Biên bản bàn giao nội bộ/Nhà thuốc/2026/BBBGNB_1 nhiệt kế logtag_PO Q725120019.pdf`
-- 2024/SCAN BÀN GIAO NỘI BỘ/Nhà thuốc: 4 file
-  - `2024/SCAN BÀN GIAO NỘI BỘ/Nhà thuốc/01 nhiệt kế wifi_Nhà thuốc_24090327.pdf`
-  - `2024/SCAN BÀN GIAO NỘI BỘ/Nhà thuốc/03 tủ mát, 03 tủ lạnh, 06 nhiệt kế wifi, 03 nhiệt ẩm kế logtag_Nhà thuốc_06.2024HĐMBSmartTech-TamAnh.pdf`
-  - `2024/SCAN BÀN GIAO NỘI BỘ/Nhà thuốc/06 bộ nguồn cấp liên tục Salicru_Nhà thuốc_.pdf`
-  - `2024/SCAN BÀN GIAO NỘI BỘ/Nhà thuốc/Scan_ mượn máy hút ẩm từ CDHA.pdf`
+| STT | SN | Tên | Model | Phòng | Hạn CN |
+|-----|-----|-----|-------|-------|--------|
+| 1 | 23090062 | Tủ mát MPR-S313-PK | MPR-S313-PK |  | 2026-07-31 |
+| 2 | 23090063 | Tủ mát MPR-S313-PK | MPR-S313-PK |  | 2026-07-31 |
+| 3 | 23090064 | Tủ mát MPR-S313-PK | MPR-S313-PK |  | 2026-07-31 |
+| 4 | 21030056 | Tủ mát MPR-S313-PK | MPR-S313-PK |  | 2026-07-31 |
+| 5 | 21110338 | Tủ mát MPR-S313-PK | MPR-S313-PK |  | 2026-07-31 |
+| 6 | 0000507245-004 | BỘ lưu điện UPS | SLC-3000-TWIN PR02CO |  | 2026-07-31 |
+| 7 | 0000507245-005 | BỘ lưu điện UPS | SLC-3000-TWIN PR02CO |  | 2026-07-31 |
+| 8 | 0000507245-007 | BỘ lưu điện UPS | SLC-3000-TWIN PR02CO |  | 2026-07-31 |
+| 9 | 0000507245-008 | BỘ lưu điện UPS | SLC-3000-TWIN PR02CO |  | 2026-07-31 |
+| 10 | 0000507245-009 | BỘ lưu điện UPS | SLC-3000-TWIN PR02CO |  | 2026-07-31 |
+| 11 | 0000507245-010 | BỘ lưu điện UPS | SLC-3000-TWIN PR02CO |  | 2026-07-31 |
+| 12 | 231090071 | Tủ lạnh bảo quản có ngăn đông MPR-715F-PE | MPR-715F-PE |  | 2026-07-31 |
+| 13 | 231090072 | Tủ lạnh bảo quản có ngăn đông MPR-715F-PE | MPR-715F-PE |  | 2026-07-31 |
+| 14 | 231190097 | Tủ lạnh bảo quản có ngăn đông MPR-715F-PE | MPR-715F-PE |  | 2026-07-31 |
+| 15 | A0C1038984C5 | Nhiệt ẩm kế | UHADO-16 | Nhà thuốc trệt | 2026-07-31 |
+| 16 | A0A5003117GH | Nhiệt kế điện tử | UTRED30-WIFI | Nhà thuốc 1 | 2026-07-31 |
+| 17 | A048005733TT | Nhiệt kế điện tử | UTRED-16F | Nhà thuốc trệt | 2026-07-31 |
 
-## Chi tiết nhiệt ẩm kế / nhiệt kế theo OCR (Mistral)
+## Việc còn mở
+1. Bổ sung ảnh field và chứng nhận kiểm định 2026 cho toàn bộ thiết bị.
+2. Kiểm tra lại nếu có thêm thiết bị mới trong master Excel.
 
-### Nhà thuốc / Khoa dược — Nhiệt ẩm kế tự ghi UHADO-16 (3 thiết bị, có trong CSV)
-- 056-007/07.25 | SN A0C1042579LS | UHADO-16 | Nhà thuốc tầng 3 | Cal: 01/07/2025 → 31/07/2026
-- 056-008/07.25 | SN A0C1042582WT | UHADO-16 | Nhà thuốc tầng trệt | Cal: 01/07/2025 → 31/07/2026
-- 056-009/07.25 | SN A0C1042585QT | UHADO-16 | Nhà thuốc tầng 1 | Cal: 01/07/2025 → 31/07/2026
-
-### Nhà thuốc / Khoa dược — Nhiệt kế điện tử UTREL30 (5 thiết bị, KHÔNG có trong CSV master)
-- 056-003/07.25 | SN A0A50034017C | UTREL30 | Nhà thuốc tầng trệt | Cal: 01/07/2025 → 31/07/2026
-- 056-004/07.25 | SN A0A5003405BT | UTREL30 | Nhà thuốc tầng trệt | Cal: 01/07/2025 → 31/07/2026
-- 056-005/07.25 | SN A0A5003402HT | UTREL30 | Nhà thuốc tầng 3 | Cal: 01/07/2025 → 31/07/2026
-- 056-006/07.25 | SN A0A5003371QT | UTREL30 | Nhà thuốc tầng 3 | Cal: 01/07/2025 → 31/07/2026
-- 056-002/07.25 | SN A0A5003406L5 | UTREL30 | Nhà thuốc tầng 1 | Cal: 01/07/2025 → 31/07/2026
-
-**Ghi chú:** CSV master liệt kê 3 Nhiệt ẩm kế tự ghi UHADO-16 cho Nhà thuốc (STT 105-107). OCR Mistral MỤC 10 phát hiện thêm 5 nhiệt kế điện tử UTREL30 tại Khoa dược (Nhà thuốc 3 tầng). Tổng số logger tại Nhà thuốc/Khoa dược: 8 thiết bị.
+## Tài liệu
+- [[synthesis/bvq7_xn_nt_kiem_dinh_20260719]] — Tổng hợp kiểm định + chứng nhận OCR XN + Nhà thuốc
+- [[raw/bvq7_xn_nt_kiem_dinh_20260719.json]] — Dữ liệu OCR thô (XN + Nhà thuốc)
+- [[raw/bvq7_nhiet_am_ke_ocr_20260719.json]] — Dữ liệu OCR thô nhiệt ẩm kế

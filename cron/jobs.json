@@ -2,205 +2,6 @@
   "version": 1,
   "jobs": [
     {
-      "id": "heartbeat",
-      "name": "heartbeat",
-      "enabled": false,
-      "schedule": {
-        "kind": "every",
-        "atMs": null,
-        "everyMs": 1800000,
-        "expr": null,
-        "tz": "UTC"
-      },
-      "payload": {
-        "kind": "system_event",
-        "message": "",
-        "deliver": false,
-        "channel": null,
-        "to": null,
-        "channelMeta": {},
-        "sessionKey": null,
-        "originChannel": null,
-        "originChatId": null,
-        "originMetadata": {}
-      },
-      "state": {
-        "nextRunAtMs": 1785119664516,
-        "lastRunAtMs": 1785117815524,
-        "lastStatus": "ok",
-        "lastError": null,
-        "runHistory": [
-          {
-            "runAtMs": 1785082442941,
-            "status": "ok",
-            "durationMs": 57639,
-            "error": null
-          },
-          {
-            "runAtMs": 1785084300583,
-            "status": "ok",
-            "durationMs": 63315,
-            "error": null
-          },
-          {
-            "runAtMs": 1785086163910,
-            "status": "ok",
-            "durationMs": 40470,
-            "error": null
-          },
-          {
-            "runAtMs": 1785088004383,
-            "status": "ok",
-            "durationMs": 89295,
-            "error": null
-          },
-          {
-            "runAtMs": 1785089893681,
-            "status": "ok",
-            "durationMs": 102584,
-            "error": null
-          },
-          {
-            "runAtMs": 1785091796268,
-            "status": "ok",
-            "durationMs": 68968,
-            "error": null
-          },
-          {
-            "runAtMs": 1785093665239,
-            "status": "ok",
-            "durationMs": 47931,
-            "error": null
-          },
-          {
-            "runAtMs": 1785095513173,
-            "status": "ok",
-            "durationMs": 36511,
-            "error": null
-          },
-          {
-            "runAtMs": 1785097349686,
-            "status": "ok",
-            "durationMs": 27381,
-            "error": null
-          },
-          {
-            "runAtMs": 1785099177093,
-            "status": "ok",
-            "durationMs": 16074,
-            "error": null
-          },
-          {
-            "runAtMs": 1785100993170,
-            "status": "ok",
-            "durationMs": 88632,
-            "error": null
-          },
-          {
-            "runAtMs": 1785102881805,
-            "status": "ok",
-            "durationMs": 45730,
-            "error": null
-          },
-          {
-            "runAtMs": 1785104727537,
-            "status": "ok",
-            "durationMs": 33649,
-            "error": null
-          },
-          {
-            "runAtMs": 1785106561189,
-            "status": "ok",
-            "durationMs": 17696,
-            "error": null
-          },
-          {
-            "runAtMs": 1785108378891,
-            "status": "ok",
-            "durationMs": 21387,
-            "error": null
-          },
-          {
-            "runAtMs": 1785110200282,
-            "status": "ok",
-            "durationMs": 47805,
-            "error": null
-          },
-          {
-            "runAtMs": 1785112048093,
-            "status": "ok",
-            "durationMs": 111345,
-            "error": null
-          },
-          {
-            "runAtMs": 1785113959441,
-            "status": "ok",
-            "durationMs": 25888,
-            "error": null
-          },
-          {
-            "runAtMs": 1785115785354,
-            "status": "ok",
-            "durationMs": 33375,
-            "error": null
-          },
-          {
-            "runAtMs": 1785117815524,
-            "status": "ok",
-            "durationMs": 48992,
-            "error": null
-          }
-        ]
-      },
-      "createdAtMs": 1784974488964,
-      "updatedAtMs": 1785117864516,
-      "deleteAfterRun": false
-    },
-    {
-      "id": "6db75d66",
-      "name": "remind-clypra-18h",
-      "enabled": true,
-      "schedule": {
-        "kind": "at",
-        "atMs": 1786273200000,
-        "everyMs": null,
-        "expr": null,
-        "tz": null
-      },
-      "payload": {
-        "kind": "agent_turn",
-        "message": "Nhắc Tấn: xem https://github.com/AIEraDev/Clypra",
-        "deliver": false,
-        "channel": null,
-        "to": null,
-        "channelMeta": {},
-        "sessionKey": "telegram:1449852069",
-        "originChannel": "telegram",
-        "originChatId": "1449852069",
-        "originMetadata": {
-          "message_id": 5720,
-          "user_id": 1449852069,
-          "username": "trongtan2104",
-          "first_name": "Tran",
-          "is_group": false,
-          "message_thread_id": null,
-          "is_forum": false,
-          "reply_to_message_id": null,
-          "_wants_stream": true
-        }
-      },
-      "state": {
-        "nextRunAtMs": null,
-        "lastRunAtMs": null,
-        "lastStatus": null,
-        "lastError": null,
-        "runHistory": []
-      },
-      "createdAtMs": 1786323939246,
-      "updatedAtMs": 1786323939246,
-      "deleteAfterRun": true
-    },
-    {
       "id": "dream",
       "name": "dream",
       "enabled": true,
@@ -224,21 +25,260 @@
         "originMetadata": {}
       },
       "state": {
-        "nextRunAtMs": 1787290622281,
-        "lastRunAtMs": 1787283421588,
+        "nextRunAtMs": 1787300018917,
+        "lastRunAtMs": 1787292777265,
         "lastStatus": "ok",
         "lastError": null,
         "runHistory": [
           {
-            "runAtMs": 1787283421588,
+            "runAtMs": 1787191211310,
             "status": "ok",
-            "durationMs": 693,
+            "durationMs": 49485,
+            "error": null
+          },
+          {
+            "runAtMs": 1787198460804,
+            "status": "ok",
+            "durationMs": 53315,
+            "error": null
+          },
+          {
+            "runAtMs": 1787205714126,
+            "status": "ok",
+            "durationMs": 48981,
+            "error": null
+          },
+          {
+            "runAtMs": 1787212963110,
+            "status": "ok",
+            "durationMs": 81979,
+            "error": null
+          },
+          {
+            "runAtMs": 1787220245095,
+            "status": "ok",
+            "durationMs": 40749,
+            "error": null
+          },
+          {
+            "runAtMs": 1787227485846,
+            "status": "ok",
+            "durationMs": 37337,
+            "error": null
+          },
+          {
+            "runAtMs": 1787234723187,
+            "status": "ok",
+            "durationMs": 36078,
+            "error": null
+          },
+          {
+            "runAtMs": 1787241959282,
+            "status": "ok",
+            "durationMs": 34546,
+            "error": null
+          },
+          {
+            "runAtMs": 1787249193834,
+            "status": "ok",
+            "durationMs": 206659,
+            "error": null
+          },
+          {
+            "runAtMs": 1787256600497,
+            "status": "ok",
+            "durationMs": 47612,
+            "error": null
+          },
+          {
+            "runAtMs": 1787263848113,
+            "status": "ok",
+            "durationMs": 40199,
+            "error": null
+          },
+          {
+            "runAtMs": 1787271088313,
+            "status": "ok",
+            "durationMs": 25644,
+            "error": null
+          },
+          {
+            "runAtMs": 1787278313967,
+            "status": "ok",
+            "durationMs": 41855,
+            "error": null
+          },
+          {
+            "runAtMs": 1787285555827,
+            "status": "ok",
+            "durationMs": 21429,
+            "error": null
+          },
+          {
+            "runAtMs": 1787292777265,
+            "status": "ok",
+            "durationMs": 41652,
             "error": null
           }
         ]
       },
-      "createdAtMs": 1787276221566,
-      "updatedAtMs": 1787283422281,
+      "createdAtMs": 1787184011267,
+      "updatedAtMs": 1787292818917,
+      "deleteAfterRun": false
+    },
+    {
+      "id": "heartbeat",
+      "name": "heartbeat",
+      "enabled": true,
+      "schedule": {
+        "kind": "every",
+        "atMs": null,
+        "everyMs": 1800000,
+        "expr": null,
+        "tz": "UTC"
+      },
+      "payload": {
+        "kind": "system_event",
+        "message": "",
+        "deliver": false,
+        "channel": null,
+        "to": null,
+        "channelMeta": {},
+        "sessionKey": null,
+        "originChannel": null,
+        "originChatId": null,
+        "originMetadata": {}
+      },
+      "state": {
+        "nextRunAtMs": 1787298607520,
+        "lastRunAtMs": 1787296807500,
+        "lastStatus": "ok",
+        "lastError": null,
+        "runHistory": [
+          {
+            "runAtMs": 1787262341468,
+            "status": "error",
+            "durationMs": 15587,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787264157068,
+            "status": "error",
+            "durationMs": 17273,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787265974344,
+            "status": "error",
+            "durationMs": 17182,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787267791535,
+            "status": "error",
+            "durationMs": 15170,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787269606715,
+            "status": "error",
+            "durationMs": 16899,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787271423619,
+            "status": "error",
+            "durationMs": 17172,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787273240796,
+            "status": "error",
+            "durationMs": 17088,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787275057896,
+            "status": "error",
+            "durationMs": 18024,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787276875939,
+            "status": "error",
+            "durationMs": 15630,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787278691583,
+            "status": "error",
+            "durationMs": 23616,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787280515204,
+            "status": "error",
+            "durationMs": 16488,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787282331703,
+            "status": "error",
+            "durationMs": 16353,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787284148056,
+            "status": "error",
+            "durationMs": 27401,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787285975467,
+            "status": "error",
+            "durationMs": 16464,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787287791943,
+            "status": "error",
+            "durationMs": 15398,
+            "error": "[WinError 5] Access is denied: 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl.tmp' -> 'C:\\\\Users\\\\tantt\\\\.nanobot\\\\workspace\\\\sessions\\\\heartbeat.jsonl'"
+          },
+          {
+            "runAtMs": 1787289607349,
+            "status": "ok",
+            "durationMs": 26,
+            "error": null
+          },
+          {
+            "runAtMs": 1787291407390,
+            "status": "ok",
+            "durationMs": 42,
+            "error": null
+          },
+          {
+            "runAtMs": 1787293207438,
+            "status": "ok",
+            "durationMs": 3,
+            "error": null
+          },
+          {
+            "runAtMs": 1787295007450,
+            "status": "ok",
+            "durationMs": 35,
+            "error": null
+          },
+          {
+            "runAtMs": 1787296807500,
+            "status": "ok",
+            "durationMs": 20,
+            "error": null
+          }
+        ]
+      },
+      "createdAtMs": 1787184011284,
+      "updatedAtMs": 1787296807520,
       "deleteAfterRun": false
     }
   ]

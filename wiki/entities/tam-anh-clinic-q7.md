@@ -40,3 +40,7 @@ Lịch kiểm tra: **sáng 8h + chiều 16h** (trừ Chủ Nhật)
 
 - [[topics/medical-gas-systems.md]] — Hệ thống khí y tế chi tiết
 - [[topics/medical-equipment.md]] — Thiết bị y tế tổng quát
+
+## Tài liệu
+- **Master Excel:** `G:/05_KIEM DINH/data/Kiểm định Master Test.xlsx`
+- **Tổng hợp kiểm định:** [[synthesis/bvq7_xn_nt_kiem_dinh_20260719]]

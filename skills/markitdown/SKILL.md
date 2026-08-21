@@ -1,15 +1,43 @@
-# markitdown
+---
+name: markitdown
+description: Convert files to Markdown (PDF, DOCX, XLSX, PPTX, images, audio, YouTube, etc.) using Microsoft MarkItDown. Use when the user asks to convert, markdown, extract text from documents, or process office files.
+---
 
-## Description
-Converts Office documents (DOCX, XLSX, PPTX) to Markdown using Microsoft's markitdown library.
+# MarkItDown
+
+Convert files to Markdown using Microsoft's `markitdown`.
+
+## Install
+
+```bash
+pip install markitdown
+```
+
+## Workflow
+
+1. Convert with `markitdown <input> -o <output.md>`.
+2. Read the resulting Markdown file.
+3. Report the content to the user.
 
 ## Usage
-markitdown <file_path>
 
-Converts the specified Office file to Markdown format.
+```bash
+# Single file
+markitdown input.pdf -o output.md
+markitdown input.docx -o output.md
+markitdown input.xlsx -o output.md
 
-## Example
-markitdown /home/tan/.nanobot/workspace/maintenance_checklists/Khám_bệnh_checklist.docx
+# URL
+markitdown https://arxiv.org/pdf/2401.06781 -o paper.md
 
-## Dependencies
-Requires the markitdown Python package.
+# YouTube transcript
+markitdown https://www.youtube.com/watch?v=VIDEO_ID -o transcript.md
+```
+
+## Notes
+
+- OCR plugin available for scanned documents.
+- Azure integration available for structured extraction.
+- For PDFs with complex layouts or Vietnamese scanned docs, prefer `mistral-ocr` skill (Mistral OCR API) which auto-routes to `markitdown` for native formats.
+- Output is UTF-8 Markdown.
+- Always read the generated `.md` file after conversion.

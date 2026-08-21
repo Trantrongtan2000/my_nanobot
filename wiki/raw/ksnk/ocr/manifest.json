@@ -1,0 +1,518 @@
+{
+  "version": 1,
+  "items": {
+    "q7:TA5.KSNK.HD.01:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.HD.01_Hướng dẫn sử dụng phương tiện phòng hộ cá nhân.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.HD.01",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_hd_01_huong_dan_su_dung_phuong_tien_phong_ho_c.md",
+      "method": "document_url",
+      "chars": 29850,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.HD.02:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTKT/TA5.KSNK.HD.02 - QTKT HƯỚNG DẪN VỆ SINH PHÒNG THỦ THUẬT.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.HD.02",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_hd_02_qtkt_huong_dan_ve_sinh_phong_thu_thuat.md",
+      "method": "document_url",
+      "chars": 15173,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.HD.06:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.HD.06_Hướng dẫn sử dụng hóa chất khử khuẩn, sát khuẩn tại phòng khám.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.HD.06",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_hd_06_huong_dan_su_dung_hoa_chat_khu_khuan_sat.md",
+      "method": "document_url",
+      "chars": 14090,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.01:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QT.01_Quy trình xử lý ban đầu khi bị phơi nhiễm với máu và chất tiết/TA5.KSNK.QT.01_Quy trình xử lý ban đầu khi bị phơi nhiễm với máu và chất tiết_04.06.2026.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.01",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_01_quy_trinh_xu_ly_ban_dau_khi_bi_phoi_nhie.md",
+      "method": "document_url",
+      "chars": 16230,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.02:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QT.02_Quy trình rửa tay thường quy/TA5.KSNK.QT.02_Quy trình rửa tay thường quy.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.02",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_02_quy_trinh_rua_tay_thuong_quy.md",
+      "method": "document_url",
+      "chars": 22819,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.03:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QT.03_Quy trình giám sát thực hành kiểm soát nhiễm khuẩn phòng khám.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.03",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_03_quy_trinh_giam_sat_thuc_hanh_kiem_soat_n.md",
+      "method": "document_url",
+      "chars": 39961,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.04:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QT.04_Quy trình thu gom, xử lý và cấp phát đồ vải người bệnh và nhân viên bệnh viện.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.04",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_04_quy_trinh_thu_gom_xu_ly_va_cap_phat_do_v.md",
+      "method": "document_url",
+      "chars": 60475,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.05:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QT.05_Quy trình vệ sinh trang thiết bị y tế/TA5.KSNK.QT.05_Quy trình vệ sinh trang thiết bị y tế.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.05",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_05_quy_trinh_ve_sinh_trang_thiet_bi_y_te.md",
+      "method": "document_url",
+      "chars": 69838,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.06:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTKT/TA5.KSNK.QT.06 - QTKT VỆ SINH TAY NGOẠI KHOA.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.06",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_06_qtkt_ve_sinh_tay_ngoai_khoa.md",
+      "method": "document_url",
+      "chars": 16829,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.37:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QT.37_Quy trình vệ sinh tay ngoại khoa/TA5.KSNK.QT.37_Quy trình vệ sinh tay ngoại khoa.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.37",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_37_quy_trinh_ve_sinh_tay_ngoai_khoa.md",
+      "method": "document_url",
+      "chars": 20899,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.43B:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QT.43B_Quy trình loại bỏ, thay thế, vật tư tiêu hao, công cụ, dụng cụ hư hỏng/TA5.KSNK.QT.43B_Quy trình loại bỏ, thay thế, vật tư tiêu hao, công cụ, dụng cụ hư hỏng.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.43B",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_43b_quy_trinh_loai_bo_thay_the_vat_tu_tieu_h.md",
+      "method": "document_url",
+      "chars": 14025,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.44:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QT.44_Quy trình tái sử dụng dụng cụ, vật tư tiêu hao sử dụng một lần.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.44",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_44_quy_trinh_tai_su_dung_dung_cu_vat_tu_tie.md",
+      "method": "document_url",
+      "chars": 19780,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.47:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QT.47_Quy trình cấp phát đồ vải mới của phòng khám.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.47",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_47_quy_trinh_cap_phat_do_vai_moi_cua_phong_.md",
+      "method": "document_url",
+      "chars": 17337,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.55:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QT.55_Quy trình thanh lý đồ vải hư hỏng, hết thời hạn sử dụng, không sử dụng.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.55",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_55_quy_trinh_thanh_ly_do_vai_hu_hong_het_th.md",
+      "method": "document_url",
+      "chars": 27632,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.56:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QT.56_Quy trình xử lý bình hút dịch.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.56",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_56_quy_trinh_xu_ly_binh_hut_dich.md",
+      "method": "document_url",
+      "chars": 22573,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QT.59:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QT.59_Quy trình lấy mẫu nước gửi đi làm xét nghiệm/TA5.KSNK.QT.59_Quy trình lấy mẫu nước gửi đi làm xét nghiệm.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QT.59",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qt_59_quy_trinh_lay_mau_nuoc_gui_di_lam_xet_ng.md",
+      "method": "document_url",
+      "chars": 19645,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QĐ.01:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTKT/TA5.KSNK.QĐ.01 - QTKT QUY ĐỊNH QUẢN LÝ CHẤT THẢI Y TẾ.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QĐ.01",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qd_01_qtkt_quy_dinh_quan_ly_chat_thai_y_te.md",
+      "method": "document_url",
+      "chars": 50476,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QĐ.02:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTKT/TA5.KSNK.QĐ.02 - QTKT QUY ĐỊNH KIỂM SOÁT NHIỄM KHUẨN TẠI PHÒNG THỦ THUẬT.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QĐ.02",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qd_02_qtkt_quy_dinh_kiem_soat_nhiem_khuan_tai_.md",
+      "method": "document_url",
+      "chars": 17025,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QĐ.03:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QĐ.03_Quy định quản lý chất thải y tế.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QĐ.03",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qd_03_quy_dinh_quan_ly_chat_thai_y_te.md",
+      "method": "document_url",
+      "chars": 51363,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QĐ.04:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QĐ.04_Quy định cách ly kiểm soát lây nhiễm đậu mùa khỉ/TA5.KSNK.QĐ.04_Quy định cách ly kiểm soát lây nhiễm đậu mùa khỉ.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QĐ.04",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qd_04_quy_dinh_cach_ly_kiem_soat_lay_nhiem_dau.md",
+      "method": "document_url",
+      "chars": 15473,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QĐ.05:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QĐ.05_Quy định kiểm soát nhiễm khuẩn tại phòng thủ thuật/TA5.KSNK.QĐ.05_Quy định kiểm soát nhiễm khuẩn tại phòng thủ thuật.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QĐ.05",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qd_05_quy_dinh_kiem_soat_nhiem_khuan_tai_phong.md",
+      "method": "document_url",
+      "chars": 16619,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QĐ.06:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QĐ.06_Quy định vệ sinh môi trường phòng khám.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QĐ.06",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qd_06_quy_dinh_ve_sinh_moi_truong_phong_kham.md",
+      "method": "document_url",
+      "chars": 45347,
+      "updated": "2026-07-25"
+    },
+    "q7:TA5.KSNK.QĐ.08:Quận 7/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA5.KSNK.QĐ.08_Quy định phòng ngừa chuẩn trong bệnh viện.pdf": {
+      "status": "ok",
+      "code": "TA5.KSNK.QĐ.08",
+      "site": "q7",
+      "ocr_rel": "raw/ksnk/ocr/q7_ta5_ksnk_qd_08_quy_dinh_phong_ngua_chuan_trong_benh_vie.md",
+      "method": "document_url",
+      "chars": 20461,
+      "updated": "2026-07-25"
+    },
+    "tb:CS.KSNK.02:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/CHƯƠNG TRÌNH/CS.KSNK.02_Chương trình kiểm soát nhiễm khuẩn trong bệnh viện/CS.KSNK.02_Chương trình kiểm soát nhiễm khuẩn trong bệnh viện.pdf": {
+      "status": "ok",
+      "code": "CS.KSNK.02",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_cs_ksnk_02_chuong_trinh_kiem_soat_nhiem_khuan_trong.md",
+      "method": "document_url",
+      "chars": 99768,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.HD.03:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/HƯỚNG DẪN/KSNK.HD.03_Hướng dẫn sử dụng phương tiện phòng hộ cá nhân lấy xét nghiệm Sars-CoV-2.pdf": {
+      "status": "ok",
+      "code": "KSNK.HD.03",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_hd_03_huong_dan_su_dung_phuong_tien_phong_ho_c.md",
+      "method": "document_url",
+      "chars": 7237,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.HD.04:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/HƯỚNG DẪN/KSNK.HD.04_ Hướng dẫn phòng ngừa nhiễm khuẩn huyết trên người bệnh đặt catheter trong lòng ngực.pdf": {
+      "status": "ok",
+      "code": "KSNK.HD.04",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_hd_04_huong_dan_phong_ngua_nhiem_khuan_huyet_t.md",
+      "method": "document_url",
+      "chars": 18517,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.07:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/KSNK.QT.07_ Quy trình khử khuẩn mức độ cao dụng cụ y tế không chịu nhiệt.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.07",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_07_quy_trinh_khu_khuan_muc_do_cao_dung_cu_y.md",
+      "method": "document_url",
+      "chars": 6134,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.35:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/Quy trình liên quan SARS-CoV-2/KSNK.QT.35_Quy trình xử lý & tiệt khuẩn dụng cụ không chịu nhiệt chăm sóc - điều trị người nghi nhiễm, nhiễm Sars-CoV-2.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.35",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_35_quy_trinh_xu_ly_tiet_khuan_dung_cu_khong.md",
+      "method": "document_url",
+      "chars": 9832,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.36:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/Quy trình liên quan SARS-CoV-2/KSNK.QT.36_Quy trình xử lý & tiệt khuẩn dụng cụ chịu nhiệt chăm sóc - điều trị người nghi nhiễm, nhiễm Sars-CoV-2.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.36",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_36_quy_trinh_xu_ly_tiet_khuan_dung_cu_chiu_.md",
+      "method": "document_url",
+      "chars": 10816,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.38:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/KSNK.QT.38_Quy trình khử khuẩn nôi sơ sinh.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.38",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_38_quy_trinh_khu_khuan_noi_so_sinh.md",
+      "method": "document_url",
+      "chars": 4638,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.39:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/KSNK.QT.39_ Quy trình cách ly người bệnh nhiễm vi khuẩn đa kháng.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.39",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_39_quy_trinh_cach_ly_nguoi_benh_nhiem_vi_kh.md",
+      "method": "document_url",
+      "chars": 16870,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.40:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/Quy trình liên quan SARS-CoV-2/KSNK.QT.40_Quy trình thu gom, xử lý đồ vải nhiễm Sars- Cov -2.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.40",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_40_quy_trinh_thu_gom_xu_ly_do_vai_nhiem_sar.md",
+      "method": "document_url",
+      "chars": 9164,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.42:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/KSNK.QT.42_ Quy trình phòng ngừa nhiễm khuẩn tiết niệu liên quan đến đặt ống thông tiểu.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.42",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_42_quy_trinh_phong_ngua_nhiem_khuan_tiet_ni.md",
+      "method": "document_url",
+      "chars": 19577,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.43:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/KSNK.QT.43B_Quy trình loại bỏ, thay thế dụng cụ, vật tư, tiêu hao hư hỏng/KSNK.QT.43_Quy trình loại bỏ, thay thế dụng cụ, vật tư, tiêu hao hư hỏng.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.43",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_43_quy_trinh_loai_bo_thay_the_dung_cu_vat_t.md",
+      "method": "document_url",
+      "chars": 9311,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.43A:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/KSNK.QT.43A_ Quy trình phân luồng vận chuyển người bệnh nội trú tại các khoa GMHS, HSTC -CĐ, HSSS.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.43A",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_43a_quy_trinh_phan_luong_van_chuyen_nguoi_be.md",
+      "method": "document_url",
+      "chars": 10173,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.45:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/Quy trình liên quan SARS-CoV-2/KSNK.QT.45_ Quy trình vệ sinh môi trường phòng thủ thuật, phẫu thuật người bệnh nhiễm hoặc nghi ngờ nhiễm Sars -Cov - 2.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.45",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_45_quy_trinh_ve_sinh_moi_truong_phong_thu_t.md",
+      "method": "document_url",
+      "chars": 16122,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.46:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/KSNK.QT.46_ Quy trình giao nhận dụng cụ phẫu thuật, thủ thuật tiệt khuẩn trong trường hợp khẩn cấp.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.46",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_46_quy_trinh_giao_nhan_dung_cu_phau_thuat_t.md",
+      "method": "document_url",
+      "chars": 6316,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.48:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/KSNK.QT.48_Quy trình phối hợp xử lý môi trường khi người bệnh nhiễm vi khuẩn đa kháng và bệnh truyền nhiễm.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.48",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_48_quy_trinh_phoi_hop_xu_ly_moi_truong_khi_.md",
+      "method": "document_url",
+      "chars": 8238,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.51:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA2.KSNK.QT.51_Quy trình tổ chức cách ly cho người bệnh mắc bệnh truyền nhiễm/TA2. KSNK.QT.51_Quy trình tổ chức cách ly cho người bệnh mắc bệnh truyền nhiễm.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.51",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_51_ta2_ksnk_qt_51_quy_trinh_to_chuc_cach_ly.md",
+      "method": "document_url",
+      "chars": 39835,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QT.52:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/KSNK.QT.52_QUY TRÌNH VẬN HÀNH HỆ THỐNG NƯỚC RO TẠI ĐƠN VỊ THẬN NHÂN TẠO/KSNK.QT.52_QUY TRÌNH VẬN HÀNH HỆ THỐNG NƯỚC RO TẠI ĐƠN VỊ THẬN NHÂN TẠO.pdf": {
+      "status": "ok",
+      "code": "KSNK.QT.52",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qt_52_quy_trinh_van_hanh_he_thong_nuoc_ro_tai_.md",
+      "method": "document_url",
+      "chars": 19960,
+      "updated": "2026-07-25"
+    },
+    "tb:KSNK.QĐ.07:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/KSNK.QĐ.07_Quy định đồng phục các vùng làm việc tại Đơn vị Tiệt khuẩn Trung tâm/KSNK.QĐ.07_Quy định đồng phục các vùng làm việc tại Đơn vị Tiệt khuẩn Trung tâm.pdf": {
+      "status": "ok",
+      "code": "KSNK.QĐ.07",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ksnk_qd_07_quy_dinh_dong_phuc_cac_vung_lam_viec_tai.md",
+      "method": "document_url",
+      "chars": 17005,
+      "updated": "2026-07-25"
+    },
+    "tb:QT.KSNK.09:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/QT.KSNK.09_Quy trình chích ngừa viêm gan B_Phát hành tạm thời/QT.KSNK.09_Quy trình chích ngừa viêm gan B_Phát hành tạm thời.pdf": {
+      "status": "ok",
+      "code": "QT.KSNK.09",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_qt_ksnk_09_quy_trinh_chich_ngua_viem_gan_b_phat_han.md",
+      "method": "document_url",
+      "chars": 5933,
+      "updated": "2026-07-25"
+    },
+    "tb:QT.KSNK.27:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/Quy trình liên quan SARS-CoV-2/QT.KSNK.27_Quy trình khử nhiễm dụng cụ tái sử dụng sau chăm sóc người bệnh nghi nhiễm, nhiễm Sars-CoV-2_ban hành lần 02.pdf": {
+      "status": "ok",
+      "code": "QT.KSNK.27",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_qt_ksnk_27_quy_trinh_khu_nhiem_dung_cu_tai_su_dung_.md",
+      "method": "document_url",
+      "chars": 4910,
+      "updated": "2026-07-25"
+    },
+    "tb:QT.KSNK.29:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/Quy trình liên quan SARS-CoV-2/QT.KSNK.29_Quy trình di chuyển bệnh nhân nghi nhiễm, nhiễm Sars-CoV-2/QT.KSNK.29_Quy trình di chuyển bệnh nhân nghi nhiễm, nhiễm Sars-CoV-2.pdf": {
+      "status": "ok",
+      "code": "QT.KSNK.29",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_qt_ksnk_29_quy_trinh_di_chuyen_benh_nhan_nghi_nhiem.md",
+      "method": "document_url",
+      "chars": 7222,
+      "updated": "2026-07-25"
+    },
+    "tb:QT.KSNK.32:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/Quy trình liên quan SARS-CoV-2/QT.KSNK.32_Quy trình VS khử khuẩn máy XQuang di động (sử dụng tại phòng bệnh nghi nhiễm, nhiễm Sars-CoV-2)/QT.KSNK.32.pdf": {
+      "status": "ok",
+      "code": "QT.KSNK.32",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_qt_ksnk_32_qt_ksnk_32.md",
+      "method": "document_url",
+      "chars": 8364,
+      "updated": "2026-07-25"
+    },
+    "tb:QTKT.KSNK.01:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTKT/QTKT.KSNK.01_QTKT xử lý dụng cụ nội soi/QTKT.KSNK.01_QTKT xử lý dụng cụ nội soi_Phát hành tạm thời.pdf": {
+      "status": "ok",
+      "code": "QTKT.KSNK.01",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_qtkt_ksnk_01_qtkt_xu_ly_dung_cu_noi_soi_phat_hanh_tam.md",
+      "method": "document_url",
+      "chars": 20488,
+      "updated": "2026-07-25"
+    },
+    "tb:QTKT.KSNK.02:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTKT/QTKT.KSNK.02_QTKT bảo dưỡng dụng cụ_Phát hành tạm thời/QTKT.KSNK.02_QTKT bảo dưỡng dụng cụ_Phát hành tạm thời.pdf": {
+      "status": "ok",
+      "code": "QTKT.KSNK.02",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_qtkt_ksnk_02_qtkt_bao_duong_dung_cu_phat_hanh_tam_tho.md",
+      "method": "document_url",
+      "chars": 7085,
+      "updated": "2026-07-25"
+    },
+    "tb:QTKT.KSNK.03:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTKT/QTKT.KSNK.03_QTKT làm sạch dụng cụ ban đầu/QTKT.KSNK.03_QTKT làm sạch dụng cụ ban đầu_Phát hành tạm thời.pdf": {
+      "status": "ok",
+      "code": "QTKT.KSNK.03",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_qtkt_ksnk_03_qtkt_lam_sach_dung_cu_ban_dau_phat_hanh_.md",
+      "method": "document_url",
+      "chars": 9892,
+      "updated": "2026-07-25"
+    },
+    "tb:QTKT.KSNK.04:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTKT/QTKT.KSNK.04_QTKT đóng gói dụng cụ/QTKT.KSNK.04_Quy trình đóng gói dụng cụ_Phát hành tạm thời.pdf": {
+      "status": "ok",
+      "code": "QTKT.KSNK.04",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_qtkt_ksnk_04_quy_trinh_dong_goi_dung_cu_phat_hanh_tam.md",
+      "method": "document_url",
+      "chars": 9317,
+      "updated": "2026-07-25"
+    },
+    "tb:TA2.KSNK.HD.05:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/HƯỚNG DẪN/TA2.KSNK.HD.05_Hướng dẫn vệ sinh phòng thủ thuật/TA2.KSNK.HD.05_Hướng dẫn vệ sinh phòng thủ thuật.pdf": {
+      "status": "ok",
+      "code": "TA2.KSNK.HD.05",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ta2_ksnk_hd_05_huong_dan_ve_sinh_phong_thu_thuat.md",
+      "method": "document_url",
+      "chars": 15161,
+      "updated": "2026-07-25"
+    },
+    "tb:TA2.KSNK.QT.41:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA2.KSNK.QT.41_Quy trình hướng dẫn phòng ngừa viêm phổi bệnh viện/TA2.KSNK.QT.41_Quy trình hướng dẫn phòng ngừa viêm phổi bệnh viện.pdf": {
+      "status": "ok",
+      "code": "TA2.KSNK.QT.41",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ta2_ksnk_qt_41_quy_trinh_huong_dan_phong_ngua_viem_phoi.md",
+      "method": "document_url",
+      "chars": 19004,
+      "updated": "2026-07-25"
+    },
+    "tb:TA2.KSNK.QT.49:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA2.KSNK.QT.49_Quy trình vệ sinh môi trường khu vực phẫu thuật/TA2.KSNK.QT.49_Quy trình vệ sinh môi trường khu vực phẫu thuật.pdf": {
+      "status": "ok",
+      "code": "TA2.KSNK.QT.49",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ta2_ksnk_qt_49_quy_trinh_ve_sinh_moi_truong_khu_vuc_pha.md",
+      "method": "document_url",
+      "chars": 69985,
+      "updated": "2026-07-25"
+    },
+    "tb:TA2.KSNK.QT.50:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA2.KSNK.QT.50_Quy trình quản lý đối tác đến bệnh viện trợ giúp phẫu thuật, thủ thuật/TA2.KSNK.QT.50_Quy trình quản lý đối tác đến bệnh viện trợ giúp phẫu thuật, thủ thuật.pdf": {
+      "status": "ok",
+      "code": "TA2.KSNK.QT.50",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ta2_ksnk_qt_50_quy_trinh_quan_ly_doi_tac_den_benh_vien_.md",
+      "method": "document_url",
+      "chars": 21398,
+      "updated": "2026-07-25"
+    },
+    "tb:TA2.KSNK.QT.57:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA2.KSNK.QT.57_Quy trình quản lý và xử lý dụng cụ y tế/TA2.KSNK.QT.57_Quy trình quản lý và xử lý dụng cụ y tế.pdf": {
+      "status": "ok",
+      "code": "TA2.KSNK.QT.57",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ta2_ksnk_qt_57_quy_trinh_quan_ly_va_xu_ly_dung_cu_y_te.md",
+      "method": "pages_png",
+      "chars": 59284,
+      "updated": "2026-07-25"
+    },
+    "tb:TA2.KSNK.QT.58:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA2.KSNK.QT.58_Quy trình quản lý và xử lý dụng cụ Trung tâm Mắt công nghệ cao/TA2.KSNK.QT.58_Quy trình quản lý và xử lý dụng cụ trung tâm mắt công nghệ cao.pdf": {
+      "status": "ok",
+      "code": "TA2.KSNK.QT.58",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ta2_ksnk_qt_58_quy_trinh_quan_ly_va_xu_ly_dung_cu_trung.md",
+      "method": "document_url",
+      "chars": 26746,
+      "updated": "2026-07-25"
+    },
+    "tb:TA2.KSNK.QT.60:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA2.KSNK.QT.60_Quy trình vệ sinh môi trường khu vực phẫu thuật mắt/TA2.KSNK.QT.60_Quy trình vệ sinh môi trường khu vực phẫu thuật mắt.pdf": {
+      "status": "ok",
+      "code": "TA2.KSNK.QT.60",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ta2_ksnk_qt_60_quy_trinh_ve_sinh_moi_truong_khu_vuc_pha.md",
+      "method": "document_url",
+      "chars": 42384,
+      "updated": "2026-07-25"
+    },
+    "tb:TA2.KSNK.QT.61:Tân Bình/20. KIỂM SOÁT NHIỄM KHUẨN/QTVH/TA2.KSNK.QT.61_Quy trình lưu trữ, bảo quản và tiêu hủy bộ phận cơ thể người thải bỏ/TA2.KSNK.QT.61_Quy trình lưu trữ, bảo quản và tiêu hủy bộ phận cơ thể người thải bỏ.pdf": {
+      "status": "ok",
+      "code": "TA2.KSNK.QT.61",
+      "site": "tb",
+      "ocr_rel": "raw/ksnk/ocr/tb_ta2_ksnk_qt_61_quy_trinh_luu_tru_bao_quan_va_tieu_huy_b.md",
+      "method": "document_url",
+      "chars": 27692,
+      "updated": "2026-07-25"
+    }
+  }
+}

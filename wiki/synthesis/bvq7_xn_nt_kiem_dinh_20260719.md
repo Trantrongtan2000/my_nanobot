@@ -9,10 +9,10 @@ sources:
 updated: 2026-07-21
 tags: [medical-equipment, calibration, XÉT NGHIỆM, NHÀ THUỐC, BV_QUẬN_7]
 refs: [
-  "[[wiki/entities/bvq7_nha_thuoc_utrel30]]",
-  "[[wiki/topics/medical-equipment-verification]]",
-  "[[wiki/entities/logtag]]",
-  "[[wiki/entities/mpr-715f]]"
+  "[[entities/bvq7_nha_thuoc]]",
+  "[[topics/medical-equipment-verification]]",
+  "[[entities/logtag]]",
+  "[[entities/mpr-715f]]"
 ]
 ---
 

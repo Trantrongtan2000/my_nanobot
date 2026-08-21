@@ -85,7 +85,7 @@ class NotionWorkspaceAgent(BaseNOOAAgent):
             capabilities=["create_notion_note", "sync_workspace"]
         )
         super().__init__(meta, dependencies)
-        self.notion_token = os.environ.get("NOTION_TOKEN", "ntn_b33821509461YDidRoXi87DjYhyxp3c4CkSYr1PrZkL9x3")
+        self.notion_token = os.environ.get("NOTION_TOKEN", "[REDACTED_SECRET]")
         self.inbox_parent_id = "3a30c997-8722-8189-801d-f21517a3439e"
 
     def create_inbox_note(self, title: str, content: str) -> Dict[str, Any]:

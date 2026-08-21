@@ -1,83 +1,67 @@
-# 📚 QLTB Equipment Wiki — Entity Index
+# Wiki Index
 
-**Total entities**: 66
-**Last updated**: 2026-08-11 06:19 UTC
+## Topics
+- [[topics/medical-equipment-verification]] — Quy trình kiểm định thiết bị nhà thuốc
+- [[topics/examination-equipment-verification]] — Kiểm định thiết bị khám bệnh
+- [[topics/verification-log]] — Nhật ký kiểm định
+- [[topics/medical-gas-systems]] — Hệ thống khí y tế
 
-## Thiết bị y tế
+## Entities
+- [[entities/logtag]] — LogTag — temperature data logger
+- [[entities/mpr-715f]] — PHCbi MPR-715F — tủ lạnh dược phẩm
+- [[entities/pharmacy-refrigerator]] — Tủ lạnh bảo quản thuốc
+- [[entities/patient-scale]] — Cân bệnh nhân
+- [[entities/blood-pressure-monitor]] — Máy đo huyết áp
+- [[entities/tam-anh-clinic-q7]] — PK Đa Khoa Tâm Anh Quận 7
+- [[entities/bvq7_khoa_xet_nghiem]] — BV Quận 7 — Khoa Xét nghiệm (65 TB)
+- [[entities/bvq7_nha_thuoc]] — BV Quận 7 — Nhà thuốc (17 TB: 9 tủ lạnh + 3 UHADO-16 + 1 UTRED30 + 1 UTRED-16F + 6 UPS)
+- [[entities/bvq7_san_khoa]] — BV Quận 7 — Sản phụ khoa (49 TB: 6 monitor + 7 Doppler + 36 other)
+- [[entities/bvq7_cap_cuu]] — BV Quận 7 — Cấp cứu (144 TB)
+- [[entities/bvq7_chan_doan_hinh_anh]] — BV Quận 7 — Chẩn đoán hình ảnh (138 TB)
+- [[entities/bvq7_noi_soi_tieu_hoa]] — BV Quận 7 — Nội soi tiêu hóa (138 TB)
+- [[entities/bvq7_kham_benh]] — BV Quận 7 — Khám bệnh (125 TB)
+- [[entities/bvq7_trung_tam_tim_mach]] — BV Quận 7 — Trung tâm tim mạch (36 TB)
+- [[entities/bvq7_cap_cuu_loc_mau]] — BV Quận 7 — Cấp cứu - Đơn vị lọc máu (29 TB)
+- [[entities/bvq7_tai_mui_hong]] — BV Quận 7 — Tai mũi họng (27 TB)
+- [[entities/bvq7_mat]] — BV Quận 7 — Mắt (20 TB)
+- [[entities/bvq7_rang_ham_mat]] — BV Quận 7 — Răng hàm mặt (18 TB)
+- [[entities/bvq7_da_lieu]] — BV Quận 7 — Da liễu (16 TB)
+- [[entities/bvq7_tim_mach]] — BV Quận 7 — Tim mạch (11 TB)
+- [[entities/bvq7_he_thong_khi]] — BV Quận 7 — Hệ thống khí (10 TB)
+- [[entities/bvq7_nha_khi]] — BV Quận 7 — Nhà khí (10 TB)
+- [[entities/bvq7_phuc_hoi_chuc_nang]] — BV Quận 7 — Phục hồi chức năng (9 TB)
+- [[entities/bvq7_kiem_soat_nhiem_khuan]] — BV Quận 7 — Kiểm soát nhiễm khuẩn (4 TB)
+- [[entities/bvq7_ung_buou]] — BV Quận 7 — Ung bướu (5 TB)
+- [[entities/bvq7_nhi]] — BV Quận 7 — Nhi (4 TB)
+- [[entities/bvq7_he_thong_bao_goi_y_ta]] — BV Quận 7 — Hệ thống báo gọi y tá (4 TB)
+- [[entities/bvq7_khac]] — BV Quận 7 — Khác (3 TB)
+- [[entities/bvq7_kiem_soat_can_nang]] — BV Quận 7 — Kiểm soát cân nặng (3 TB)
+- [[entities/bvq7_sieu_am_bao_thai]] — BV Quận 7 — Siêu âm bào thai (3 TB)
+- [[entities/bvq7_noi_than_kinh]] — BV Quận 7 — Nội thần kinh (3 TB)
+- [[entities/bvq7_noi_tong_hop]] — BV Quận 7 — Nội tổng hợp (2 TB)
+- [[entities/bvq7_noi_tiet]] — BV Quận 7 — Nội tiết (1 TB)
+- [[entities/omron_hem8712_20240456768vg]] — Omron HEM-8712 tại PKĐK Tâm Anh Q7
+- [[entities/resonance_r14o]] — Resonance R14O OAE Screener (ENT)
+- [[entities/rion_aa-m1c1]] — Rion AA-M1C1 Audiometer (ENT)
+- [[entities/rion_rs-h1]] — Rion RS-H1 Impedance Audiometer (ENT)
 
-- [[entities/ampcare_es.md]] — Ampcare_Es
-- [[entities/artromot_s3_standard.md]] — Artromot_S3_Standard
-- [[entities/biomed_tv100_tx2301031.md]] — Biomed_Tv100_Tx2301031
-- [[entities/blood-pressure-monitor.md]] — Blood Pressure Monitor
-- [[entities/btl_4625_premium.md]] — Btl_4625_Premium
-- [[entities/btl_4710_smart.md]] — Btl_4710_Smart
-- [[entities/btl_6000_laser_30w.md]] — Btl_6000_Laser_30W
-- [[entities/btl_600_tr_therapy_elite.md]] — Btl_600_Tr_Therapy_Elite
-- [[entities/bvq7_khoa_cap_cuu.md]] — Bvq7_Khoa_Cap_Cuu
-- [[entities/bvq7_khoa_tim_mach.md]] — Bvq7_Khoa_Tim_Mach
-- [[entities/bvq7_khoa_xet_nghiem.md]] — Bvq7_Khoa_Xet_Nghiem
-- [[entities/bvq7_nha_thuoc.md]] — Bvq7_Nha_Thuoc
-- [[entities/bvq7_nha_thuoc_utrel30.md]] — Bvq7_Nha_Thuoc_Utrel30
-- [[entities/chardeer_ms3500_c24005468.md]] — Chardeer_Ms3500_C24005468
-- [[entities/dashi-ppt.md]] — Dashi-PPT Skill
-- [[entities/elpis_den_mo_treo_tran_elo2401002.md]] — Elpis_Den_Mo_Treo_Tran_Elo2401002
-- [[entities/elpismedical_solarmax_led160_2401001.md]] — Elpismedical_Solarmax_Led160_2401001
-- [[entities/ge_b125m_8b72420010000.md]] — Ge_B125M_8B72420010000
-- [[entities/ge_b125m_sr724200022sa.md]] — Ge_B125M_Sr724200022Sa
-- [[entities/ge_b125m_sr72420010684.md]] — Ge_B125M_Sr72420010684
-- [[entities/ge_b125m_srt24200006sa.md]] — Ge_B125M_Srt24200006Sa
-- [[entities/koolio.md]] — Koolio
-- [[entities/le_epsme.md]] — Le_Epsme
-- [[entities/logtag.md]] — Logtag
-- [[entities/machan_sc32pro_bm24_p1256.md]] — Machan_Sc32Pro_Bm24_P1256
-- [[entities/machan_sc32pro_bm24_p1266.md]] — Machan_Sc32Pro_Bm24_P1266
-- [[entities/mpr-715f.md]] — Mpr 715F
-- [[entities/nikon_kohden_ecg3350_0104831921014776.md]] — Nikon_Kohden_Ecg3350_0104831921014776
-- [[entities/nikon_kohden_ecg3350_0129451521014776.md]] — Nikon_Kohden_Ecg3350_0129451521014776
-- [[entities/omron_hem8712_20240456611vg.md]] — Omron_Hem8712_20240456611Vg
-- [[entities/omron_hem8712_20240456768vg.md]] — Omron_Hem8712_20240456768Vg
-- [[entities/patient-scale.md]] — Patient Scale
-- [[entities/pharmacy-refrigerator.md]] — Pharmacy Refrigerator
-- [[entities/proxeo_ultra_pb520.md]] — Proxeo_Ultra_Pb520
-- [[entities/resmed_astral150_22241721443.md]] — Resmed_Astral150_22241721443
-- [[entities/terumo_te_lf630n03_2204010109.md]] — Terumo_Te_Lf630N03_2204010109
-- [[entities/terumo_te_lf630n03_2206010214.md]] — Terumo_Te_Lf630N03_2206010214
-- [[entities/terumo_te_lf630n03_2206010224.md]] — Terumo_Te_Lf630N03_2206010224
-- [[entities/terumo_te_lf630n03_2206010227.md]] — Terumo_Te_Lf630N03_2206010227
-- [[entities/terumo_te_lf630n03_2206010236.md]] — Terumo_Te_Lf630N03_2206010236
-- [[entities/terumo_te_ss835n03_2205010002.md]] — Terumo_Te_Ss835N03_2205010002
-- [[entities/terumo_te_ss835n03_2205010005.md]] — Terumo_Te_Ss835N03_2205010005
-- [[entities/terumo_te_ss835n03_2205010006.md]] — Terumo_Te_Ss835N03_2205010006
-- [[entities/terumo_te_ss835n03_2205010032.md]] — Terumo_Te_Ss835N03_2205010032
-- [[entities/terumo_te_ss835n03_2205010036.md]] — Terumo_Te_Ss835N03_2205010036
-- [[entities/volkson_s8_bt16_vs8000518.md]] — Volkson_S8_Bt16_Vs8000518
-- [[entities/voluson_s8_bt16_vs8000518.md]] — Voluson_S8_Bt16_Vs8000518
-- [[entities/arietta_65.md]] — Arietta_65_Ultrasound
+## Synthesis
+- [[synthesis/bvq7_xn_nt_kiem_dinh_20260719]] — Tổng hợp kiểm định BV Quận 7: XN + Nhà thuốc
+- [[synthesis/phong_do_thinh_luc_ve_sinh_ttb_20260722]] — Hướng dẫn vệ sinh TTBYT phòng đo thính lực; RS-H1, AA-M1C1, R14O đã có manual + entity wiki
 
-## Dữ liệu hệ thống
+## KSNK — Kiểm soát nhiễm khuẩn
+- [[synthesis/ksnk_quy_trinh_hub]]
+- [[synthesis/ksnk_q7_goi_quy_trinh]] — Map gói QTVH Quận 7 + trích BK/BM/PL (2026-07-21) — Hub quy trình KSNK (TA5 Q7 + TA2 Tân Bình), ingest 2026-07-21
+- [[entities/ksnk_tam_anh]] — Đơn vị/chức năng KSNK Tâm Anh
+- [[raw/ksnk/catalog]] — Catalog 299 file nguồn
 
-- [[entities/b125m_monitor_5_thong_so.md]] — B125M_Monitor_5_Thong_So
-- [[entities/docuflow-studio.md]] — Docuflow Studio
-- [[entities/jin_sol_operating_table_js003_4002802549.md]] — Jin_Sol_Operating_Table_Js003_4002802549
-- [[entities/jin_sol_operating_table_js003_4002802550.md]] — Jin_Sol_Operating_Table_Js003_4002802550
-- [[entities/may_gay_me_amxr00289.md]] — May_Gay_Me_Amxr00289
-- [[entities/may_pha_rung_tim_sn16564.md]] — May_Pha_Rung_Tim_Sn16564
-- [[entities/qltb-data-model-v1-tbty.md]] — QLTB Data Model v1 — Snipe-IT Design Proposal
-- [[entities/slc_rabs_4n1_s.md]] — Slc_Rabs_4N1_S
-- [[entities/snipe-it.md]] — Snipe-IT Asset Management
-- [[entities/snipe-it-source-analysis.md]] — Snipe-IT Source Code Analysis
-- [[entities/tam-anh-clinic-q7.md]] — Tam Anh Clinic Q7
-- [[entities/ttbyt-deployment-plan.md]] — Kế hoạch & Module TTBYT — Bệnh viện Quận 7
-- [[entities/zeus_150_a07coas0429.md]] — Zeus_150_A07Coas0429
-
-## Công cụ/Skill
-
-- [[entities/claude-video.md]] — Claude Video — Watch Videos in Conversations
-- [[entities/claude-video-integration.md]] — Claude Video (watch skill) — Source Analysis
-- [[entities/mesh-llm-integration.md]] — Mesh-LLM Integration — Nanobot
-- [[entities/nanobot-knowledge-management.md]] — Nanobot Knowledge Management System — Phân tích
-- [[entities/skill-watch-video-analysis.md]] — Skill: /watch — Video Analysis via Claude-Video
-
-## Video/Content
-
-- [[entities/video-rom-hacking-powershell.md]] — Video: Tạo công cụ hỗ trợ dịch game bằng PowerShell
+### Quy trình KSNK (concepts)
+- [[concepts/ksnk_cs_ksnk_02_chuong_trinh_kiem_soat_nhiem_khuan_trong_benh_vien]] — CS.KSNK.02 — Chương trình kiểm soát nhiễm khuẩn trong bệnh viện (tb)
+- [[concepts/ksnk_ksnk_hd_01_huong_dan_su_dung_phuong_tien_phong_ho_ca_nhan]] — TA5.KSNK.HD.01 — Hướng dẫn sử dụng phương tiện phòng hộ cá nhân (q7, tb)
+- [[concepts/ksnk_ksnk_hd_02_qtkt_huong_dan_ve_sinh_phong_thu_thuat]] — TA5.KSNK.HD.02 — QTKT HƯỚNG DẪN VỆ SINH PHÒNG THỦ THUẬT (q7, tb)
+- [[concepts/ksnk_ksnk_hd_03_huong_dan_su_dung_phuong_tien_phong_ho_ca_nhan_lay_xet_nghiem_sa]] — KSNK.HD.03 — Hướng dẫn sử dụng phương tiện phòng hộ cá nhân lấy xét nghiệm Sars-CoV-2 (tb)
+- [[concepts/ksnk_ksnk_hd_04_huong_dan_phong_ngua_nhiem_khuan_huyet_tren_nguoi_benh_dat_cathe]] — KSNK.HD.04 — Hướng dẫn phòng ngừa nhiễm khuẩn huyết trên người bệnh đặt catheter trong lòng ngực (tb)
+- [[concepts/ksnk_ksnk_hd_05_huong_dan_ve_sinh_phong_thu_thuat]] — TA2.KSNK.HD.05 — Hướng dẫn vệ sinh phòng thủ thuật (tb)
+- [[concepts/ksnk_ksnk_hd_06_huong_dan_su_dung_hoa_chat_khu_khuan_sat_khuan_tai_phong_kham]] — TA5.KSNK.HD.06 — Hướng dẫn sử dụng hóa chất khử khuẩn, sát khuẩn tại phòng khám (q7, tb)
+- [[concepts/ksnk_ksnk_qt_01_quy_trinh_xu_ly_ban_dau_khi_bi_phoi_nhiem_voi_mau_va_chat_tiet_0]] — TA5.KSNK.QT.01 — Quy trình xử lý ban đầu khi bị phơi nhiễm với máu và chất tiết 04.06.2026 (q7, tb)
+- [[concepts/ksnk_ksnk_qt_02_quy_trinh_rua_tay_thuong_quy]] — TA5.KSNK.QT.02 — Quy trình rửa tay thường quy (q7, tb)

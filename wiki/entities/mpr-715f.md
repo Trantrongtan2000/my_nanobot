@@ -43,3 +43,7 @@ Xem [[topics/medical-equipment-verification.md#kiểm-định-logtag]] và [[ent
 - [[topics/medical-equipment-verification.md]] — kiểm định thiết bị y tế
 - [[entities/pharmacy-refrigerator.md]] — tủ lạnh bảo quản thuốc
 - [[entities/logtag.md]] — LogTag giám sát nhiệt độ
+
+## Tài liệu
+- **Wiki entity:** [[entities/mpr-715f]]
+- **OCR chứng nhận:** [[raw/ocr_ksnk_qt05/q7/organized]]

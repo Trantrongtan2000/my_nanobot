@@ -5,11 +5,32 @@ import os
 import re
 import sys
 import time
+from pathlib import Path
+
 import requests
 
-API_KEY = "z9aTON54cWJb0hS8tGm6hkjdrlvefdO3"
+
+def _load_nanobot_env() -> None:
+    for path in (Path.home() / ".nanobot" / ".env", Path.home() / ".nanobot" / "env"):
+        if not path.is_file():
+            continue
+        for raw in path.read_text(encoding="utf-8").splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, _, v = line.partition("=")
+            k, v = k.strip(), v.strip().strip('"').strip("'")
+            if k and v and not os.environ.get(k):
+                os.environ[k] = v
+
+
+_load_nanobot_env()
+
+API_KEY = os.environ.get("MISTRAL_API_KEY", "").strip()
+if not API_KEY:
+    raise SystemExit("Missing MISTRAL_API_KEY (set in ~/.nanobot/.env)")
 API_URL = "https://api.mistral.ai/v1/ocr"
-MODEL = "mistral-ocr-latest"
+MODEL = os.environ.get("MISTRAL_OCR_MODEL", "mistral-ocr-latest")
 HEADERS = {
     "Authorization": f"Bearer {API_KEY}",
     "Content-Type": "application/json"

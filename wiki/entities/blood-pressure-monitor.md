@@ -82,3 +82,7 @@ Quầy đánh giá ban đầu, Khu E Tầng 1 — Tai Mũi Họng
 
 - [[examination-equipment-verification.md]] — overall topic
 - [[tam-anh-clinic-q7.md]] — PK Đa Khoa Tâm Anh Q7
+
+## Tài liệu
+- **Wiki entity:** [[entities/blood-pressure-monitor]]
+- **OCR chứng nhận:** [[raw/ocr_ksnk_qt05/q7/organized]]

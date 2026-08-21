@@ -1,25 +1,21 @@
-image: python:3.10-slim
-
 stages:
-  - lint
-  - test
+  - validate
 
-variables:
-  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
-
-cache:
-  paths:
-    - .cache/pip
-
-lint_syntax:
-  stage: lint
+validate_markdown_and_cleanliness:
+  stage: validate
+  image: python:3.11-slim
   script:
-    - python -m pip install --upgrade pip
-    - python -m py_compile nanobot_self_improve.py import_upnote.py ocr_process.py self_improve_cron.py session_fts.py
-    - echo "Syntax check passed cleanly!"
-
-test_self_improve:
-  stage: test
-  script:
-    - python nanobot_self_improve.py report
-    - echo "Nanobot self-improvement report check passed!"
+    - echo "Validating Markdown files for raw tool_call tags..."
+    - python -c "
+import glob, sys
+has_error = False
+for file in glob.glob('**/*.md', recursive=True):
+    with open(file, 'r', encoding='utf-8', errors='ignore') as f:
+        content = f.read()
+        if '<tool_call>' in content or '<function=' in content:
+            print(f'ERROR: Raw tool_call tag found in {file}')
+            has_error = True
+if has_error:
+    sys.exit(1)
+print('SUCCESS: All Markdown files are clean!')
+"

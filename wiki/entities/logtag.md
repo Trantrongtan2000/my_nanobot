@@ -2,13 +2,8 @@
 type: entity
 title: "LogTag — Temperature Data Logger"
 created: 2026-07-19
-updated: 2026-08-10
+updated: 2026-07-19
 tags: [logtag, data-logger, temperature, humidity, calibration, pharmacy]
-device_sn: "AOA1005236US"
-model: "UTRED30-WIFI"
-mac_address: "00:80:E1:C4:1E:BD"
-location: "Bệnh viện Quận 7"
-source: "Mistral OCR v4"
 ---
 
 ## Overview
@@ -25,33 +20,6 @@ source: "Mistral OCR v4"
 | **HAXO-8** | Ghi nhiệt độ + độ ẩm |
 | **UHADO-16** | Ghi nhiệt độ + độ ẩm, độ chính xác cao |
 | **TREX** | Đầu dò ngoài, chịu nhiệt cao |
-
-## Thiết bị cụ thể (cập nhật 2026-08-10)
-
-### LogTag UTRED30-WIFI — SN: AOA1005236US
-
-**Thông số từ thiết bị:**
-- **Serial Number**: `AOA1005236US`
-- **Model**: `UTR/D10-WIFI` / `UTRED30-WIFI`
-- **MAC Address**: `00:80:E1:C4:1E:BD`
-- **Distributor**: SmartTech Co. (www.smarttechco.com.vn)
-- **Battery Status**: Low ⚠️ → **Đã thay pin** ✓ (2026-08-10)
-- **Certificate of Calibration**: Có (Certificate of Calibration)
-
-**Cấu hình logging:**
-- **Record readings continuously**: overwrite oldest when memory full
-- **Số ngày ghi**: ≥ 56 Days
-- **Số lần đọc tối đa**: 16129 (max)
-- **Chu kỳ đọc**: mỗi 5 phút
-- **Begin recording after**: 0 phút delay (bắt đầu ngay)
-
-**Cài đặt Wifi:**
-- **SSID**: Leave Wifi settings unchanged (chưa cấu hình)
-- Hoạt động trong nhiều tháng: THANG 01–05/2026
-
-**Trạng thái bảo mật:**
-- ☐ Configure requires a password
-- ☐ Download requires a password
 
 ## Hiệu chuẩn (Calibration)
 
@@ -87,3 +55,7 @@ source: "Mistral OCR v4"
 - Sau thay pin → nên hiệu chuẩn lại
 - Hóa chất tẩy rửa (cồn isopropyl) có thể ảnh hưởng cảm biến độ ẩm
 - Không ngâm LogTag trong dung dịch — chỉ lau bề mặt
+
+## Tài liệu
+- **Wiki entity:** [[entities/logtag]]
+- **OCR chứng nhận:** [[raw/ocr_ksnk_qt05/q7/organized]]

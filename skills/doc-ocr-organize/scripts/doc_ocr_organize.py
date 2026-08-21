@@ -33,17 +33,63 @@ from pathlib import Path
 
 import requests
 
+
+def _load_dotenv_files() -> None:
+    """Load KEY=VAL from nanobot env files without overriding existing env."""
+    home = Path.home()
+    candidates = [
+        home / ".nanobot" / ".env",
+        home / ".nanobot" / "env",
+        Path(__file__).resolve().parents[3] / ".env",  # workspace/.env if any
+        Path(__file__).resolve().parents[4] / ".env",  # ~/.nanobot/.env via skills path
+    ]
+    # Also resolve C:\Users\…\.nanobot\.env explicitly via parents of this script:
+    # …/workspace/skills/doc-ocr-organize/scripts/this.py → parents[3]=workspace, [4]=.nanobot
+    seen: set[Path] = set()
+    for path in candidates:
+        try:
+            path = path.resolve()
+        except OSError:
+            continue
+        if path in seen or not path.is_file():
+            continue
+        seen.add(path)
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        for raw in text.splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, val = line.partition("=")
+            key = key.strip()
+            val = val.strip().strip('"').strip("'")
+            if not key or not val or val.startswith("#"):
+                continue
+            if not os.environ.get(key):
+                os.environ[key] = val
+
+
+_load_dotenv_files()
+
 MISTRAL_URL = os.environ.get("MISTRAL_API_URL", "https://api.mistral.ai/v1").rstrip("/")
 OCR_MODEL = os.environ.get("MISTRAL_OCR_MODEL", "mistral-ocr-latest")
 DEFAULT_ORGANIZE_MODEL = os.environ.get("MISTRAL_ORGANIZE_MODEL", "mistral-small-2603")
 ORFREE_BASE = os.environ.get("ORFREE_BASE", "http://127.0.0.1:20128/v1").rstrip("/")
 
-_KEYS = [
-    os.environ.get("MISTRAL_API_KEY", ""),
-    os.environ.get("MISTRAL_API_KEY_2", ""),
-    os.environ.get("MISTRAL_API_KEY_3", ""),
-]
-_KEYS = [k for k in _KEYS if k and k not in ("your-api-key-here",)]
+
+def _collect_keys() -> list[str]:
+    keys = [
+        os.environ.get("MISTRAL_API_KEY", ""),
+        os.environ.get("MISTRAL_API_KEY_2", ""),
+        os.environ.get("MISTRAL_API_KEY_3", ""),
+    ]
+    bad = {"", "your-api-key-here", "CHANGE_ME", "xxx"}
+    return [k.strip() for k in keys if k and k.strip() not in bad]
+
+
+_KEYS = _collect_keys()
 _key_i = 0
 
 
@@ -52,17 +98,29 @@ def log(msg: str) -> None:
 
 
 def next_key() -> str:
-    global _key_i
+    global _key_i, _KEYS
     if not _KEYS:
-        raise SystemExit("Missing MISTRAL_API_KEY (and optional MISTRAL_API_KEY_2/3)")
+        _load_dotenv_files()
+        _KEYS = _collect_keys()
+    if not _KEYS:
+        raise SystemExit(
+            "Missing MISTRAL_API_KEY. Set it in ~/.nanobot/.env or the process env "
+            "(optional MISTRAL_API_KEY_2/3 for rotate)."
+        )
     k = _KEYS[_key_i % len(_KEYS)]
     _key_i += 1
     return k
 
 
 def current_key() -> str:
+    global _KEYS
     if not _KEYS:
-        raise SystemExit("Missing MISTRAL_API_KEY")
+        _load_dotenv_files()
+        _KEYS = _collect_keys()
+    if not _KEYS:
+        raise SystemExit(
+            "Missing MISTRAL_API_KEY. Set it in ~/.nanobot/.env (see skills/doc-ocr-organize/SKILL.md)."
+        )
     return _KEYS[_key_i % len(_KEYS)]
 
 
