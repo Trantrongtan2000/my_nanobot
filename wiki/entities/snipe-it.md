@@ -1,53 +1,36 @@
----
-type: entity
-title: "Snipe-IT"
-status: draft
-sources:
-  - "https://snipeitapp.com/"
-  - "https://snipe-it.readme.io/docs/introduction"
-updated: 2026-07-22
-tags: [asset-management, itam, open-source, rest-api, meims]
-refs:
-  - "[[docuflow-studio]]"
----
+# Snipe-IT Asset Management
 
-# Snipe-IT
+**Status**: reviewed (comparison with QLTB MEIMS)
 
-**Free Open Source IT Asset Management System**
+## Overview
+- **Source**: https://github.com/grokability/snipe-it
+- **Framework**: Laravel 12 (PHP)
+- **Database**: MySQL/PostgreSQL
+- **Deploy**: Docker image available (`snipe/snipe-it`)
+- **License**: GPL v2
 
-## Tổng quan
-Snipe-IT là hệ thống quản lý tài sản IT mã nguồn mở, giúp:
-- Quản lý tài sản, phần mềm, giấy phép, phụ kiện, linh kiện
-- Theo dõi ai có tài sản nào, lịch sử bảo trì, audit log
-- Hỗ trợ nhiều khu vực, bảo mật cao
-- API REST mạnh, tích hợp linh hoạt
+## QLTB Integration Potential
 
-## Thống kê (từ website)
-- 20,889,000+ tài sản được quản lý
-- 10,140,000+ người dùng
-- 6,010 khách hàng
-- 13 năm phát triển
-- 330+ contributors, 12,000+ commits
+### Compatible (reuse patterns for QLTB MEIMS)
+- **Asset entity model**: serial, asset_tag, purchase_date, warranty tracking
+- **Maintenance entity**: separate table with asset→maintenance relations
+- **Depreciation model**: linked via asset→model→depreciation
+- **Assignment/Checkout model**: who has which asset, when, acceptance records
+- **Categories/Manufacturers/Departments/Locations**: taxonomy pattern reusable
 
-## Tính năng nổi bật
-- REST API mạnh (JSON), dễ tích hợp
-- Quản lý giấy phép phần mềm
-- Theo dõi lịch sử bảo trì, audit log
-- Hỗ trợ barcode, QR code
-- Nhiều tùy chọn triển khai: self-hosted, cloud, Docker
+### Missing for Biomedical Devices (gaps to fill in QLTB)
+- ❌ Calibration traceability (due dates, certificates, traceability chain) 
+- ❌ Risk class (IEC 60601: risk class B, C, or D)
+- ❌ MTBF / MTTR (reliability metrics)
+- ❌ PM compliance tracking (ISO 13485:2016 7.5.4 — planned maintenance)
+- ❌ Regulatory evidence linkage (attach ISO 13485, FDA 21 CFR Part 820 records)
 
-## Công nghệ
-- Xây dựng trên Laravel (PHP)
-- CSDL: MySQL/SQLite
-- Web-based, chạy trên web server
+## Suggested QLTB Extensions
+1. Extend `Asset` model → add: `calibration_due`, `calibration_certificate_path`, `risk_class`, `IEC_standard`
+2. Extend `Maintenance` → link to PM schedule with recurrence pattern (cron-like)
+3. Add `MTBF` computed field = `total_uptime_hours / number_of_failures`
+4. Add `PM schedule` model with `next_due_date`, `compliance_status`
 
-## Ứng dụng cho MEIMS/QLTB
-- **Quản lý tài sản y tế** (thiết bị, phần mềm, giấy phép)
-- **Theo dõi vị trí, người chịu trách nhiệm, lịch bảo trì**
-- **Tích hợp với hệ thống báo cáo KPI** (uptime, MTBF, MTTR)
-- **API REST** để tích hợp với nanobot, wiki, Notion
-
-## Open questions
-- So sánh với DocuFlow Studio: Snipe-IT tập trung asset management, DocuFlow tập trung tài liệu
-- Tích hợp với hệ thống kiểm định BYT hiện tại như thế nào?
-- Có cần custom field cho thiết bị y tế (hạn kiểm định, người bảo trì) không?
+## References
+- [[snipe-it-architecture]]
+- [[mri_1_5t_power_loss_troubleshooting]]

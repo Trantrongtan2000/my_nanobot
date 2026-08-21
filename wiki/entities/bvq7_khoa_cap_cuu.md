@@ -234,7 +234,8 @@ refs:
 ### Các thiết bị khác
 - BIO-MED TV-100 Ventilator (S/N TX2301031, mã TS 5113220400001)
 - ResMed Astral 150 (S/N 22241721443, tem 00442 hạn 06/02/2027)
-- GE Voluson S8 BT16 (S/N VS8000518)
+|- GE Voluson S8 BT16 (S/N VS8000518)
+|- Arietta 65 (Máy siêu âm chuẩn đoán hình ảnh — P.0086, chuyển lên 2018) [[entities/arietta_65.md]]
 - OMRON HEM-8712 (S/N 20240456611VG, tem 205666 hạn 15/07/2027)
 - Chardeer MS3500 (S/N C24005468, tem 205665 hạn 15/07/2027)
 - Defibrillator (S/N 16564, tem 00440 hạn 06/02/2027)

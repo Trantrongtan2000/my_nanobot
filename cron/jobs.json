@@ -157,6 +157,50 @@
       "deleteAfterRun": false
     },
     {
+      "id": "6db75d66",
+      "name": "remind-clypra-18h",
+      "enabled": true,
+      "schedule": {
+        "kind": "at",
+        "atMs": 1786273200000,
+        "everyMs": null,
+        "expr": null,
+        "tz": null
+      },
+      "payload": {
+        "kind": "agent_turn",
+        "message": "Nhắc Tấn: xem https://github.com/AIEraDev/Clypra",
+        "deliver": false,
+        "channel": null,
+        "to": null,
+        "channelMeta": {},
+        "sessionKey": "telegram:1449852069",
+        "originChannel": "telegram",
+        "originChatId": "1449852069",
+        "originMetadata": {
+          "message_id": 5720,
+          "user_id": 1449852069,
+          "username": "trongtan2104",
+          "first_name": "Tran",
+          "is_group": false,
+          "message_thread_id": null,
+          "is_forum": false,
+          "reply_to_message_id": null,
+          "_wants_stream": true
+        }
+      },
+      "state": {
+        "nextRunAtMs": null,
+        "lastRunAtMs": null,
+        "lastStatus": null,
+        "lastError": null,
+        "runHistory": []
+      },
+      "createdAtMs": 1786323939246,
+      "updatedAtMs": 1786323939246,
+      "deleteAfterRun": true
+    },
+    {
       "id": "dream",
       "name": "dream",
       "enabled": true,
@@ -180,135 +224,21 @@
         "originMetadata": {}
       },
       "state": {
-        "nextRunAtMs": 1785577831996,
-        "lastRunAtMs": 1785570631728,
+        "nextRunAtMs": 1787290622281,
+        "lastRunAtMs": 1787283421588,
         "lastStatus": "ok",
         "lastError": null,
         "runHistory": [
           {
-            "runAtMs": 1785432455894,
+            "runAtMs": 1787283421588,
             "status": "ok",
-            "durationMs": 268,
-            "error": null
-          },
-          {
-            "runAtMs": 1785439656166,
-            "status": "ok",
-            "durationMs": 404,
-            "error": null
-          },
-          {
-            "runAtMs": 1785446856575,
-            "status": "ok",
-            "durationMs": 267,
-            "error": null
-          },
-          {
-            "runAtMs": 1785454056845,
-            "status": "ok",
-            "durationMs": 213,
-            "error": null
-          },
-          {
-            "runAtMs": 1785461257315,
-            "status": "ok",
-            "durationMs": 1179,
-            "error": null
-          },
-          {
-            "runAtMs": 1785468458498,
-            "status": "ok",
-            "durationMs": 268177,
-            "error": null
-          },
-          {
-            "runAtMs": 1785475926679,
-            "status": "ok",
-            "durationMs": 286,
-            "error": null
-          },
-          {
-            "runAtMs": 1785483126982,
-            "status": "ok",
-            "durationMs": 329,
-            "error": null
-          },
-          {
-            "runAtMs": 1785490327322,
-            "status": "ok",
-            "durationMs": 370803,
-            "error": null
-          },
-          {
-            "runAtMs": 1785497898133,
-            "status": "ok",
-            "durationMs": 620771,
-            "error": null
-          },
-          {
-            "runAtMs": 1785505718908,
-            "status": "ok",
-            "durationMs": 376,
-            "error": null
-          },
-          {
-            "runAtMs": 1785512919286,
-            "status": "ok",
-            "durationMs": 111077,
-            "error": null
-          },
-          {
-            "runAtMs": 1785520230365,
-            "status": "ok",
-            "durationMs": 241,
-            "error": null
-          },
-          {
-            "runAtMs": 1785527430612,
-            "status": "ok",
-            "durationMs": 89,
-            "error": null
-          },
-          {
-            "runAtMs": 1785534630705,
-            "status": "ok",
-            "durationMs": 139,
-            "error": null
-          },
-          {
-            "runAtMs": 1785541830850,
-            "status": "ok",
-            "durationMs": 212,
-            "error": null
-          },
-          {
-            "runAtMs": 1785549031064,
-            "status": "ok",
-            "durationMs": 38,
-            "error": null
-          },
-          {
-            "runAtMs": 1785556231104,
-            "status": "ok",
-            "durationMs": 231,
-            "error": null
-          },
-          {
-            "runAtMs": 1785563431380,
-            "status": "ok",
-            "durationMs": 227,
-            "error": null
-          },
-          {
-            "runAtMs": 1785570631728,
-            "status": "ok",
-            "durationMs": 268,
+            "durationMs": 693,
             "error": null
           }
         ]
       },
-      "createdAtMs": 1785244658427,
-      "updatedAtMs": 1785570631996,
+      "createdAtMs": 1787276221566,
+      "updatedAtMs": 1787283422281,
       "deleteAfterRun": false
     }
   ]

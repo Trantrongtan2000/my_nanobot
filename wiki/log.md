@@ -47,3 +47,22 @@
 - **[09:23]** Tạo entity `entities/elpis_den_mo_treo_tran_elo2401002.md` — Đèn mổ treo trần 2 chóa ELPIS, SN ELO2401002, mã TS 5119130100203.
 - **[09:23]** Ghi nhận thêm 5 entity mới vào wiki.
 - **[09:23]** Cập nhật bàn mổ JIN SOL JS-003 SN 4002802549 (đã tồn tại trước đó)
+
+
+---
+## 2026-08-10: Wiki sync
+
+**Added 66 entities** to wiki index. New categories:
+- Công cụ/Skill (mesh-llm MCP, claude-video, repo-ingestor)
+- Video/Content (YouTube analysis: ROM hacking with PowerShell)
+- Project planning (TTBYT deployment plan v1)
+
+**Actions taken:**
+1. Added mesh-llm MCP wrapper as nanobot tool
+2. Added repo-ingestor MCP for /ingest command
+3. Added watch skill (claude-video) for video analysis
+4. Created personality: hermes
+5. Configured mesh-llm serve --auto (port 9338)
+6. Updated nanobot config.json with all new providers/MCPs
+
+**Files:** wiki/index.md (refreshed), wiki/log.md (this entry)
