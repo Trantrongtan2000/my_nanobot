@@ -1,5 +1,6 @@
 import os
 import json
+import base64
 import urllib.request
 import urllib.error
 import uuid
@@ -10,7 +11,8 @@ from .base import NormalizedDocument, DocumentBlock, OCRProvider
 
 class MistralOCRProvider:
     """
-    Production Mistral OCR 4.x Client with HTTP API Integration & Token Authentication.
+    Production Mistral OCR 4.x Client with Base64 File Encoding & Token Authentication.
+    Outputs NormalizedDocument strictly tagged with TrustLevel.RAW_OCR.
     """
     def __init__(self, api_key: Optional[str] = None, endpoint: Optional[str] = None):
         self.api_key = api_key or os.environ.get("MISTRAL_API_KEY", "")
@@ -21,22 +23,27 @@ class MistralOCRProvider:
         doc_id = str(uuid.uuid4())
         file_name = os.path.basename(file_path)
 
-        # 1. Attempt Real Mistral OCR API if API Key is configured
+        # 1. Live Mistral OCR API Call with Base64 Payload
         if self.api_key and os.path.exists(file_path):
             try:
+                with open(file_path, "rb") as f:
+                    file_b64 = base64.b64encode(f.read()).decode("utf-8")
+
                 headers = {
                     "Authorization": f"Bearer {self.api_key}",
                     "Content-Type": "application/json"
                 }
-                # Construct Mistral OCR payload
                 payload = {
                     "model": "mistral-ocr-latest",
-                    "document": {"type": "document_url", "document_name": file_name}
+                    "document": {
+                        "type": "document_base64",
+                        "document_name": file_name,
+                        "document_base64": file_b64
+                    }
                 }
                 req = urllib.request.Request(self.endpoint, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
                 with urllib.request.urlopen(req, timeout=self.timeout_seconds) as resp:
                     data = json.loads(resp.read().decode("utf-8"))
-                    # Parse real blocks from Mistral response
                     pages = data.get("pages", [])
                     blocks = []
                     for idx, p in enumerate(pages):
@@ -55,11 +62,10 @@ class MistralOCRProvider:
                         trust_level=TrustLevel.RAW_OCR,
                         provenance=ProvenanceMetadata(source_type="MISTRAL_OCR_API", record_id=doc_id, file_path=file_path, confidence=0.97)
                     )
-            except Exception as e:
-                # Log error and fall back to local parser
+            except Exception:
                 pass
 
-        # 2. Local Verified Parsing
+        # 2. Local Fallback Parsing
         blocks = [
             DocumentBlock(
                 block_type="HEADER",
