@@ -7,8 +7,8 @@ from nanobot.core.trust_model import TrustLevel, ProvenanceMetadata
 class DeviceRepository:
     """
     Production SQLite Repository for Medical Equipment Management.
-    Executes real parameterized SQL queries against database/devices.db with tokenized search
-    and strict days_ahead calibration date filtering.
+    Executes precise tokenized parameterized SQL queries against database/devices.db with multi-word search
+    across device models, names, serials, and facility names.
     """
     def __init__(self, db_path: str = "database/devices.db"):
         self.db_path = db_path
@@ -66,42 +66,51 @@ class DeviceRepository:
     def search_devices(self, query: str, department: Optional[str] = None, limit: int = 50) -> List[Dict[str, Any]]:
         conn = self._get_connection()
         c = conn.cursor()
-        tokens = [t for t in re.findall(r"[A-Za-z0-9\-_]+|[À-ỹ\w]+", query) if len(t) > 1]
         
-        extracted_model = None
-        for tok in tokens:
-            if tok.upper() in ["MS4980", "RAD-5V", "RAD5V", "ASKIR", "230", "FRESENIUS", "WATO"]:
-                extracted_model = tok.upper()
-                if extracted_model == "RAD5V": extracted_model = "Rad-5v"
-                break
-                
-        if extracted_model:
-            sql = """
+        # Proper Unicode tokenization
+        raw_tokens = re.findall(r"[\w\-]+", query, flags=re.UNICODE)
+        stopwords = {
+            "tra", "cứu", "tìm", "xem", "cho", "kiểm", "thiết", "bị", "tại", "ở", "khoa",
+            "phòng", "của", "các", "những", "danh", "sách", "máy", "vị", "trí", "số", "nằm",
+            "đặt", "đang", "hỏi", "biết", "hiện", "có"
+        }
+        tokens = [t for t in raw_tokens if len(t) >= 2 and t.lower() not in stopwords]
+        
+        # 1. Multi-token parameterized AND search (including facility name)
+        if tokens:
+            where_clauses = []
+            params = []
+            for tok in tokens:
+                where_clauses.append("(d.model LIKE ? OR d.device_name LIKE ? OR d.serial_no LIKE ? OR d.manufacturer LIKE ? OR f.name LIKE ?)")
+                p = f"%{tok}%"
+                params.extend([p, p, p, p, p])
+            
+            sql = f"""
                 SELECT d.*, f.name as facility_name, f.floor, f.contact_ext
                 FROM devices d
                 LEFT JOIN facilities f ON d.facility_id = f.id
-                WHERE (d.model LIKE ? OR d.device_name LIKE ? OR d.serial_no LIKE ?)
+                WHERE {' AND '.join(where_clauses)}
             """
-            params = [f"%{extracted_model}%", f"%{extracted_model}%", f"%{extracted_model}%"]
             if department:
                 sql += " AND f.name LIKE ?"
                 params.append(f"%{department.strip()}%")
             sql += " LIMIT ?"
             params.append(limit)
+            
             c.execute(sql, params)
             rows = [dict(r) for r in c.fetchall()]
-            if rows:
-                conn.close()
-                return rows
+            conn.close()
+            return rows
 
+        # 2. Substring fallback
         q_term = f"%{query.strip()}%"
         sql = """
             SELECT d.*, f.name as facility_name, f.floor, f.contact_ext
             FROM devices d
             LEFT JOIN facilities f ON d.facility_id = f.id
-            WHERE (d.device_name LIKE ? OR d.model LIKE ? OR d.serial_no LIKE ?)
+            WHERE (d.device_name LIKE ? OR d.model LIKE ? OR d.serial_no LIKE ? OR f.name LIKE ?)
         """
-        params = [q_term, q_term, q_term]
+        params = [q_term, q_term, q_term, q_term]
         if department:
             sql += " AND f.name LIKE ?"
             params.append(f"%{department.strip()}%")
@@ -116,7 +125,6 @@ class DeviceRepository:
     def get_calibration_due_list(self, days_ahead: int = 60) -> List[Dict[str, Any]]:
         conn = self._get_connection()
         c = conn.cursor()
-        # Parameterized date filtering using SQLite date calculation
         sql = """
             SELECT d.id, d.device_name, d.model, d.serial_no, d.next_calibration_due, f.name as facility_name
             FROM devices d

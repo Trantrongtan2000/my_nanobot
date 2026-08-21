@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import urllib.request
 import urllib.error
 from typing import Dict, Any, Optional
@@ -25,7 +26,36 @@ class MedicalEquipmentAgent(BaseNOOAAgent):
         return self.device_service.reconcile_device(query, department=department)
 
     def execute(self, context: AgentContext) -> AgentResult:
-        query = context.input_text
+        query = context.input_text.strip()
+        tool = context.routing_decision.tool if context.routing_decision else "lookup_device"
+
+        # 1. Lookup by serial
+        if tool == "lookup_device_by_serial":
+            sn_match = re.search(r"(T\d{8}|N\d{6}|\d{5})", query, re.IGNORECASE)
+            serial = sn_match.group(1) if sn_match else query
+            dev = self.device_service.repo.find_by_serial(serial)
+            if dev:
+                return AgentResult(
+                    status="success",
+                    output=[dev],
+                    trust_level=TrustLevel.VERIFIED_FACT,
+                    provenance=ProvenanceMetadata(source_type="SQLITE_DB", record_id=str(dev.get("id")), file_path=self.device_service.repo.db_path, confidence=1.0),
+                    events=["SERIAL_LOOKUP_SUCCESS"]
+                )
+            return AgentResult(status="not_found", output=[], trust_level=TrustLevel.UNKNOWN, error_code="SERIAL_NOT_FOUND")
+
+        # 2. Calibration status
+        elif tool == "get_calibration_status":
+            res = self.device_service.get_due_calibrations(days_ahead=365)
+            return AgentResult(
+                status="success",
+                output=res["data"],
+                trust_level=TrustLevel.VERIFIED_FACT,
+                provenance=ProvenanceMetadata(source_type="SQLITE_DB", file_path=self.device_service.repo.db_path, confidence=1.0),
+                events=["CALIBRATION_LIST_RETRIEVED"]
+            )
+
+        # 3. Default reconciliation
         res = self.device_service.reconcile_device(query)
         if res.get("status") == "success":
             return AgentResult(
@@ -59,7 +89,6 @@ class NotionWorkspaceAgent(BaseNOOAAgent):
         self.inbox_parent_id = "3a30c997-8722-8189-801d-f21517a3439e"
 
     def create_inbox_note(self, title: str, content: str) -> Dict[str, Any]:
-        # Perform real Notion HTTP API call if token available
         page_id = self.inbox_parent_id
         if self.notion_token:
             try:
