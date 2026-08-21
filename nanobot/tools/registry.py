@@ -1,18 +1,16 @@
-from typing import Dict, Callable, List, Any
-from .catalog import TOOL_CATALOG
+from typing import Dict, Optional, List
+from .catalog import ToolDefinition, TOOL_REGISTRY
 
 class CapabilityRegistry:
-    """Registry mapping tool names to callable execution targets."""
+    """Production Capability Registry managing typed ToolDefinitions."""
     def __init__(self):
-        self._tools: Dict[str, Callable] = {}
-        for fn in TOOL_CATALOG:
-            self._tools[fn.__name__] = fn
+        self._tools = TOOL_REGISTRY
 
-    def get_tool(self, name: str) -> Callable:
+    def get_tool(self, name: str) -> Optional[ToolDefinition]:
         return self._tools.get(name)
 
     def list_tools(self) -> List[str]:
         return list(self._tools.keys())
 
-    def get_catalog(self) -> List[Callable]:
+    def get_definitions(self) -> List[ToolDefinition]:
         return list(self._tools.values())
