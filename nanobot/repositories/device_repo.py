@@ -7,7 +7,8 @@ from nanobot.core.trust_model import TrustLevel, ProvenanceMetadata
 class DeviceRepository:
     """
     Production SQLite Repository for Medical Equipment Management.
-    Executes real parameterized SQL queries against database/devices.db with tokenized matching.
+    Executes real parameterized SQL queries against database/devices.db with tokenized search
+    and strict days_ahead calibration date filtering.
     """
     def __init__(self, db_path: str = "database/devices.db"):
         self.db_path = db_path
@@ -65,11 +66,8 @@ class DeviceRepository:
     def search_devices(self, query: str, department: Optional[str] = None, limit: int = 50) -> List[Dict[str, Any]]:
         conn = self._get_connection()
         c = conn.cursor()
-        
-        # Extract meaningful tokens (model, serial, key device terms)
         tokens = [t for t in re.findall(r"[A-Za-z0-9\-_]+|[À-ỹ\w]+", query) if len(t) > 1]
         
-        # Look for explicit known model identifiers first
         extracted_model = None
         for tok in tokens:
             if tok.upper() in ["MS4980", "RAD-5V", "RAD5V", "ASKIR", "230", "FRESENIUS", "WATO"]:
@@ -96,7 +94,6 @@ class DeviceRepository:
                 conn.close()
                 return rows
 
-        # Fallback to general token search
         q_term = f"%{query.strip()}%"
         sql = """
             SELECT d.*, f.name as facility_name, f.floor, f.contact_ext
@@ -119,14 +116,16 @@ class DeviceRepository:
     def get_calibration_due_list(self, days_ahead: int = 60) -> List[Dict[str, Any]]:
         conn = self._get_connection()
         c = conn.cursor()
+        # Parameterized date filtering using SQLite date calculation
         sql = """
             SELECT d.id, d.device_name, d.model, d.serial_no, d.next_calibration_due, f.name as facility_name
             FROM devices d
             LEFT JOIN facilities f ON d.facility_id = f.id
-            WHERE d.next_calibration_due IS NOT NULL
+            WHERE d.next_calibration_due IS NOT NULL 
+              AND date(d.next_calibration_due) <= date('now', '+' || ? || ' days')
             ORDER BY d.next_calibration_due ASC
         """
-        c.execute(sql)
+        c.execute(sql, (days_ahead,))
         rows = [dict(r) for r in c.fetchall()]
         conn.close()
         return rows

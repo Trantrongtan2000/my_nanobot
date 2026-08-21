@@ -36,12 +36,13 @@ class DeviceService:
     # Backward compatibility alias
     query_equipment_reconciliation = reconcile_device
 
-    def get_due_calibrations(self) -> Dict[str, Any]:
-        due_list = self.repo.get_calibration_due_list()
+    def get_due_calibrations(self, days_ahead: int = 60) -> Dict[str, Any]:
+        due_list = self.repo.get_calibration_due_list(days_ahead=days_ahead)
         return {
             "status": "success",
             "count": len(due_list),
             "trust_level": TrustLevel.VERIFIED_FACT,
+            "days_ahead": days_ahead,
             "data": due_list,
             "provenance": ProvenanceMetadata(
                 source_type="SQLITE_DB",
