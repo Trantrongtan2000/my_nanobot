@@ -1,0 +1,23 @@
+name = "nanobot-computer"
+main = "src/index.ts"
+compatibility_date = "2026-08-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+ENVIRONMENT = "production"
+NANOBOT_NAME = "Nanobot 🐈"
+
+# Durable Object for Stateful Virtual Computer Filesystem (SQLite backed)
+[[durable_objects.bindings]]
+name = "COMPUTER_FS"
+class_name = "NanobotComputerDO"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["NanobotComputerDO"]
+
+# Optional D1 SQLite database binding for medical equipment
+[[d1_databases]]
+binding = "DB"
+database_name = "nanobot-devices-db"
+database_id = "your-d1-database-id"
